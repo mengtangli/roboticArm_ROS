@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "test_description")
+set(test_description_MAINTAINER "eeit <eeit@todo.todo>")
+set(test_description_DEPRECATED "")
+set(test_description_VERSION "0.0.0")
+set(test_description_BUILD_DEPENDS )
+set(test_description_RUN_DEPENDS )
+set(test_description_BUILDTOOL_DEPENDS "catkin")

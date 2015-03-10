@@ -1,0 +1,8 @@
+prefix=/home/eeit/roboarm/catkin_ws/install
+
+Name: urdf_tutorial
+Description: Description of urdf_tutorial
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/eeit/roboarm/catkin_ws/install/lib 
+Requires: 

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "gripper")
+set(gripper_MAINTAINER "eeit <eeit@todo.todo>")
+set(gripper_DEPRECATED "")
+set(gripper_VERSION "0.0.0")
+set(gripper_BUILD_DEPENDS )
+set(gripper_RUN_DEPENDS )
+set(gripper_BUILDTOOL_DEPENDS "catkin")

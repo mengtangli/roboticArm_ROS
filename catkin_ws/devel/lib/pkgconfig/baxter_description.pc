@@ -1,0 +1,8 @@
+prefix=/home/eeit/roboarm/catkin_ws/devel
+
+Name: baxter_description
+Description: Description of baxter_description
+Version: 1.1.0
+Cflags: 
+Libs: -L/home/eeit/roboarm/catkin_ws/devel/lib 
+Requires: 

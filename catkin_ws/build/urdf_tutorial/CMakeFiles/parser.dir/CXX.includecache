@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eeit/roboarm/catkin_ws/src/urdf_tutorial/robot_description/src/parser.cpp
+urdf/model.h
+-
+ros/ros.h
+/home/eeit/roboarm/catkin_ws/src/urdf_tutorial/robot_description/src/ros/ros.h
+

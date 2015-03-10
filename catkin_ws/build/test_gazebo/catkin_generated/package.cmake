@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "test_gazebo")
+set(test_gazebo_MAINTAINER "eeit <eeit@todo.todo>")
+set(test_gazebo_DEPRECATED "")
+set(test_gazebo_VERSION "0.0.0")
+set(test_gazebo_BUILD_DEPENDS )
+set(test_gazebo_RUN_DEPENDS )
+set(test_gazebo_BUILDTOOL_DEPENDS "catkin")

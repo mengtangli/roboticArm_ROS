@@ -1,0 +1,106 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1330585508/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1330585508.dir/build.make CMakeFiles/cmTryCompileExec1330585508.dir/build
+make[1]: Entering directory `/home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1330585508.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1330585508.dir/CheckSymbolExists.c.o   -c /home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1330585508
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1330585508.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1330585508.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1330585508 -rdynamic 
+CMakeFiles/cmTryCompileExec1330585508.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec1330585508] Error 1
+make[1]: Leaving directory `/home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1330585508/fast] Error 2
+
+File /home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec79029945/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec79029945.dir/build.make CMakeFiles/cmTryCompileExec79029945.dir/build
+make[1]: Entering directory `/home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec79029945.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec79029945.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec79029945
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec79029945.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec79029945.dir/CheckFunctionExists.c.o  -o cmTryCompileExec79029945 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec79029945] Error 1
+make[1]: Leaving directory `/home/eeit/roboarm/ros_ws/arduino_fer/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec79029945/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2309732218/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2309732218.dir/build.make CMakeFiles/cmTryCompileExec2309732218.dir/build
+make[1]: Entering directory `/home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2309732218.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2309732218.dir/CheckSymbolExists.c.o   -c /home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2309732218
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2309732218.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2309732218.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2309732218 -rdynamic 
+CMakeFiles/cmTryCompileExec2309732218.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2309732218] Error 1
+make: *** [cmTryCompileExec2309732218/fast] Error 2
+
+File /home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1274689010/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1274689010.dir/build.make CMakeFiles/cmTryCompileExec1274689010.dir/build
+make[1]: Entering directory `/home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1274689010.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1274689010.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1274689010
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1274689010.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1274689010.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1274689010 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec1274689010] Error 1
+make[1]: Leaving directory `/home/eeit/roboarm/catkin_ws/src/arduino_fer/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1274689010/fast] Error 2
+
+

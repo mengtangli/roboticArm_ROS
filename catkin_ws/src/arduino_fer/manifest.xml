@@ -1,0 +1,16 @@
+<package>
+  <description brief="arduino_fer">
+
+     arduino_fer
+
+  </description>
+  <author>eeit</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arduino_fer</url>
+  <depend package="rosserial_arduino"/>
+  <depend package="std_msgs"/>
+
+</package>
+
+
