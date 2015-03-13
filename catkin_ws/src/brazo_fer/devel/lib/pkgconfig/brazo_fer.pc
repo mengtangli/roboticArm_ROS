@@ -1,0 +1,8 @@
+prefix=/home/eeit/roboarm/catkin_ws/src/brazo_fer/devel
+
+Name: brazo_fer
+Description: Description of brazo_fer
+Version: 0.0.0
+Cflags: -I/home/eeit/roboarm/catkin_ws/src/brazo_fer/devel/include -I/home/eeit/roboarm/catkin_ws/src/brazo_fer/include
+Libs: -L/home/eeit/roboarm/catkin_ws/src/brazo_fer/devel/lib -lbrazo_fer
+Requires: geometry_msgs roscpp std_msgs message_runtime

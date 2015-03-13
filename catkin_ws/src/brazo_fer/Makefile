@@ -108,6 +108,16 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/progress.marks
@@ -140,82 +150,134 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ROSBUILD_genmsg_cpp
+# Target rules for targets named _brazo_fer_generate_messages_check_deps_ReadServos
 
 # Build rule for target.
-ROSBUILD_genmsg_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_genmsg_cpp
-.PHONY : ROSBUILD_genmsg_cpp
+_brazo_fer_generate_messages_check_deps_ReadServos: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _brazo_fer_generate_messages_check_deps_ReadServos
+.PHONY : _brazo_fer_generate_messages_check_deps_ReadServos
 
 # fast build rule for target.
-ROSBUILD_genmsg_cpp/fast:
-	$(MAKE) -f CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make CMakeFiles/ROSBUILD_genmsg_cpp.dir/build
-.PHONY : ROSBUILD_genmsg_cpp/fast
+_brazo_fer_generate_messages_check_deps_ReadServos/fast:
+	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/build
+.PHONY : _brazo_fer_generate_messages_check_deps_ReadServos/fast
 
 #=============================================================================
-# Target rules for targets named ROSBUILD_genmsg_lisp
+# Target rules for targets named _brazo_fer_generate_messages_check_deps_Servos
 
 # Build rule for target.
-ROSBUILD_genmsg_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_genmsg_lisp
-.PHONY : ROSBUILD_genmsg_lisp
+_brazo_fer_generate_messages_check_deps_Servos: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _brazo_fer_generate_messages_check_deps_Servos
+.PHONY : _brazo_fer_generate_messages_check_deps_Servos
 
 # fast build rule for target.
-ROSBUILD_genmsg_lisp/fast:
-	$(MAKE) -f CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make CMakeFiles/ROSBUILD_genmsg_lisp.dir/build
-.PHONY : ROSBUILD_genmsg_lisp/fast
+_brazo_fer_generate_messages_check_deps_Servos/fast:
+	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/build
+.PHONY : _brazo_fer_generate_messages_check_deps_Servos/fast
 
 #=============================================================================
-# Target rules for targets named ROSBUILD_genmsg_py
+# Target rules for targets named _brazo_fer_generate_messages_check_deps_WriteServos
 
 # Build rule for target.
-ROSBUILD_genmsg_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_genmsg_py
-.PHONY : ROSBUILD_genmsg_py
+_brazo_fer_generate_messages_check_deps_WriteServos: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _brazo_fer_generate_messages_check_deps_WriteServos
+.PHONY : _brazo_fer_generate_messages_check_deps_WriteServos
 
 # fast build rule for target.
-ROSBUILD_genmsg_py/fast:
-	$(MAKE) -f CMakeFiles/ROSBUILD_genmsg_py.dir/build.make CMakeFiles/ROSBUILD_genmsg_py.dir/build
-.PHONY : ROSBUILD_genmsg_py/fast
+_brazo_fer_generate_messages_check_deps_WriteServos/fast:
+	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/build
+.PHONY : _brazo_fer_generate_messages_check_deps_WriteServos/fast
 
 #=============================================================================
-# Target rules for targets named ROSBUILD_gensrv_cpp
+# Target rules for targets named brazo_fer_gencpp
 
 # Build rule for target.
-ROSBUILD_gensrv_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_gensrv_cpp
-.PHONY : ROSBUILD_gensrv_cpp
+brazo_fer_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 brazo_fer_gencpp
+.PHONY : brazo_fer_gencpp
 
 # fast build rule for target.
-ROSBUILD_gensrv_cpp/fast:
-	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_cpp.dir/build.make CMakeFiles/ROSBUILD_gensrv_cpp.dir/build
-.PHONY : ROSBUILD_gensrv_cpp/fast
+brazo_fer_gencpp/fast:
+	$(MAKE) -f CMakeFiles/brazo_fer_gencpp.dir/build.make CMakeFiles/brazo_fer_gencpp.dir/build
+.PHONY : brazo_fer_gencpp/fast
 
 #=============================================================================
-# Target rules for targets named ROSBUILD_gensrv_lisp
+# Target rules for targets named brazo_fer_generate_messages
 
 # Build rule for target.
-ROSBUILD_gensrv_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_gensrv_lisp
-.PHONY : ROSBUILD_gensrv_lisp
+brazo_fer_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 brazo_fer_generate_messages
+.PHONY : brazo_fer_generate_messages
 
 # fast build rule for target.
-ROSBUILD_gensrv_lisp/fast:
-	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_lisp.dir/build.make CMakeFiles/ROSBUILD_gensrv_lisp.dir/build
-.PHONY : ROSBUILD_gensrv_lisp/fast
+brazo_fer_generate_messages/fast:
+	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages.dir/build.make CMakeFiles/brazo_fer_generate_messages.dir/build
+.PHONY : brazo_fer_generate_messages/fast
 
 #=============================================================================
-# Target rules for targets named _catkin_empty_exported_target
+# Target rules for targets named brazo_fer_generate_messages_cpp
 
 # Build rule for target.
-_catkin_empty_exported_target: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
-.PHONY : _catkin_empty_exported_target
+brazo_fer_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 brazo_fer_generate_messages_cpp
+.PHONY : brazo_fer_generate_messages_cpp
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+brazo_fer_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_cpp.dir/build.make CMakeFiles/brazo_fer_generate_messages_cpp.dir/build
+.PHONY : brazo_fer_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named brazo_fer_generate_messages_lisp
+
+# Build rule for target.
+brazo_fer_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 brazo_fer_generate_messages_lisp
+.PHONY : brazo_fer_generate_messages_lisp
+
+# fast build rule for target.
+brazo_fer_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_lisp.dir/build.make CMakeFiles/brazo_fer_generate_messages_lisp.dir/build
+.PHONY : brazo_fer_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named brazo_fer_generate_messages_py
+
+# Build rule for target.
+brazo_fer_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 brazo_fer_generate_messages_py
+.PHONY : brazo_fer_generate_messages_py
+
+# fast build rule for target.
+brazo_fer_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_py.dir/build.make CMakeFiles/brazo_fer_generate_messages_py.dir/build
+.PHONY : brazo_fer_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named brazo_fer_genlisp
+
+# Build rule for target.
+brazo_fer_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 brazo_fer_genlisp
+.PHONY : brazo_fer_genlisp
+
+# fast build rule for target.
+brazo_fer_genlisp/fast:
+	$(MAKE) -f CMakeFiles/brazo_fer_genlisp.dir/build.make CMakeFiles/brazo_fer_genlisp.dir/build
+.PHONY : brazo_fer_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named brazo_fer_genpy
+
+# Build rule for target.
+brazo_fer_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 brazo_fer_genpy
+.PHONY : brazo_fer_genpy
+
+# fast build rule for target.
+brazo_fer_genpy/fast:
+	$(MAKE) -f CMakeFiles/brazo_fer_genpy.dir/build.make CMakeFiles/brazo_fer_genpy.dir/build
+.PHONY : brazo_fer_genpy/fast
 
 #=============================================================================
 # Target rules for targets named clean_test_results
@@ -244,108 +306,121 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
-# Target rules for targets named rosbuild_clean-test-results
+# Target rules for targets named geometry_msgs_generate_messages_cpp
 
 # Build rule for target.
-rosbuild_clean-test-results: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosbuild_clean-test-results
-.PHONY : rosbuild_clean-test-results
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
 
 # fast build rule for target.
-rosbuild_clean-test-results/fast:
-	$(MAKE) -f CMakeFiles/rosbuild_clean-test-results.dir/build.make CMakeFiles/rosbuild_clean-test-results.dir/build
-.PHONY : rosbuild_clean-test-results/fast
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named rosbuild_precompile
+# Target rules for targets named geometry_msgs_generate_messages_lisp
 
 # Build rule for target.
-rosbuild_precompile: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosbuild_precompile
-.PHONY : rosbuild_precompile
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
 
 # fast build rule for target.
-rosbuild_precompile/fast:
-	$(MAKE) -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
-.PHONY : rosbuild_precompile/fast
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named rosbuild_premsgsrvgen
+# Target rules for targets named geometry_msgs_generate_messages_py
 
 # Build rule for target.
-rosbuild_premsgsrvgen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosbuild_premsgsrvgen
-.PHONY : rosbuild_premsgsrvgen
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
 
 # fast build rule for target.
-rosbuild_premsgsrvgen/fast:
-	$(MAKE) -f CMakeFiles/rosbuild_premsgsrvgen.dir/build.make CMakeFiles/rosbuild_premsgsrvgen.dir/build
-.PHONY : rosbuild_premsgsrvgen/fast
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named rospack_genmsg
+# Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
-rospack_genmsg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rospack_genmsg
-.PHONY : rospack_genmsg
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
 
 # fast build rule for target.
-rospack_genmsg/fast:
-	$(MAKE) -f CMakeFiles/rospack_genmsg.dir/build.make CMakeFiles/rospack_genmsg.dir/build
-.PHONY : rospack_genmsg/fast
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named rospack_genmsg_all
+# Target rules for targets named roscpp_generate_messages_lisp
 
 # Build rule for target.
-rospack_genmsg_all: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rospack_genmsg_all
-.PHONY : rospack_genmsg_all
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
 
 # fast build rule for target.
-rospack_genmsg_all/fast:
-	$(MAKE) -f CMakeFiles/rospack_genmsg_all.dir/build.make CMakeFiles/rospack_genmsg_all.dir/build
-.PHONY : rospack_genmsg_all/fast
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named rospack_genmsg_libexe
+# Target rules for targets named roscpp_generate_messages_py
 
 # Build rule for target.
-rospack_genmsg_libexe: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rospack_genmsg_libexe
-.PHONY : rospack_genmsg_libexe
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
 
 # fast build rule for target.
-rospack_genmsg_libexe/fast:
-	$(MAKE) -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
-.PHONY : rospack_genmsg_libexe/fast
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named rospack_gensrv
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
 
 # Build rule for target.
-rospack_gensrv: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rospack_gensrv
-.PHONY : rospack_gensrv
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
 
 # fast build rule for target.
-rospack_gensrv/fast:
-	$(MAKE) -f CMakeFiles/rospack_gensrv.dir/build.make CMakeFiles/rospack_gensrv.dir/build
-.PHONY : rospack_gensrv/fast
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named rospack_gensrv_all
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
 
 # Build rule for target.
-rospack_gensrv_all: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rospack_gensrv_all
-.PHONY : rospack_gensrv_all
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
 
 # fast build rule for target.
-rospack_gensrv_all/fast:
-	$(MAKE) -f CMakeFiles/rospack_gensrv_all.dir/build.make CMakeFiles/rospack_gensrv_all.dir/build
-.PHONY : rospack_gensrv_all/fast
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named run_tests
@@ -361,56 +436,43 @@ run_tests/fast:
 .PHONY : run_tests/fast
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named test-future
+# Target rules for targets named std_msgs_generate_messages_lisp
 
 # Build rule for target.
-test-future: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test-future
-.PHONY : test-future
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
 
 # fast build rule for target.
-test-future/fast:
-	$(MAKE) -f CMakeFiles/test-future.dir/build.make CMakeFiles/test-future.dir/build
-.PHONY : test-future/fast
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named test-results
+# Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
-test-results: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test-results
-.PHONY : test-results
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
 
 # fast build rule for target.
-test-results/fast:
-	$(MAKE) -f CMakeFiles/test-results.dir/build.make CMakeFiles/test-results.dir/build
-.PHONY : test-results/fast
-
-#=============================================================================
-# Target rules for targets named test-results-run
-
-# Build rule for target.
-test-results-run: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test-results-run
-.PHONY : test-results-run
-
-# fast build rule for target.
-test-results-run/fast:
-	$(MAKE) -f CMakeFiles/test-results-run.dir/build.make CMakeFiles/test-results-run.dir/build
-.PHONY : test-results-run/fast
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named tests
@@ -457,33 +519,38 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... ROSBUILD_genmsg_cpp"
-	@echo "... ROSBUILD_genmsg_lisp"
-	@echo "... ROSBUILD_genmsg_py"
-	@echo "... ROSBUILD_gensrv_cpp"
-	@echo "... ROSBUILD_gensrv_lisp"
-	@echo "... _catkin_empty_exported_target"
+	@echo "... _brazo_fer_generate_messages_check_deps_ReadServos"
+	@echo "... _brazo_fer_generate_messages_check_deps_Servos"
+	@echo "... _brazo_fer_generate_messages_check_deps_WriteServos"
+	@echo "... brazo_fer_gencpp"
+	@echo "... brazo_fer_generate_messages"
+	@echo "... brazo_fer_generate_messages_cpp"
+	@echo "... brazo_fer_generate_messages_lisp"
+	@echo "... brazo_fer_generate_messages_py"
+	@echo "... brazo_fer_genlisp"
+	@echo "... brazo_fer_genpy"
 	@echo "... clean_test_results"
 	@echo "... doxygen"
 	@echo "... edit_cache"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... rosbuild_clean-test-results"
-	@echo "... rosbuild_precompile"
-	@echo "... rosbuild_premsgsrvgen"
-	@echo "... rospack_genmsg"
-	@echo "... rospack_genmsg_all"
-	@echo "... rospack_genmsg_libexe"
-	@echo "... rospack_gensrv"
-	@echo "... rospack_gensrv_all"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... run_tests"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
-	@echo "... test-future"
-	@echo "... test-results"
-	@echo "... test-results-run"
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"

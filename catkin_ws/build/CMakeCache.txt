@@ -314,6 +314,20 @@ baxter_maintenance_msgs_BINARY_DIR:STATIC=/home/eeit/roboarm/catkin_ws/build/bax
 //Value Computed by CMake
 baxter_maintenance_msgs_SOURCE_DIR:STATIC=/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs
 
+//Value Computed by CMake
+brazo_fer_BINARY_DIR:STATIC=/home/eeit/roboarm/catkin_ws/build/brazo_fer
+
+brazo_fer_DIR:PATH=
+
+//Value Computed by CMake
+brazo_fer_SOURCE_DIR:STATIC=/home/eeit/roboarm/catkin_ws/src/brazo_fer
+
+//Value Computed by CMake
+brazo_fer_modelo_BINARY_DIR:STATIC=/home/eeit/roboarm/catkin_ws/build/brazo_fer_modelo
+
+//Value Computed by CMake
+brazo_fer_modelo_SOURCE_DIR:STATIC=/home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
 
@@ -401,6 +415,12 @@ message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
 
 //Path to a library.
 onelib:FILEPATH=/usr/lib/x86_64-linux-gnu/libsdformat.so
+
+//Value Computed by CMake
+ros_tut_BINARY_DIR:STATIC=/home/eeit/roboarm/catkin_ws/build/ros_tut
+
+//Value Computed by CMake
+ros_tut_SOURCE_DIR:STATIC=/home/eeit/roboarm/catkin_ws/src/ros_tut
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
@@ -613,7 +633,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=13
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

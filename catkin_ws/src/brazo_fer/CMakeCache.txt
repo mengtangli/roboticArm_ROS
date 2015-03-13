@@ -29,10 +29,6 @@ CATKIN_SKIP_TESTING:BOOL=OFF
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//For backwards compatibility, what version of CMake commands and
-// syntax should this version of CMake try to support.
-CMAKE_BACKWARDS_COMPATIBILITY:STRING=2.4
-
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
 CMAKE_BUILD_TYPE:STRING=
@@ -195,9 +191,6 @@ EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 //Empy script
 EMPY_SCRIPT:STRING=/usr/bin/empy
 
-//Single output directory for building all executables.
-EXECUTABLE_OUTPUT_PATH:PATH=
-
 //Path to a file.
 GTEST_INCLUDE_DIR:PATH=/usr/include
 
@@ -213,9 +206,6 @@ GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
-//Single output directory for building all libraries.
-LIBRARY_OUTPUT_PATH:PATH=
-
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
 
@@ -225,23 +215,11 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
-//Path to a file.
-PROJECTCONFIG:FILEPATH=PROJECTCONFIG-NOTFOUND
-
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
 //Specify specific Python version to use ('major.minor' or 'major')
 PYTHON_VERSION:STRING=
-
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/eeit/roboarm/catkin_ws/src/brazo_fer
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/eeit/roboarm/catkin_ws/src/brazo_fer
-
-//rospack executable
-ROSPACK_EXE:FILEPATH=/opt/ros/indigo/bin/rospack
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
@@ -254,9 +232,6 @@ UBUNTU:BOOL=TRUE
 
 //LSB Distrib - codename tag
 UBUNTU_TRUSTY:BOOL=TRUE
-
-//Path to a file.
-USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
 _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
@@ -273,6 +248,9 @@ brazo_fer_SOURCE_DIR:STATIC=/home/eeit/roboarm/catkin_ws/src/brazo_fer
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
 
+//The directory containing a CMake configuration file for cpp_common.
+cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
 
@@ -284,6 +262,9 @@ genmsg_DIR:PATH=/opt/ros/indigo/share/genmsg/cmake
 
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/eeit/roboarm/catkin_ws/src/brazo_fer/gtest
@@ -311,13 +292,37 @@ gtest_force_shared_crt:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/indigo/lib/libroslib.so
+lib:FILEPATH=/opt/ros/indigo/lib/libxmlrpcpp.so
 
-//The directory containing a CMake configuration file for roslib.
-roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
+//The directory containing a CMake configuration file for message_generation.
+message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 
-//The directory containing a CMake configuration file for rosunit.
-rosunit_DIR:PATH=/opt/ros/indigo/share/rosunit/cmake
+//The directory containing a CMake configuration file for message_runtime.
+message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for rosconsole.
+rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for roscpp.
+roscpp_DIR:PATH=/opt/ros/indigo/share/roscpp/cmake
+
+//The directory containing a CMake configuration file for roscpp_serialization.
+roscpp_serialization_DIR:PATH=/opt/ros/indigo/share/roscpp_serialization/cmake
+
+//The directory containing a CMake configuration file for roscpp_traits.
+roscpp_traits_DIR:PATH=/opt/ros/indigo/share/roscpp_traits/cmake
+
+//The directory containing a CMake configuration file for rosgraph_msgs.
+rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
+
+//The directory containing a CMake configuration file for rostime.
+rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
+
+//The directory containing a CMake configuration file for std_msgs.
+std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for xmlrpcpp.
+xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
 
 
 ########################
@@ -487,19 +492,4 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
-_rosbuild_EXPORTS:INTERNAL=
-_rosbuild_cached_flag_time:INTERNAL=1425958983.67
-_roslang_LANGS:INTERNAL=roslisp
-_rospack_deps_manifests_invoke_result:INTERNAL=/opt/ros/indigo/share/cpp_common/package.xml;/opt/ros/indigo/share/rostime/package.xml;/opt/ros/indigo/share/roscpp_traits/package.xml;/opt/ros/indigo/share/roscpp_serialization/package.xml;/opt/ros/indigo/share/genmsg/package.xml;/opt/ros/indigo/share/genpy/package.xml;/opt/ros/indigo/share/message_runtime/package.xml;/opt/ros/indigo/share/std_msgs/package.xml;/opt/ros/indigo/share/geometry_msgs/package.xml;/opt/ros/indigo/share/catkin/package.xml;/opt/ros/indigo/share/gencpp/package.xml;/opt/ros/indigo/share/genlisp/package.xml;/opt/ros/indigo/share/message_generation/package.xml;/opt/ros/indigo/share/rosbuild/package.xml;/opt/ros/indigo/share/rosconsole/package.xml;/opt/ros/indigo/share/rosgraph_msgs/package.xml;/opt/ros/indigo/share/xmlrpcpp/package.xml;/opt/ros/indigo/share/roscpp/package.xml
-_rospack_msgsrv_gen_invoke_result:INTERNAL=
-brazo_fer_CFLAGS_OTHER:INTERNAL=
-brazo_fer_INCLUDEDIR:INTERNAL=
-brazo_fer_INCLUDE_DIRS:INTERNAL=/opt/ros/indigo/include
-brazo_fer_LDFLAGS_OTHER:INTERNAL=
-brazo_fer_LIBRARIES:INTERNAL=roscpp;pthread;:/usr/lib/x86_64-linux-gnu/libboost_signals.so;:/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;rosconsole;rosconsole_log4cxx;rosconsole_backend_interface;:/usr/lib/liblog4cxx.so;:/usr/lib/x86_64-linux-gnu/libboost_regex.so;xmlrpcpp;roscpp_serialization;rostime;:/usr/lib/x86_64-linux-gnu/libboost_date_time.so;cpp_common;:/usr/lib/x86_64-linux-gnu/libboost_system.so;:/usr/lib/x86_64-linux-gnu/libboost_thread.so;:/usr/lib/x86_64-linux-gnu/libpthread.so;:/usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-brazo_fer_LIBRARY_DIRS:INTERNAL=/opt/ros/indigo/lib
-brazo_fer_cached_manifest_list:INTERNAL=/home/eeit/roboarm/catkin_ws/src/brazo_fer/manifest.xml;/opt/ros/indigo/share/cpp_common/package.xml;/opt/ros/indigo/share/rostime/package.xml;/opt/ros/indigo/share/roscpp_traits/package.xml;/opt/ros/indigo/share/roscpp_serialization/package.xml;/opt/ros/indigo/share/genmsg/package.xml;/opt/ros/indigo/share/genpy/package.xml;/opt/ros/indigo/share/message_runtime/package.xml;/opt/ros/indigo/share/std_msgs/package.xml;/opt/ros/indigo/share/geometry_msgs/package.xml;/opt/ros/indigo/share/catkin/package.xml;/opt/ros/indigo/share/gencpp/package.xml;/opt/ros/indigo/share/genlisp/package.xml;/opt/ros/indigo/share/message_generation/package.xml;/opt/ros/indigo/share/rosbuild/package.xml;/opt/ros/indigo/share/rosconsole/package.xml;/opt/ros/indigo/share/rosgraph_msgs/package.xml;/opt/ros/indigo/share/xmlrpcpp/package.xml;/opt/ros/indigo/share/roscpp/package.xml
-brazo_fer_temp:INTERNAL=
-roslib_path:INTERNAL=/opt/ros/indigo/share/roslib
-roslisp_CMAKE:INTERNAL=/opt/ros/indigo/share/roslisp/rosbuild/roslisp.cmake
 

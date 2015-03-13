@@ -163,90 +163,6 @@ parser/fast:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f testbot_description/CMakeFiles/parser.dir/build.make testbot_description/CMakeFiles/parser.dir/build
 .PHONY : parser/fast
 
-# Convenience name for target.
-testbot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 testbot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : testbot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: testbot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f testbot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make testbot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-testbot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 testbot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : testbot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: testbot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f testbot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make testbot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-testbot_description/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 testbot_description/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : testbot_description/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: testbot_description/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f testbot_description/CMakeFiles/roscpp_generate_messages_py.dir/build.make testbot_description/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make testbot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
 src/parser.o: src/parser.cpp.o
 .PHONY : src/parser.o
 
@@ -284,12 +200,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... parser"
 	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... test"
 	@echo "... src/parser.o"
 	@echo "... src/parser.i"

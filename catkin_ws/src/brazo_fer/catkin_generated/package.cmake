@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "brazo_fer")
+set(brazo_fer_MAINTAINER "eeit <eeit@todo.todo>")
+set(brazo_fer_DEPRECATED "")
+set(brazo_fer_VERSION "0.0.0")
+set(brazo_fer_BUILD_DEPENDS "message_generation" "geometry_msgs" "roscpp" "std_msgs")
+set(brazo_fer_RUN_DEPENDS "message_runtime" "geometry_msgs" "roscpp" "std_msgs")
+set(brazo_fer_BUILDTOOL_DEPENDS "catkin")

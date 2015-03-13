@@ -1,0 +1,20 @@
+<launch>
+
+  <param name="/use_sim_time" value="true" />
+
+  <node name="gazebo" pkg="gazebo" type="gazebo" args="-u $(find brazo_fer_modelo)/worlds/empty.world" respawn="false" output="screen"/>
+  <node name="gazebo_gui" pkg="gazebo" type="gui" />
+
+<group ns="brazo">
+
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find brazo_fer_modelo)/src/brazo.urdf.xacro'" />
+
+  <node name="spawn_brazo" pkg="gazebo" type="spawn_model" args="-urdf -param robot_description -model brazo" respawn="false" output="screen" />
+
+  <rosparam file="$(find brazo_fer_modelo)/controllers.yaml" command="load"/>
+
+  <node name="spawn_controller_brazo" pkg="pr2_controller_manager" type="spawner" args="base_pos_controller arti1_pos_controller arti2_pos_controller arti3_pos_controller pinza_pos_controller base_vel_controller arti1_vel_controller arti2_vel_controller arti3_vel_controller pinza_vel_controller" respawn="false" output="screen" />
+ 
+</group>  
+ 
+</launch>

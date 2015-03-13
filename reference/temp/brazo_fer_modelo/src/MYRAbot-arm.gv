@@ -1,0 +1,65 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"base_brazo_link" [label="base_brazo_link"];
+"hombro_link" [label="hombro_link"];
+"brazo_link" [label="brazo_link"];
+"antebrazo_link" [label="antebrazo_link"];
+"muneca_link" [label="muneca_link"];
+"pinza_link" [label="pinza_link"];
+"pinza_link_B" [label="pinza_link_B"];
+"pinza_link_SI" [label="pinza_link_SI"];
+"pinza_link_SD" [label="pinza_link_SD"];
+"muneca_link_B" [label="muneca_link_B"];
+"muneca_link_SI" [label="muneca_link_SI"];
+"muneca_link_SD" [label="muneca_link_SD"];
+"muneca_link_P" [label="muneca_link_P"];
+"muneca_link_PS" [label="muneca_link_PS"];
+"antebrazo_link_B" [label="antebrazo_link_B"];
+"antebrazo_link_SI" [label="antebrazo_link_SI"];
+"antebrazo_link_SD" [label="antebrazo_link_SD"];
+"brazo_link_B" [label="brazo_link_B"];
+"brazo_link_SI" [label="brazo_link_SI"];
+"brazo_link_SD" [label="brazo_link_SD"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "fixed" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"fixed" -> "base_brazo_link"
+"base_brazo_link" -> "base" [label="xyz: 0 0 0.04 \nrpy: 0 -0 0"]
+"base" -> "hombro_link"
+"hombro_link" -> "arti1" [label="xyz: 0 0 0.0385 \nrpy: 0 -0 0"]
+"arti1" -> "brazo_link"
+"brazo_link" -> "arti2" [label="xyz: 0 0 0.104 \nrpy: 0 -0 0"]
+"arti2" -> "antebrazo_link"
+"antebrazo_link" -> "arti3" [label="xyz: 0 0 0.104 \nrpy: 0 -0 0"]
+"arti3" -> "muneca_link"
+"muneca_link" -> "pinza" [label="xyz: -0.00725 0 0.06 \nrpy: 0 -0 0"]
+"pinza" -> "pinza_link"
+"pinza_link" -> "servo_pinza_B" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_pinza_B" -> "pinza_link_B"
+"pinza_link" -> "servo_pinza_D" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_pinza_D" -> "pinza_link_SI"
+"pinza_link" -> "servo_pinza_I" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_pinza_I" -> "pinza_link_SD"
+"muneca_link" -> "servo_arti3_B" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti3_B" -> "muneca_link_B"
+"muneca_link" -> "servo_arti3_D" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti3_D" -> "muneca_link_SI"
+"muneca_link" -> "servo_arti3_I" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti3_I" -> "muneca_link_SD"
+"muneca_link" -> "servo_arti3_P" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti3_P" -> "muneca_link_P"
+"muneca_link" -> "servo_arti3_PS" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti3_PS" -> "muneca_link_PS"
+"antebrazo_link" -> "servo_arti2_B" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti2_B" -> "antebrazo_link_B"
+"antebrazo_link" -> "servo_arti2_D" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti2_D" -> "antebrazo_link_SI"
+"antebrazo_link" -> "servo_arti2_I" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti2_I" -> "antebrazo_link_SD"
+"brazo_link" -> "servo_arti1_B" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti1_B" -> "brazo_link_B"
+"brazo_link" -> "servo_arti1_D" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti1_D" -> "brazo_link_SI"
+"brazo_link" -> "servo_arti1_I" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"servo_arti1_I" -> "brazo_link_SD"
+}

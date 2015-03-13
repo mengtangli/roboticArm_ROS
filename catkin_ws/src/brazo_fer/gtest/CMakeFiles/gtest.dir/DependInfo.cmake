@@ -11,7 +11,6 @@ SET(CMAKE_CXX_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 SET(CMAKE_TARGET_DEFINITIONS
   "GTEST_CREATE_SHARED_LIBRARY=1"
-  "ROS_PACKAGE_NAME=\"brazo_fer\""
   )
 
 # Targets to which this target links.
@@ -20,8 +19,6 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "include"
-  "/opt/ros/indigo/include"
   "/usr/src/gtest/include"
   "/usr/src/gtest"
   )
