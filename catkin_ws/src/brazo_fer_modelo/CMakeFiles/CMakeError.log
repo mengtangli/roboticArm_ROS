@@ -1,0 +1,106 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec360264089/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec360264089.dir/build.make CMakeFiles/cmTryCompileExec360264089.dir/build
+make[1]: Entering directory `/home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec360264089.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec360264089.dir/CheckSymbolExists.c.o   -c /home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec360264089
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec360264089.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec360264089.dir/CheckSymbolExists.c.o  -o cmTryCompileExec360264089 -rdynamic 
+CMakeFiles/cmTryCompileExec360264089.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec360264089] Error 1
+make: *** [cmTryCompileExec360264089/fast] Error 2
+
+File /home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1362117999/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1362117999.dir/build.make CMakeFiles/cmTryCompileExec1362117999.dir/build
+make[1]: Entering directory `/home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1362117999.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1362117999.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1362117999
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1362117999.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1362117999.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1362117999 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec1362117999] Error 1
+make[1]: Leaving directory `/home/eeit/roboarm/catkin_ws/brazo_fer_modelo/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1362117999/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec302043657/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec302043657.dir/build.make CMakeFiles/cmTryCompileExec302043657.dir/build
+make[1]: Entering directory `/home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec302043657.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec302043657.dir/CheckSymbolExists.c.o   -c /home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec302043657
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec302043657.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec302043657.dir/CheckSymbolExists.c.o  -o cmTryCompileExec302043657 -rdynamic 
+CMakeFiles/cmTryCompileExec302043657.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec302043657] Error 1
+make[1]: Leaving directory `/home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec302043657/fast] Error 2
+
+File /home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1534196874/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1534196874.dir/build.make CMakeFiles/cmTryCompileExec1534196874.dir/build
+make[1]: Entering directory `/home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1534196874.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1534196874.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1534196874
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1534196874.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1534196874.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1534196874 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec1534196874] Error 1
+make[1]: Leaving directory `/home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1534196874/fast] Error 2
+
+

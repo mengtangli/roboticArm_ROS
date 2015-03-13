@@ -150,144 +150,118 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/rule
-.PHONY : brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/rule
+brazo_fer/CMakeFiles/control_v01.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/control_v01.dir/rule
+.PHONY : brazo_fer/CMakeFiles/control_v01.dir/rule
 
 # Convenience name for target.
-_brazo_fer_generate_messages_check_deps_ReadServos: brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/rule
-.PHONY : _brazo_fer_generate_messages_check_deps_ReadServos
+control_v01: brazo_fer/CMakeFiles/control_v01.dir/rule
+.PHONY : control_v01
 
 # fast build rule for target.
-_brazo_fer_generate_messages_check_deps_ReadServos/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/build.make brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/build
-.PHONY : _brazo_fer_generate_messages_check_deps_ReadServos/fast
+control_v01/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/control_v01.dir/build.make brazo_fer/CMakeFiles/control_v01.dir/build
+.PHONY : control_v01/fast
 
 # Convenience name for target.
-brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/rule
-.PHONY : brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/rule
+brazo_fer/CMakeFiles/tele.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/tele.dir/rule
+.PHONY : brazo_fer/CMakeFiles/tele.dir/rule
 
 # Convenience name for target.
-_brazo_fer_generate_messages_check_deps_Servos: brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/rule
-.PHONY : _brazo_fer_generate_messages_check_deps_Servos
+tele: brazo_fer/CMakeFiles/tele.dir/rule
+.PHONY : tele
 
 # fast build rule for target.
-_brazo_fer_generate_messages_check_deps_Servos/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/build.make brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/build
-.PHONY : _brazo_fer_generate_messages_check_deps_Servos/fast
+tele/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/tele.dir/build.make brazo_fer/CMakeFiles/tele.dir/build
+.PHONY : tele/fast
 
 # Convenience name for target.
-brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/rule
-.PHONY : brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/rule
+brazo_fer/CMakeFiles/teleoperador_teclado.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/teleoperador_teclado.dir/rule
+.PHONY : brazo_fer/CMakeFiles/teleoperador_teclado.dir/rule
 
 # Convenience name for target.
-_brazo_fer_generate_messages_check_deps_WriteServos: brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/rule
-.PHONY : _brazo_fer_generate_messages_check_deps_WriteServos
+teleoperador_teclado: brazo_fer/CMakeFiles/teleoperador_teclado.dir/rule
+.PHONY : teleoperador_teclado
 
 # fast build rule for target.
-_brazo_fer_generate_messages_check_deps_WriteServos/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/build.make brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/build
-.PHONY : _brazo_fer_generate_messages_check_deps_WriteServos/fast
+teleoperador_teclado/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/teleoperador_teclado.dir/build.make brazo_fer/CMakeFiles/teleoperador_teclado.dir/build
+.PHONY : teleoperador_teclado/fast
 
-# Convenience name for target.
-brazo_fer/CMakeFiles/brazo_fer_gencpp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/brazo_fer_gencpp.dir/rule
-.PHONY : brazo_fer/CMakeFiles/brazo_fer_gencpp.dir/rule
+src/control_v01.o: src/control_v01.cpp.o
+.PHONY : src/control_v01.o
 
-# Convenience name for target.
-brazo_fer_gencpp: brazo_fer/CMakeFiles/brazo_fer_gencpp.dir/rule
-.PHONY : brazo_fer_gencpp
+# target to build an object file
+src/control_v01.cpp.o:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/control_v01.dir/build.make brazo_fer/CMakeFiles/control_v01.dir/src/control_v01.cpp.o
+.PHONY : src/control_v01.cpp.o
 
-# fast build rule for target.
-brazo_fer_gencpp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/brazo_fer_gencpp.dir/build.make brazo_fer/CMakeFiles/brazo_fer_gencpp.dir/build
-.PHONY : brazo_fer_gencpp/fast
+src/control_v01.i: src/control_v01.cpp.i
+.PHONY : src/control_v01.i
 
-# Convenience name for target.
-brazo_fer/CMakeFiles/brazo_fer_generate_messages.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/brazo_fer_generate_messages.dir/rule
-.PHONY : brazo_fer/CMakeFiles/brazo_fer_generate_messages.dir/rule
+# target to preprocess a source file
+src/control_v01.cpp.i:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/control_v01.dir/build.make brazo_fer/CMakeFiles/control_v01.dir/src/control_v01.cpp.i
+.PHONY : src/control_v01.cpp.i
 
-# Convenience name for target.
-brazo_fer_generate_messages: brazo_fer/CMakeFiles/brazo_fer_generate_messages.dir/rule
-.PHONY : brazo_fer_generate_messages
+src/control_v01.s: src/control_v01.cpp.s
+.PHONY : src/control_v01.s
 
-# fast build rule for target.
-brazo_fer_generate_messages/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/brazo_fer_generate_messages.dir/build.make brazo_fer/CMakeFiles/brazo_fer_generate_messages.dir/build
-.PHONY : brazo_fer_generate_messages/fast
+# target to generate assembly for a file
+src/control_v01.cpp.s:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/control_v01.dir/build.make brazo_fer/CMakeFiles/control_v01.dir/src/control_v01.cpp.s
+.PHONY : src/control_v01.cpp.s
 
-# Convenience name for target.
-brazo_fer/CMakeFiles/brazo_fer_generate_messages_cpp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/brazo_fer_generate_messages_cpp.dir/rule
-.PHONY : brazo_fer/CMakeFiles/brazo_fer_generate_messages_cpp.dir/rule
+src/tele.o: src/tele.cpp.o
+.PHONY : src/tele.o
 
-# Convenience name for target.
-brazo_fer_generate_messages_cpp: brazo_fer/CMakeFiles/brazo_fer_generate_messages_cpp.dir/rule
-.PHONY : brazo_fer_generate_messages_cpp
+# target to build an object file
+src/tele.cpp.o:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/tele.dir/build.make brazo_fer/CMakeFiles/tele.dir/src/tele.cpp.o
+.PHONY : src/tele.cpp.o
 
-# fast build rule for target.
-brazo_fer_generate_messages_cpp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/brazo_fer_generate_messages_cpp.dir/build.make brazo_fer/CMakeFiles/brazo_fer_generate_messages_cpp.dir/build
-.PHONY : brazo_fer_generate_messages_cpp/fast
+src/tele.i: src/tele.cpp.i
+.PHONY : src/tele.i
 
-# Convenience name for target.
-brazo_fer/CMakeFiles/brazo_fer_generate_messages_lisp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/brazo_fer_generate_messages_lisp.dir/rule
-.PHONY : brazo_fer/CMakeFiles/brazo_fer_generate_messages_lisp.dir/rule
+# target to preprocess a source file
+src/tele.cpp.i:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/tele.dir/build.make brazo_fer/CMakeFiles/tele.dir/src/tele.cpp.i
+.PHONY : src/tele.cpp.i
 
-# Convenience name for target.
-brazo_fer_generate_messages_lisp: brazo_fer/CMakeFiles/brazo_fer_generate_messages_lisp.dir/rule
-.PHONY : brazo_fer_generate_messages_lisp
+src/tele.s: src/tele.cpp.s
+.PHONY : src/tele.s
 
-# fast build rule for target.
-brazo_fer_generate_messages_lisp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/brazo_fer_generate_messages_lisp.dir/build.make brazo_fer/CMakeFiles/brazo_fer_generate_messages_lisp.dir/build
-.PHONY : brazo_fer_generate_messages_lisp/fast
+# target to generate assembly for a file
+src/tele.cpp.s:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/tele.dir/build.make brazo_fer/CMakeFiles/tele.dir/src/tele.cpp.s
+.PHONY : src/tele.cpp.s
 
-# Convenience name for target.
-brazo_fer/CMakeFiles/brazo_fer_generate_messages_py.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/brazo_fer_generate_messages_py.dir/rule
-.PHONY : brazo_fer/CMakeFiles/brazo_fer_generate_messages_py.dir/rule
+src/teleoperador_teclado.o: src/teleoperador_teclado.cpp.o
+.PHONY : src/teleoperador_teclado.o
 
-# Convenience name for target.
-brazo_fer_generate_messages_py: brazo_fer/CMakeFiles/brazo_fer_generate_messages_py.dir/rule
-.PHONY : brazo_fer_generate_messages_py
+# target to build an object file
+src/teleoperador_teclado.cpp.o:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/teleoperador_teclado.dir/build.make brazo_fer/CMakeFiles/teleoperador_teclado.dir/src/teleoperador_teclado.cpp.o
+.PHONY : src/teleoperador_teclado.cpp.o
 
-# fast build rule for target.
-brazo_fer_generate_messages_py/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/brazo_fer_generate_messages_py.dir/build.make brazo_fer/CMakeFiles/brazo_fer_generate_messages_py.dir/build
-.PHONY : brazo_fer_generate_messages_py/fast
+src/teleoperador_teclado.i: src/teleoperador_teclado.cpp.i
+.PHONY : src/teleoperador_teclado.i
 
-# Convenience name for target.
-brazo_fer/CMakeFiles/brazo_fer_genlisp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/brazo_fer_genlisp.dir/rule
-.PHONY : brazo_fer/CMakeFiles/brazo_fer_genlisp.dir/rule
+# target to preprocess a source file
+src/teleoperador_teclado.cpp.i:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/teleoperador_teclado.dir/build.make brazo_fer/CMakeFiles/teleoperador_teclado.dir/src/teleoperador_teclado.cpp.i
+.PHONY : src/teleoperador_teclado.cpp.i
 
-# Convenience name for target.
-brazo_fer_genlisp: brazo_fer/CMakeFiles/brazo_fer_genlisp.dir/rule
-.PHONY : brazo_fer_genlisp
+src/teleoperador_teclado.s: src/teleoperador_teclado.cpp.s
+.PHONY : src/teleoperador_teclado.s
 
-# fast build rule for target.
-brazo_fer_genlisp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/brazo_fer_genlisp.dir/build.make brazo_fer/CMakeFiles/brazo_fer_genlisp.dir/build
-.PHONY : brazo_fer_genlisp/fast
-
-# Convenience name for target.
-brazo_fer/CMakeFiles/brazo_fer_genpy.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 brazo_fer/CMakeFiles/brazo_fer_genpy.dir/rule
-.PHONY : brazo_fer/CMakeFiles/brazo_fer_genpy.dir/rule
-
-# Convenience name for target.
-brazo_fer_genpy: brazo_fer/CMakeFiles/brazo_fer_genpy.dir/rule
-.PHONY : brazo_fer_genpy
-
-# fast build rule for target.
-brazo_fer_genpy/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/brazo_fer_genpy.dir/build.make brazo_fer/CMakeFiles/brazo_fer_genpy.dir/build
-.PHONY : brazo_fer_genpy/fast
+# target to generate assembly for a file
+src/teleoperador_teclado.cpp.s:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f brazo_fer/CMakeFiles/teleoperador_teclado.dir/build.make brazo_fer/CMakeFiles/teleoperador_teclado.dir/src/teleoperador_teclado.cpp.s
+.PHONY : src/teleoperador_teclado.cpp.s
 
 # Help Target
 help:
@@ -295,23 +269,25 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... _brazo_fer_generate_messages_check_deps_ReadServos"
-	@echo "... _brazo_fer_generate_messages_check_deps_Servos"
-	@echo "... _brazo_fer_generate_messages_check_deps_WriteServos"
-	@echo "... brazo_fer_gencpp"
-	@echo "... brazo_fer_generate_messages"
-	@echo "... brazo_fer_generate_messages_cpp"
-	@echo "... brazo_fer_generate_messages_lisp"
-	@echo "... brazo_fer_generate_messages_py"
-	@echo "... brazo_fer_genlisp"
-	@echo "... brazo_fer_genpy"
+	@echo "... control_v01"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... tele"
+	@echo "... teleoperador_teclado"
 	@echo "... test"
+	@echo "... src/control_v01.o"
+	@echo "... src/control_v01.i"
+	@echo "... src/control_v01.s"
+	@echo "... src/tele.o"
+	@echo "... src/tele.i"
+	@echo "... src/tele.s"
+	@echo "... src/teleoperador_teclado.o"
+	@echo "... src/teleoperador_teclado.i"
+	@echo "... src/teleoperador_teclado.s"
 .PHONY : help
 
 

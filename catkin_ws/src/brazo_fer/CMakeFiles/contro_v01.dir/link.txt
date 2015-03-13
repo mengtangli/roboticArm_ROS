@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/contro_v01.dir/src/control_v01.cpp.o  -o devel/lib/brazo_fer/contro_v01 -rdynamic 

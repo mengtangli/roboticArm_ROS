@@ -1,2 +1,7 @@
 1. rosrun rosserial_arduino make_libraries.py doesn't make new libraries in Arduino's sketchbook.
 	Solution: rm -rf ros_lib inside sketchbook/libraries, run the command again
+2. rosbuild_add_executable() doesn't work:
+	Solution: Replace by	add_executable(talker src/talker.cpp)
+				target_link_libraries(talker ${catkin_LIBRARIES})
+				add_dependencies(talker ros_tut_generate_messages_cpp)
+	(change talker with your cpp file name)

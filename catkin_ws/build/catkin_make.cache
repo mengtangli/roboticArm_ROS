@@ -1,2 +1,2 @@
-baxter_common/baxter_common:baxter_common/baxter_core_msgs:baxter_common/baxter_description:baxter_common/baxter_maintenance_msgs:brazo_fer:gripper:ros_tut:rrbot_control:rrbot_description:rrbot_gazebo:test_description:test_gazebo:testbot_description
+baxter_common/baxter_common:baxter_common/baxter_core_msgs:baxter_common/baxter_description:baxter_common/baxter_maintenance_msgs:brazo_fer:brazo_fer_modelo:gripper:ros_tut:rrbot_control:rrbot_description:rrbot_gazebo:test_description:test_gazebo:testbot_description
 -DCATKIN_DEVEL_PREFIX=/home/eeit/roboarm/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/eeit/roboarm/catkin_ws/install -G Unix Makefiles

@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(brazo_fer)
 
+include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -8,7 +9,6 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   roscpp
   std_msgs
-  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -45,12 +45,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
- add_message_files(
-   FILES
-   Servos.msg
-   WriteServos.msg
-   ReadServos.msg
- )
+# add_message_files(
+#   FILES
+#   Message1.msg
+#   Message2.msg
+# )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -67,11 +66,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
-   DEPENDENCIES
-   geometry_msgs
-   std_msgs
-)
+# generate_messages(
+#   DEPENDENCIES
+#   geometry_msgs#   std_msgs
+# )
 
 ###################################
 ## catkin specific configuration ##
@@ -82,11 +80,11 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
- catkin_package(
-  INCLUDE_DIRS include
-  LIBRARIES brazo_fer
-  CATKIN_DEPENDS geometry_msgs roscpp std_msgs message_runtime
-  DEPENDS system_lib
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES brazo_fer
+#  CATKIN_DEPENDS geometry_msgs roscpp std_msgs
+#  DEPENDS system_lib
 )
 
 ###########
@@ -164,3 +162,16 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+#//rosbuild_add_executable(control_v01 src/control_v01.cpp)
+add_executable(control_v01 src/control_v01.cpp)
+target_link_libraries(control_v01 ${catkin_LIBRARIES})
+add_dependencies(control_v01 ros_tut_generate_messages_cpp)
+
+add_executable(teleoperador_teclado src/teleoperador_teclado.cpp)
+target_link_libraries(teleoperador_teclado ${catkin_LIBRARIES})
+add_dependencies(teleoperador_teclado ros_tut_generate_messages_cpp)
+
+add_executable(tele src/tele.cpp)
+target_link_libraries(tele ${catkin_LIBRARIES})
+add_dependencies(tele ros_tut_generate_messages_cpp)

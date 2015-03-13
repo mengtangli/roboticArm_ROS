@@ -53,334 +53,6 @@ CMAKE_SOURCE_DIR = /home/eeit/roboarm/catkin_ws/src/brazo_fer
 CMAKE_BINARY_DIR = /home/eeit/roboarm/catkin_ws/src/brazo_fer
 
 #=============================================================================
-# Target rules for target CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir
-
-# All Build rule for target.
-CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/all:
-	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/depend
-	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 
-	@echo "Built target _brazo_fer_generate_messages_check_deps_ReadServos"
-.PHONY : CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/rule
-
-# Convenience name for target.
-_brazo_fer_generate_messages_check_deps_ReadServos: CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/rule
-.PHONY : _brazo_fer_generate_messages_check_deps_ReadServos
-
-# clean rule for target.
-CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/clean:
-	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/clean
-.PHONY : CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir
-
-# All Build rule for target.
-CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/all:
-	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/depend
-	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 
-	@echo "Built target _brazo_fer_generate_messages_check_deps_Servos"
-.PHONY : CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/rule
-
-# Convenience name for target.
-_brazo_fer_generate_messages_check_deps_Servos: CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/rule
-.PHONY : _brazo_fer_generate_messages_check_deps_Servos
-
-# clean rule for target.
-CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/clean:
-	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/clean
-.PHONY : CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir
-
-# All Build rule for target.
-CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/all:
-	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/depend
-	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 
-	@echo "Built target _brazo_fer_generate_messages_check_deps_WriteServos"
-.PHONY : CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/rule
-
-# Convenience name for target.
-_brazo_fer_generate_messages_check_deps_WriteServos: CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/rule
-.PHONY : _brazo_fer_generate_messages_check_deps_WriteServos
-
-# clean rule for target.
-CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/clean:
-	$(MAKE) -f CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/build.make CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/clean
-.PHONY : CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/brazo_fer_gencpp.dir
-
-# All Build rule for target.
-CMakeFiles/brazo_fer_gencpp.dir/all: CMakeFiles/brazo_fer_generate_messages_cpp.dir/all
-	$(MAKE) -f CMakeFiles/brazo_fer_gencpp.dir/build.make CMakeFiles/brazo_fer_gencpp.dir/depend
-	$(MAKE) -f CMakeFiles/brazo_fer_gencpp.dir/build.make CMakeFiles/brazo_fer_gencpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 
-	@echo "Built target brazo_fer_gencpp"
-.PHONY : CMakeFiles/brazo_fer_gencpp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/brazo_fer_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/brazo_fer_gencpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/brazo_fer_gencpp.dir/rule
-
-# Convenience name for target.
-brazo_fer_gencpp: CMakeFiles/brazo_fer_gencpp.dir/rule
-.PHONY : brazo_fer_gencpp
-
-# clean rule for target.
-CMakeFiles/brazo_fer_gencpp.dir/clean:
-	$(MAKE) -f CMakeFiles/brazo_fer_gencpp.dir/build.make CMakeFiles/brazo_fer_gencpp.dir/clean
-.PHONY : CMakeFiles/brazo_fer_gencpp.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/brazo_fer_gencpp.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/brazo_fer_generate_messages.dir
-
-# All Build rule for target.
-CMakeFiles/brazo_fer_generate_messages.dir/all: CMakeFiles/brazo_fer_generate_messages_lisp.dir/all
-CMakeFiles/brazo_fer_generate_messages.dir/all: CMakeFiles/brazo_fer_generate_messages_py.dir/all
-CMakeFiles/brazo_fer_generate_messages.dir/all: CMakeFiles/brazo_fer_generate_messages_cpp.dir/all
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages.dir/build.make CMakeFiles/brazo_fer_generate_messages.dir/depend
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages.dir/build.make CMakeFiles/brazo_fer_generate_messages.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 
-	@echo "Built target brazo_fer_generate_messages"
-.PHONY : CMakeFiles/brazo_fer_generate_messages.dir/all
-
-# Include target in all.
-all: CMakeFiles/brazo_fer_generate_messages.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/brazo_fer_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 10
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/brazo_fer_generate_messages.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/brazo_fer_generate_messages.dir/rule
-
-# Convenience name for target.
-brazo_fer_generate_messages: CMakeFiles/brazo_fer_generate_messages.dir/rule
-.PHONY : brazo_fer_generate_messages
-
-# clean rule for target.
-CMakeFiles/brazo_fer_generate_messages.dir/clean:
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages.dir/build.make CMakeFiles/brazo_fer_generate_messages.dir/clean
-.PHONY : CMakeFiles/brazo_fer_generate_messages.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/brazo_fer_generate_messages.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/brazo_fer_generate_messages_cpp.dir
-
-# All Build rule for target.
-CMakeFiles/brazo_fer_generate_messages_cpp.dir/all: CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/all
-CMakeFiles/brazo_fer_generate_messages_cpp.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-CMakeFiles/brazo_fer_generate_messages_cpp.dir/all: CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-CMakeFiles/brazo_fer_generate_messages_cpp.dir/all: CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/all
-CMakeFiles/brazo_fer_generate_messages_cpp.dir/all: CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/all
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_cpp.dir/build.make CMakeFiles/brazo_fer_generate_messages_cpp.dir/depend
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_cpp.dir/build.make CMakeFiles/brazo_fer_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles  1 2 3
-	@echo "Built target brazo_fer_generate_messages_cpp"
-.PHONY : CMakeFiles/brazo_fer_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/brazo_fer_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/brazo_fer_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/brazo_fer_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-brazo_fer_generate_messages_cpp: CMakeFiles/brazo_fer_generate_messages_cpp.dir/rule
-.PHONY : brazo_fer_generate_messages_cpp
-
-# clean rule for target.
-CMakeFiles/brazo_fer_generate_messages_cpp.dir/clean:
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_cpp.dir/build.make CMakeFiles/brazo_fer_generate_messages_cpp.dir/clean
-.PHONY : CMakeFiles/brazo_fer_generate_messages_cpp.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/brazo_fer_generate_messages_cpp.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/brazo_fer_generate_messages_lisp.dir
-
-# All Build rule for target.
-CMakeFiles/brazo_fer_generate_messages_lisp.dir/all: CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/all
-CMakeFiles/brazo_fer_generate_messages_lisp.dir/all: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-CMakeFiles/brazo_fer_generate_messages_lisp.dir/all: CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/all
-CMakeFiles/brazo_fer_generate_messages_lisp.dir/all: CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-CMakeFiles/brazo_fer_generate_messages_lisp.dir/all: CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/all
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_lisp.dir/build.make CMakeFiles/brazo_fer_generate_messages_lisp.dir/depend
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_lisp.dir/build.make CMakeFiles/brazo_fer_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles  4 5 6
-	@echo "Built target brazo_fer_generate_messages_lisp"
-.PHONY : CMakeFiles/brazo_fer_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/brazo_fer_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/brazo_fer_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/brazo_fer_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-brazo_fer_generate_messages_lisp: CMakeFiles/brazo_fer_generate_messages_lisp.dir/rule
-.PHONY : brazo_fer_generate_messages_lisp
-
-# clean rule for target.
-CMakeFiles/brazo_fer_generate_messages_lisp.dir/clean:
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_lisp.dir/build.make CMakeFiles/brazo_fer_generate_messages_lisp.dir/clean
-.PHONY : CMakeFiles/brazo_fer_generate_messages_lisp.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/brazo_fer_generate_messages_lisp.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/brazo_fer_generate_messages_py.dir
-
-# All Build rule for target.
-CMakeFiles/brazo_fer_generate_messages_py.dir/all: CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir/all
-CMakeFiles/brazo_fer_generate_messages_py.dir/all: CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-CMakeFiles/brazo_fer_generate_messages_py.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
-CMakeFiles/brazo_fer_generate_messages_py.dir/all: CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir/all
-CMakeFiles/brazo_fer_generate_messages_py.dir/all: CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir/all
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_py.dir/build.make CMakeFiles/brazo_fer_generate_messages_py.dir/depend
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_py.dir/build.make CMakeFiles/brazo_fer_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles  7 8 9 10
-	@echo "Built target brazo_fer_generate_messages_py"
-.PHONY : CMakeFiles/brazo_fer_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/brazo_fer_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/brazo_fer_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/brazo_fer_generate_messages_py.dir/rule
-
-# Convenience name for target.
-brazo_fer_generate_messages_py: CMakeFiles/brazo_fer_generate_messages_py.dir/rule
-.PHONY : brazo_fer_generate_messages_py
-
-# clean rule for target.
-CMakeFiles/brazo_fer_generate_messages_py.dir/clean:
-	$(MAKE) -f CMakeFiles/brazo_fer_generate_messages_py.dir/build.make CMakeFiles/brazo_fer_generate_messages_py.dir/clean
-.PHONY : CMakeFiles/brazo_fer_generate_messages_py.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/brazo_fer_generate_messages_py.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/brazo_fer_genlisp.dir
-
-# All Build rule for target.
-CMakeFiles/brazo_fer_genlisp.dir/all: CMakeFiles/brazo_fer_generate_messages_lisp.dir/all
-	$(MAKE) -f CMakeFiles/brazo_fer_genlisp.dir/build.make CMakeFiles/brazo_fer_genlisp.dir/depend
-	$(MAKE) -f CMakeFiles/brazo_fer_genlisp.dir/build.make CMakeFiles/brazo_fer_genlisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 
-	@echo "Built target brazo_fer_genlisp"
-.PHONY : CMakeFiles/brazo_fer_genlisp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/brazo_fer_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/brazo_fer_genlisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/brazo_fer_genlisp.dir/rule
-
-# Convenience name for target.
-brazo_fer_genlisp: CMakeFiles/brazo_fer_genlisp.dir/rule
-.PHONY : brazo_fer_genlisp
-
-# clean rule for target.
-CMakeFiles/brazo_fer_genlisp.dir/clean:
-	$(MAKE) -f CMakeFiles/brazo_fer_genlisp.dir/build.make CMakeFiles/brazo_fer_genlisp.dir/clean
-.PHONY : CMakeFiles/brazo_fer_genlisp.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/brazo_fer_genlisp.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/brazo_fer_genpy.dir
-
-# All Build rule for target.
-CMakeFiles/brazo_fer_genpy.dir/all: CMakeFiles/brazo_fer_generate_messages_py.dir/all
-	$(MAKE) -f CMakeFiles/brazo_fer_genpy.dir/build.make CMakeFiles/brazo_fer_genpy.dir/depend
-	$(MAKE) -f CMakeFiles/brazo_fer_genpy.dir/build.make CMakeFiles/brazo_fer_genpy.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 
-	@echo "Built target brazo_fer_genpy"
-.PHONY : CMakeFiles/brazo_fer_genpy.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/brazo_fer_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/brazo_fer_genpy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
-.PHONY : CMakeFiles/brazo_fer_genpy.dir/rule
-
-# Convenience name for target.
-brazo_fer_genpy: CMakeFiles/brazo_fer_genpy.dir/rule
-.PHONY : brazo_fer_genpy
-
-# clean rule for target.
-CMakeFiles/brazo_fer_genpy.dir/clean:
-	$(MAKE) -f CMakeFiles/brazo_fer_genpy.dir/build.make CMakeFiles/brazo_fer_genpy.dir/clean
-.PHONY : CMakeFiles/brazo_fer_genpy.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/brazo_fer_genpy.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/clean_test_results.dir
 
 # All Build rule for target.
@@ -409,6 +81,41 @@ CMakeFiles/clean_test_results.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/clean_test_results.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/control_v01.dir
+
+# All Build rule for target.
+CMakeFiles/control_v01.dir/all:
+	$(MAKE) -f CMakeFiles/control_v01.dir/build.make CMakeFiles/control_v01.dir/depend
+	$(MAKE) -f CMakeFiles/control_v01.dir/build.make CMakeFiles/control_v01.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles  1
+	@echo "Built target control_v01"
+.PHONY : CMakeFiles/control_v01.dir/all
+
+# Include target in all.
+all: CMakeFiles/control_v01.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/control_v01.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/control_v01.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
+.PHONY : CMakeFiles/control_v01.dir/rule
+
+# Convenience name for target.
+control_v01: CMakeFiles/control_v01.dir/rule
+.PHONY : control_v01
+
+# clean rule for target.
+CMakeFiles/control_v01.dir/clean:
+	$(MAKE) -f CMakeFiles/control_v01.dir/build.make CMakeFiles/control_v01.dir/clean
+.PHONY : CMakeFiles/control_v01.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/control_v01.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -846,6 +553,41 @@ clean: CMakeFiles/std_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/teleoperador_teclado.dir
+
+# All Build rule for target.
+CMakeFiles/teleoperador_teclado.dir/all:
+	$(MAKE) -f CMakeFiles/teleoperador_teclado.dir/build.make CMakeFiles/teleoperador_teclado.dir/depend
+	$(MAKE) -f CMakeFiles/teleoperador_teclado.dir/build.make CMakeFiles/teleoperador_teclado.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles  4
+	@echo "Built target teleoperador_teclado"
+.PHONY : CMakeFiles/teleoperador_teclado.dir/all
+
+# Include target in all.
+all: CMakeFiles/teleoperador_teclado.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/teleoperador_teclado.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/teleoperador_teclado.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles 0
+.PHONY : CMakeFiles/teleoperador_teclado.dir/rule
+
+# Convenience name for target.
+teleoperador_teclado: CMakeFiles/teleoperador_teclado.dir/rule
+.PHONY : teleoperador_teclado
+
+# clean rule for target.
+CMakeFiles/teleoperador_teclado.dir/clean:
+	$(MAKE) -f CMakeFiles/teleoperador_teclado.dir/build.make CMakeFiles/teleoperador_teclado.dir/clean
+.PHONY : CMakeFiles/teleoperador_teclado.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/teleoperador_teclado.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/tests.dir
 
 # All Build rule for target.
@@ -899,7 +641,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles  11
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles  2
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
@@ -930,7 +672,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles  12
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles  3
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 

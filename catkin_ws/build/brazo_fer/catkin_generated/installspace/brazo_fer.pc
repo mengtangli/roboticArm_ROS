@@ -3,6 +3,6 @@ prefix=/home/eeit/roboarm/catkin_ws/install
 Name: brazo_fer
 Description: Description of brazo_fer
 Version: 0.0.0
-Cflags: -I/home/eeit/roboarm/catkin_ws/install/include
-Libs: -L/home/eeit/roboarm/catkin_ws/install/lib -lbrazo_fer
-Requires: geometry_msgs roscpp std_msgs message_runtime
+Cflags: 
+Libs: -L/home/eeit/roboarm/catkin_ws/install/lib 
+Requires: 

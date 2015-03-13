@@ -64,9 +64,9 @@ int main(int argc, char **argv)
     msg.first = count;
     ROS_INFO("First: %d", msg.first);
     msg.second = count;
-    ROS_INFO("First: %d", msg.first);
+    ROS_INFO("Second: %d", msg.first);
     msg.third = count;
-    ROS_INFO("First: %d", msg.first);
+    ROS_INFO("Third: %d", msg.first);
     /**
      * The publish() function is how you send messages. The parameter
      * is the message object. The type of this object must agree with the type

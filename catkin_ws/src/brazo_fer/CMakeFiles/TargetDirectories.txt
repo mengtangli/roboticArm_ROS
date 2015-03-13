@@ -1,14 +1,5 @@
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_ReadServos.dir
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_Servos.dir
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/_brazo_fer_generate_messages_check_deps_WriteServos.dir
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/brazo_fer_gencpp.dir
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/brazo_fer_generate_messages.dir
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/brazo_fer_generate_messages_cpp.dir
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/brazo_fer_generate_messages_lisp.dir
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/brazo_fer_generate_messages_py.dir
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/brazo_fer_genlisp.dir
-/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/brazo_fer_genpy.dir
 /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/clean_test_results.dir
+/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/control_v01.dir
 /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/doxygen.dir
 /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
 /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
@@ -25,4 +16,5 @@
 /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/std_msgs_generate_messages_cpp.dir
 /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/std_msgs_generate_messages_lisp.dir
 /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/teleoperador_teclado.dir
 /home/eeit/roboarm/catkin_ws/src/brazo_fer/CMakeFiles/tests.dir

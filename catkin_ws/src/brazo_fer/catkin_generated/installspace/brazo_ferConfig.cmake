@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(brazo_fer_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include" STREQUAL "")
+if(NOT "" STREQUAL "")
   set(brazo_fer_INCLUDE_DIRS "")
-  set(_include_dirs "include")
+  set(_include_dirs "")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -109,7 +109,7 @@ if(NOT "include" STREQUAL "")
   endforeach()
 endif()
 
-set(libraries "brazo_fer")
+set(libraries "")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^debug|optimized|general$")
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(brazo_fer_EXPORTED_TARGETS "brazo_fer_generate_messages_cpp;brazo_fer_generate_messages_lisp;brazo_fer_generate_messages_py")
+set(brazo_fer_EXPORTED_TARGETS "")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${brazo_fer_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -153,7 +153,7 @@ foreach(t ${brazo_fer_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "geometry_msgs;roscpp;std_msgs;message_runtime")
+set(depends "")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND brazo_fer_EXPORTED_TARGETS ${${brazo_fer_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "brazo_fer-msg-extras.cmake")
+set(pkg_cfg_extras "")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${brazo_fer_DIR}/${extra})

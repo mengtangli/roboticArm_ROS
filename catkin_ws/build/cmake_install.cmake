@@ -137,6 +137,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/eeit/roboarm/catkin_ws/build/test_description/cmake_install.cmake")
   INCLUDE("/home/eeit/roboarm/catkin_ws/build/test_gazebo/cmake_install.cmake")
   INCLUDE("/home/eeit/roboarm/catkin_ws/build/brazo_fer/cmake_install.cmake")
+  INCLUDE("/home/eeit/roboarm/catkin_ws/build/brazo_fer_modelo/cmake_install.cmake")
   INCLUDE("/home/eeit/roboarm/catkin_ws/build/testbot_description/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
