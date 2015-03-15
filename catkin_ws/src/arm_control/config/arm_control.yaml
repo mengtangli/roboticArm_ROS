@@ -5,15 +5,23 @@ arm:
     publish_rate: 50  
   
   # Position Controllers ---------------------------------------
-  joint1_z_controller:
+  elbow1_1_controller:
     type: effort_controllers/JointPositionController
-    joint: joint1_z
+    joint: elbow1_1
     pid: {p: 100.0, i: 0.01, d: 10.0}
-  joint1_y_controller:
+  elbow1_2_controller:
     type: effort_controllers/JointPositionController
-    joint: joint1_y
+    joint: elbow1_2
     pid: {p: 100.0, i: 0.01, d: 10.0}
-  joint2_position_controller:
+  elbow2_1_controller:
     type: effort_controllers/JointPositionController
-    joint: joint2
+    joint: elbow2_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  elbow2_2_controller:
+    type: effort_controllers/JointPositionController
+    joint: elbow2_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  elbow3_1_controller:
+    type: effort_controllers/JointPositionController
+    joint: elbow3_1
     pid: {p: 100.0, i: 0.01, d: 10.0}
