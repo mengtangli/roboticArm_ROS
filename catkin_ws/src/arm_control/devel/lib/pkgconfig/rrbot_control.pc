@@ -1,0 +1,8 @@
+prefix=/home/eeit/roboarm/catkin_ws/src/rrbot_control/devel
+
+Name: rrbot_control
+Description: Description of rrbot_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/eeit/roboarm/catkin_ws/src/rrbot_control/devel/lib 
+Requires: 

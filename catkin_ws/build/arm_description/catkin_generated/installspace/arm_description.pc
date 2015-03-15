@@ -1,0 +1,8 @@
+prefix=/home/eeit/roboarm/catkin_ws/install
+
+Name: arm_description
+Description: Description of arm_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/eeit/roboarm/catkin_ws/install/lib 
+Requires: 

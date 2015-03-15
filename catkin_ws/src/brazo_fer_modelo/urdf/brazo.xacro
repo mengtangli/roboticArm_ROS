@@ -453,7 +453,57 @@
 	  <default_inertia />
     </inertial>            
   </link>
+
+ <gazebo_propiedades_link nombre="base_brazo_link" material="Black" />
  
+<gazebo_propiedades_link nombre="hombro_link" material="Black" />
+ 
+<gazebo_propiedades_link nombre="brazo_link" material="Black" />  
+ 
+<gazebo_propiedades_link nombre="antebrazo_link" material="Black" />
+ 
+<gazebo_propiedades_link nombre="muneca_link" material="Black" />
+ 
+<gazebo_propiedades_link nombre="brazo_link_B" material="White" />   
+ 
+<gazebo_propiedades_link nombre="brazo_link_SI" material="White" /> 
+ 
+<gazebo_propiedades_link nombre="brazo_link_SD" material="White" />     
+ 
+<gazebo_propiedades_link nombre="antebrazo_link_B" material="White" />   
+ 
+<gazebo_propiedades_link nombre="antebrazo_link_SI" material="White" />   
+ 
+<gazebo_propiedades_link nombre="antebrazo_link_SD" material="White" />   
+ 
+<gazebo_propiedades_link nombre="muneca_link_B" material="White" />   
+ 
+<gazebo_propiedades_link nombre="muneca_link_SI" material="White" />   
+ 
+<gazebo_propiedades_link nombre="muneca_link_SD" material="White" />   
+ 
+<gazebo_propiedades_link nombre="muneca_link_P" material="White" /> 
+ 
+<gazebo_propiedades_link nombre="muneca_link_PS" material="White" />     
+ 
+<gazebo_propiedades_link nombre="pinza_link" material="White" />   
+ 
+<gazebo_propiedades_link nombre="pinza_link_B" material="White" />   
+ 
+<gazebo_propiedades_link nombre="pinza_link_SI" material="White" />   
+ 
+<gazebo_propiedades_link nombre="pinza_link_SD" material="White" /> 
+ 
+<gazebo_propiedades_joint nombre="base" />
+ 
+<gazebo_propiedades_joint nombre="arti1" />
+ 
+<gazebo_propiedades_joint nombre="arti2" />
+ 
+<gazebo_propiedades_joint nombre="arti3" />
+ 
+<gazebo_propiedades_joint nombre="pinza" />
+
 </macro>
  
 </robot>

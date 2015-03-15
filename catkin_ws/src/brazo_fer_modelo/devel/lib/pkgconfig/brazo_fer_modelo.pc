@@ -1,0 +1,8 @@
+prefix=/home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/devel
+
+Name: brazo_fer_modelo
+Description: Description of brazo_fer_modelo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/eeit/roboarm/catkin_ws/src/brazo_fer_modelo/devel/lib 
+Requires: 

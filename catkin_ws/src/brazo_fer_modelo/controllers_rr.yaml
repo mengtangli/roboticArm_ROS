@@ -1,0 +1,33 @@
+brazo:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+  base_pos_controller:
+    type: effort_controllers/JointPositionController
+    joint: base
+    pid: {p: 2.0, i: 0.5, d: 0.0}
+
+  arti1_pos_controller:
+    type: effort_controllers/JointPositionController
+    joint: arti1
+    pid: {p: 2.0, i: 0.5, d: 0.0}
+
+  arti2_pos_controller:
+    type: effort_controllers/JointPositionController
+    joint: arti2
+    pid: {p: 2.0, i: 0.5, d: 0.0}
+
+  arti3_pos_controller:
+    type: effort_controllers/JointPositionController
+    joint: arti3
+    pid: {p: 2.0, i: 0.5, d: 0.0}
+
+  pinza_pos_controller:
+    type: effort_controllers/JointPositionController
+    joint: pinza
+    pid: {p: 2.0, i: 0.5, d: 0.0}
+
+

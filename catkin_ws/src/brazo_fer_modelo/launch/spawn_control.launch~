@@ -1,0 +1,26 @@
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find brazo_fer_modelo)/worlds/brazo.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+
+  <!-- Spawn a robot into Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find brazo_fer_modelo)/src/brazo_test.urdf -urdf -z 0 -model brazo" />
+
+  <!-- Load joint controller configurations from YAML file to parameter server 
+  <rosparam file="$(find brazo_fer_modelo)/controllers_rr.yaml" command="load"/>
+
+  <!-- load the controllers
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/brazo" args="base_pos_controller arti1_pos_controller arti2_pos_controller arti3_pos_controller pinza_pos_controller base_vel_controller arti1_vel_controller arti2_vel_controller arti3_vel_controller pinza_vel_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc 
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/brazo/joint_states" />
+  </node>
+
+-->
+
+</launch>

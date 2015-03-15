@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "arm_description")
+set(arm_description_MAINTAINER "Dave Coleman <davetcoleman@gmail.com>")
+set(arm_description_DEPRECATED "")
+set(arm_description_VERSION "0.0.0")
+set(arm_description_BUILD_DEPENDS )
+set(arm_description_RUN_DEPENDS )
+set(arm_description_BUILDTOOL_DEPENDS "catkin")

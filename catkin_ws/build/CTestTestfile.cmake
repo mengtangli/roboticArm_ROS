@@ -5,6 +5,9 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
+SUBDIRS(arm_control)
+SUBDIRS(arm_description)
+SUBDIRS(arm_gazebo)
 SUBDIRS(baxter_common/baxter_common)
 SUBDIRS(baxter_common/baxter_description)
 SUBDIRS(gripper)

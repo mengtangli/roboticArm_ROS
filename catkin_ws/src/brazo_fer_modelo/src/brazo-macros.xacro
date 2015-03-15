@@ -91,4 +91,73 @@
   </link>
 </macro>
  
+<macro name="gazebo_propiedades_link" params="nombre material">
+  <gazebo reference="${nombre}">
+	<mu1>0.5</mu1>
+	<mu2>0.5</mu2>
+	<material>Gazebo/${material}</material>
+    <selfCollide>true</selfCollide>
+    <turnGravityOff>false</turnGravityOff> 
+  </gazebo>
+</macro>
+ 
+<macro name="gazebo_propiedades_joint" params="nombre">
+ <gazebo reference="${nombre}">
+    <erp>0.1</erp>
+    <stopKd value="1000000.0" />
+    <stopKp value="10000000.0" />
+    <fudgeFactor value="0.5" />
+ </gazebo>
+</macro> 
+ 
+<gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>brazo</robotNamespace>
+    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+  </plugin>
+</gazebo>
+
+<gazebo>   
+     <controller:gazebo_ros_controller_manager name="gazebo_ros_controller_manager" plugin="libgazebo_ros_controller_manager.so">
+          <alwaysOn>true</alwaysOn>
+          <updateRate>1000.0</updateRate>
+          <robotNamespace>brazo</robotNamespace>
+     </controller:gazebo_ros_controller_manager>
+</gazebo>
+ 
+ <transmission type="pr2_mechanism_model/SimpleTransmission" name="base_trans">
+    <actuator name="base_motor" />
+    <joint name="base" />
+    <mechanicalReduction>1.0</mechanicalReduction>
+    <motorTorqueConstant>1.0</motorTorqueConstant>
+ </transmission>
+ 
+ <transmission type="pr2_mechanism_model/SimpleTransmission" name="arti1_trans">
+    <actuator name="arti1_motor" />
+    <joint name="arti1" />
+    <mechanicalReduction>1.0</mechanicalReduction>
+    <motorTorqueConstant>1.0</motorTorqueConstant>
+ </transmission>              
+ 
+ <transmission type="pr2_mechanism_model/SimpleTransmission" name="arti2_trans">
+    <actuator name="arti2_motor" />
+    <joint name="arti2" />
+    <mechanicalReduction>1.0</mechanicalReduction>
+    <motorTorqueConstant>1.0</motorTorqueConstant>
+ </transmission>
+ 
+ <transmission type="pr2_mechanism_model/SimpleTransmission" name="arti3_trans">
+    <actuator name="arti3_motor" />
+    <joint name="arti3" />
+    <mechanicalReduction>1.0</mechanicalReduction>
+    <motorTorqueConstant>1.0</motorTorqueConstant>
+ </transmission>
+ 
+ <transmission type="pr2_mechanism_model/SimpleTransmission" name="pinza_trans">
+    <actuator name="pinza_motor" />
+    <joint name="pinza" />
+    <mechanicalReduction>1.0</mechanicalReduction>
+    <motorTorqueConstant>1.0</motorTorqueConstant>
+ </transmission>
+
 </robot>

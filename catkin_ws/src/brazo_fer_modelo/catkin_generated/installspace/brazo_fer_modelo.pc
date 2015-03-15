@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: brazo_fer_modelo
+Description: Description of brazo_fer_modelo
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

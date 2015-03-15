@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "MYBOT_control")
+set(MYBOT_control_MAINTAINER "Dave Coleman <davetcoleman@gmail.com>")
+set(MYBOT_control_DEPRECATED "")
+set(MYBOT_control_VERSION "0.0.0")
+set(MYBOT_control_BUILD_DEPENDS )
+set(MYBOT_control_RUN_DEPENDS "controller_manager")
+set(MYBOT_control_BUILDTOOL_DEPENDS "catkin")

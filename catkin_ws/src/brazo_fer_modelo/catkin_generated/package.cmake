@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "brazo_fer_modelo")
+set(brazo_fer_modelo_MAINTAINER "eeit <eeit@todo.todo>")
+set(brazo_fer_modelo_DEPRECATED "")
+set(brazo_fer_modelo_VERSION "0.0.0")
+set(brazo_fer_modelo_BUILD_DEPENDS "brazo_fer" "roscpp" "sensor_msgs" "std_msgs" "tf" "urdf")
+set(brazo_fer_modelo_RUN_DEPENDS "brazo_fer" "roscpp" "sensor_msgs" "std_msgs" "tf" "urdf")
+set(brazo_fer_modelo_BUILDTOOL_DEPENDS "catkin")
