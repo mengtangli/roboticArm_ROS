@@ -8,7 +8,7 @@
   <xacro:property name="height1" value="4" /> <!-- Link 1 -->
   <xacro:property name="height2" value="1.5" /> <!-- Link 2 -->
   <xacro:property name="height3" value="0.5" /> <!-- Link 3 -->
-  <xacro:property name="elbow_width" value="0.6" /> <!-- The length of elbow -->
+  <xacro:property name="elbow_width" value="0.1" /> <!-- The length of elbow -->
   <xacro:property name="axel_offset" value="0.05" /> <!-- Space btw top of beam and the each joint -->
 
   <!-- Import all Gazebo-customization elements, including Gazebo colors -->
