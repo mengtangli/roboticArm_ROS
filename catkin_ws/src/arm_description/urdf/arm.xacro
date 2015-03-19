@@ -141,7 +141,7 @@
     </collision>
 
     <visual>
-      <origin xyz="${elbow_width/2.3} ${-elbow_width/2.35} 0.06" rpy="0 3.14 0"/>
+      <origin xyz="${elbow_width/2.55} ${-elbow_width/2.45} 0.06" rpy="0 3.14 0"/>
       <geometry>
 	<mesh filename="package://arm_description/meshes/gearBox.STL" scale="0.2 0.2 0.2"/>
       </geometry>
@@ -161,7 +161,7 @@
   <joint name="elbow2_2" type="continuous">
     <parent link="elbow2"/>
     <child link="link3"/>
-    <origin xyz="0 0 ${-elbow_width}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${-elbow_width/3}" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
     <dynamics damping="0.7"/>
   </joint>
@@ -176,9 +176,9 @@
     </collision>
 
     <visual>
-      <origin xyz="0 0 ${-height3/2}" rpy="0 0 0"/>
+      <origin xyz="${-width/8.0} -0.47 ${-height2/1}" rpy="1.57 0 1.57"/>
       <geometry>
-	<box size="${width} ${width} ${height3}"/>
+	<mesh filename="package://arm_description/meshes/armSkeleton.STL" scale="0.2 0.26 0.2"/>
       </geometry>
       <material name="black"/>
     </visual>
