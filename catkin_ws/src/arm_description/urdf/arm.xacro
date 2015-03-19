@@ -46,9 +46,9 @@
       <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
       <mass value="1"/>
       <inertia
-	  ixx="3.0" ixy="0.0" ixz="0.0"
-	  iyy="3.0" iyz="0.0"
-	  izz="3.0"/>
+	  ixx="9.0" ixy="0.0" ixz="0.0"
+	  iyy="9.0" iyz="0.0"
+	  izz="9.0"/>
     </inertial>
   </link>
 
@@ -162,7 +162,7 @@
     <parent link="elbow2"/>
     <child link="link3"/>
     <origin xyz="0 0 ${-elbow_width/3}" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
+    <axis xyz="0 1 0"/>
     <dynamics damping="0.7"/>
   </joint>
 
