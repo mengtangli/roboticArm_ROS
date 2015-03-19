@@ -34,9 +34,9 @@
     </collision>
 
     <visual>
-      <origin xyz="${width*2.5} 0.5 0" rpy="1.57 0 -1.57"/>
+      <origin xyz="${width*2.0} 0.5 0" rpy="1.57 0 -1.57"/>
       <geometry>
-	<mesh filename="package://arm_description/meshes/dummyBody.STL" scale="2.7 2.7 2.7"/>
+	<mesh filename="package://arm_description/meshes/dummyBody.STL" scale="2 2.6 2"/>
 	<!--box size="${width} ${width} ${height1}"/-->
       </geometry>
       <material name="orange"/>
@@ -70,7 +70,7 @@
     </collision>
 
     <visual>
-      <origin xyz="0 0 0" rpy="-1.57 1.57 0"/>
+      <origin xyz="${elbow_width/2.39} 0 ${elbow_width/2-0.13}" rpy="-1.57 1.57 0"/>
       <geometry>
 	<mesh filename="package://arm_description/meshes/gearBox.STL" scale="0.2 0.2 0.2"/>
 	<!--box size="${elbow_width} ${elbow_width} ${elbow_width}"/-->
@@ -91,7 +91,7 @@
   <joint name="elbow1_2" type="continuous">
     <parent link="elbow1"/>
     <child link="link2"/>
-    <origin xyz="0 ${elbow_width/2} ${-elbow_width/2}" rpy="0 0 0"/>
+    <origin xyz="0 ${elbow_width/2} ${-elbow_width*0}" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
     <dynamics damping="0.7"/>
   </joint>
@@ -106,9 +106,9 @@
     </collision>
 
     <visual>
-      <origin xyz="0 0 ${-height2/2}" rpy="0 0 0"/>
+      <origin xyz="${-width/2.3} 0 ${-height2/1}" rpy="1.57 0 0"/>
       <geometry>
-	<box size="${width} ${width} ${height2}"/>
+	<mesh filename="package://arm_description/meshes/armSkeleton.STL" scale="0.2 0.26 0.2"/>
       </geometry>
       <material name="black"/>
     </visual>

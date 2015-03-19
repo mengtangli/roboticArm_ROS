@@ -15,7 +15,7 @@
     <!-- Focus camera on tall pendulum -->
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>24.927360 24.376610 23.740080 1.000000 0.275643 2.356190</pose>
+        <pose>24.927360 -24.376610 23.740080 0.000000 0.275643 2.356190</pose>
         <view_controller>orbit</view_controller>
       </camera>
     </gui>
