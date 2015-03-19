@@ -72,7 +72,7 @@
     <visual>
       <origin xyz="${elbow_width/2.39} 0 ${elbow_width/2-0.13}" rpy="-1.57 1.57 0"/>
       <geometry>
-	<mesh filename="package://arm_description/meshes/gearBox.STL" scale="0.2 0.2 0.2"/>
+	<mesh filename="package://arm_description/meshes/gearBox.STL" scale="0.2 0.2 0.25"/>
 	<!--box size="${elbow_width} ${elbow_width} ${elbow_width}"/-->
       </geometry>
       <material name="orange"/>
@@ -106,7 +106,7 @@
     </collision>
 
     <visual>
-      <origin xyz="${-width/2.3} 0 ${-height2/1}" rpy="1.57 0 0"/>
+      <origin xyz="${-width/2.3} 0.1 ${-height2/1}" rpy="1.57 0 0"/>
       <geometry>
 	<mesh filename="package://arm_description/meshes/armSkeleton.STL" scale="0.2 0.26 0.2"/>
       </geometry>
@@ -141,7 +141,7 @@
     </collision>
 
     <visual>
-      <origin xyz="0 ${-elbow_width/1.3} 0" rpy="0 3.14 0"/>
+      <origin xyz="${elbow_width/2.3} ${-elbow_width/2.35} 0.06" rpy="0 3.14 0"/>
       <geometry>
 	<mesh filename="package://arm_description/meshes/gearBox.STL" scale="0.2 0.2 0.2"/>
       </geometry>
