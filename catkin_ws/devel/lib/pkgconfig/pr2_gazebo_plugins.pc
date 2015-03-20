@@ -1,0 +1,8 @@
+prefix=/home/eeit/roboarm/catkin_ws/devel
+
+Name: pr2_gazebo_plugins
+Description: Description of pr2_gazebo_plugins
+Version: 2.0.5
+Cflags: -I/home/eeit/roboarm/catkin_ws/devel/include -I/home/eeit/roboarm/catkin_ws/src/pr2_gazebo_plugins/include
+Libs: -L/home/eeit/roboarm/catkin_ws/devel/lib -lgazebo_ros_controller_manager -lgazebo_ros_power_monitor
+Requires: message_runtime message_generation roscpp rospy angles std_msgs nav_msgs sensor_msgs pr2_msgs geometry_msgs diagnostic_msgs gazebo_msgs urdf tf driver_base image_transport

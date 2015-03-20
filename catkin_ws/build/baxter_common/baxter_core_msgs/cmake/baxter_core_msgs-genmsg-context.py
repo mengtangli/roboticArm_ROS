@@ -4,7 +4,7 @@ messages_str = "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/
 services_str = "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/CloseCamera.srv;/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/ListCameras.srv;/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/OpenCamera.srv;/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/SolvePositionIK.srv"
 pkg_name = "baxter_core_msgs"
 dependencies_str = "geometry_msgs;sensor_msgs;std_msgs"
-langs = "gencpp;genlisp;genpy"
+langs = "gencpp;geneus;genlisp;genpy"
 dep_include_paths_str = "baxter_core_msgs;/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg;geometry_msgs;/opt/ros/indigo/share/geometry_msgs/cmake/../msg;sensor_msgs;/opt/ros/indigo/share/sensor_msgs/cmake/../msg;std_msgs;/opt/ros/indigo/share/std_msgs/cmake/../msg"
 PYTHON_EXECUTABLE = "/usr/bin/python"
 package_has_static_sources = '' == 'TRUE'

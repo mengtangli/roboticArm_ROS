@@ -290,6 +290,20 @@ baxter_maintenance_msgs_generate_messages_cpp/fast:
 .PHONY : baxter_maintenance_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/rule
+.PHONY : baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+baxter_maintenance_msgs_generate_messages_eus: baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/rule
+.PHONY : baxter_maintenance_msgs_generate_messages_eus
+
+# fast build rule for target.
+baxter_maintenance_msgs_generate_messages_eus/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/build
+.PHONY : baxter_maintenance_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_lisp.dir/rule:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_lisp.dir/rule
 .PHONY : baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_lisp.dir/rule
@@ -316,6 +330,20 @@ baxter_maintenance_msgs_generate_messages_py: baxter_common/baxter_maintenance_m
 baxter_maintenance_msgs_generate_messages_py/fast:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_py.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_py.dir/build
 .PHONY : baxter_maintenance_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/rule
+.PHONY : baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/rule
+
+# Convenience name for target.
+baxter_maintenance_msgs_geneus: baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/rule
+.PHONY : baxter_maintenance_msgs_geneus
+
+# fast build rule for target.
+baxter_maintenance_msgs_geneus/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/build
+.PHONY : baxter_maintenance_msgs_geneus/fast
 
 # Convenience name for target.
 baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_genlisp.dir/rule:
@@ -361,8 +389,10 @@ help:
 	@echo "... baxter_maintenance_msgs_gencpp"
 	@echo "... baxter_maintenance_msgs_generate_messages"
 	@echo "... baxter_maintenance_msgs_generate_messages_cpp"
+	@echo "... baxter_maintenance_msgs_generate_messages_eus"
 	@echo "... baxter_maintenance_msgs_generate_messages_lisp"
 	@echo "... baxter_maintenance_msgs_generate_messages_py"
+	@echo "... baxter_maintenance_msgs_geneus"
 	@echo "... baxter_maintenance_msgs_genlisp"
 	@echo "... baxter_maintenance_msgs_genpy"
 	@echo "... edit_cache"

@@ -1,0 +1,8 @@
+prefix=/home/eeit/roboarm/catkin_ws/devel
+
+Name: pr2_controller_configuration_gazebo
+Description: Description of pr2_controller_configuration_gazebo
+Version: 2.0.5
+Cflags: 
+Libs: -L/home/eeit/roboarm/catkin_ws/devel/lib 
+Requires: 

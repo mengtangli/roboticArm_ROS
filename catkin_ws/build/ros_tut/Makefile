@@ -262,6 +262,20 @@ ros_tut_generate_messages_cpp/fast:
 .PHONY : ros_tut_generate_messages_cpp/fast
 
 # Convenience name for target.
+ros_tut/CMakeFiles/ros_tut_generate_messages_eus.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/ros_tut_generate_messages_eus.dir/rule
+.PHONY : ros_tut/CMakeFiles/ros_tut_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+ros_tut_generate_messages_eus: ros_tut/CMakeFiles/ros_tut_generate_messages_eus.dir/rule
+.PHONY : ros_tut_generate_messages_eus
+
+# fast build rule for target.
+ros_tut_generate_messages_eus/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/ros_tut_generate_messages_eus.dir/build.make ros_tut/CMakeFiles/ros_tut_generate_messages_eus.dir/build
+.PHONY : ros_tut_generate_messages_eus/fast
+
+# Convenience name for target.
 ros_tut/CMakeFiles/ros_tut_generate_messages_lisp.dir/rule:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/ros_tut_generate_messages_lisp.dir/rule
 .PHONY : ros_tut/CMakeFiles/ros_tut_generate_messages_lisp.dir/rule
@@ -288,6 +302,20 @@ ros_tut_generate_messages_py: ros_tut/CMakeFiles/ros_tut_generate_messages_py.di
 ros_tut_generate_messages_py/fast:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/ros_tut_generate_messages_py.dir/build.make ros_tut/CMakeFiles/ros_tut_generate_messages_py.dir/build
 .PHONY : ros_tut_generate_messages_py/fast
+
+# Convenience name for target.
+ros_tut/CMakeFiles/ros_tut_geneus.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/ros_tut_geneus.dir/rule
+.PHONY : ros_tut/CMakeFiles/ros_tut_geneus.dir/rule
+
+# Convenience name for target.
+ros_tut_geneus: ros_tut/CMakeFiles/ros_tut_geneus.dir/rule
+.PHONY : ros_tut_geneus
+
+# fast build rule for target.
+ros_tut_geneus/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/ros_tut_geneus.dir/build.make ros_tut/CMakeFiles/ros_tut_geneus.dir/build
+.PHONY : ros_tut_geneus/fast
 
 # Convenience name for target.
 ros_tut/CMakeFiles/ros_tut_genlisp.dir/rule:
@@ -573,8 +601,10 @@ help:
 	@echo "... ros_tut_gencpp"
 	@echo "... ros_tut_generate_messages"
 	@echo "... ros_tut_generate_messages_cpp"
+	@echo "... ros_tut_generate_messages_eus"
 	@echo "... ros_tut_generate_messages_lisp"
 	@echo "... ros_tut_generate_messages_py"
+	@echo "... ros_tut_geneus"
 	@echo "... ros_tut_genlisp"
 	@echo "... ros_tut_genpy"
 	@echo "... roscpp_generate_messages_cpp"

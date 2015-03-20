@@ -4,7 +4,7 @@ messages_str = "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenanc
 services_str = ""
 pkg_name = "baxter_maintenance_msgs"
 dependencies_str = "std_msgs"
-langs = "gencpp;genlisp;genpy"
+langs = "gencpp;geneus;genlisp;genpy"
 dep_include_paths_str = "baxter_maintenance_msgs;/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg;std_msgs;/opt/ros/indigo/share/std_msgs/cmake/../msg"
 PYTHON_EXECUTABLE = "/usr/bin/python"
 package_has_static_sources = '' == 'TRUE'

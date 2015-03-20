@@ -10,7 +10,10 @@
   <xacro:property name="height3" value="2" /> <!-- Link 3 -->
   <xacro:property name="elbow_width" value="1.0" /> <!-- The length of elbow -->
   <xacro:property name="axel_offset" value="0.05" /> <!-- Space btw top of beam and the each joint -->
-
+  <xacro:property name="limit_lower" value="-2" /> <!-- Space btw top of beam and the each joint -->
+  <xacro:property name="limit_upper" value="1" /> <!-- Space btw top of beam and the each joint -->
+  <xacro:property name="limit_effort" value="30" /> <!-- Space btw top of beam and the each joint -->
+  <xacro:property name="limit_velocity" value="30" /> <!-- Space btw top of beam and the each joint -->
   <!-- Import all Gazebo-customization elements, including Gazebo colors -->
   <xacro:include filename="$(find arm_description)/urdf/arm.gazebo" />
   <!-- Import Rviz colors -->
@@ -44,7 +47,7 @@
 
     <inertial>
       <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
-      <mass value="1"/>
+      <mass value="10"/>
       <inertia
 	  ixx="9.0" ixy="0.0" ixz="0.0"
 	  iyy="9.0" iyz="0.0"
@@ -58,6 +61,8 @@
     <origin xyz="0 ${width/2} ${height1-elbow_width/2}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7"/>
+    <limit effort="${limit_effort}" lower="${limit_lower}" upper="${limit_upper}" velocity="${limit_velocity}" />
+    <safety_controller k_velocity="100" k_position="15" soft_lower_limit="-1.9" soft_upper_limit="0.5" />
   </joint>
 
   <!-- Elbow 1 Link -->
@@ -80,7 +85,7 @@
 
     <inertial>
       <origin xyz="0 ${elbow_width/2} 0" rpy="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.1"/>
       <inertia
 	  ixx="1.0" ixy="0.0" ixz="0.0"
 	  iyy="1.0" iyz="0.0"
@@ -115,7 +120,7 @@
 
     <inertial>
       <origin xyz="0 0 ${-height2/2}" rpy="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.1"/>
       <inertia
 	  ixx="1.0" ixy="0.0" ixz="0.0"
 	  iyy="1.0" iyz="0.0"
@@ -150,7 +155,7 @@
 
     <inertial>
       <origin xyz="0 0 ${-elbow_width/2}" rpy="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.1"/>
       <inertia
 	  ixx="1.0" ixy="0.0" ixz="0.0"
 	  iyy="1.0" iyz="0.0"
@@ -185,7 +190,7 @@
 
     <inertial>
       <origin xyz="0 0 ${-height3/2}" rpy="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.1"/>
       <inertia
 	  ixx="1.0" ixy="0.0" ixz="0.0"
 	  iyy="1.0" iyz="0.0"
@@ -220,7 +225,7 @@
 
     <inertial>
       <origin xyz="0 0 ${-elbow_width/2}" rpy="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.1"/>
       <inertia
 	  ixx="1.0" ixy="0.0" ixz="0.0"
 	  iyy="1.0" iyz="0.0"

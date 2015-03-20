@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "pr2_controller_configuration_gazebo")
+set(pr2_controller_configuration_gazebo_MAINTAINER "John Hsu <hsu@osrfoundation.org>")
+set(pr2_controller_configuration_gazebo_DEPRECATED "")
+set(pr2_controller_configuration_gazebo_VERSION "2.0.5")
+set(pr2_controller_configuration_gazebo_BUILD_DEPENDS )
+set(pr2_controller_configuration_gazebo_RUN_DEPENDS "pr2_controller_manager" "single_joint_position_action" "pr2_head_action" "pr2_gripper_action")
+set(pr2_controller_configuration_gazebo_BUILDTOOL_DEPENDS "catkin")

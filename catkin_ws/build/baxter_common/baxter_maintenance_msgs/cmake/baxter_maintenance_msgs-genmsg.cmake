@@ -6,6 +6,7 @@ set(MSG_I_FLAGS "-Ibaxter_maintenance_msgs:/home/eeit/roboarm/catkin_ws/src/baxt
 
 # Find all generators
 find_package(gencpp REQUIRED)
+find_package(geneus REQUIRED)
 find_package(genlisp REQUIRED)
 find_package(genpy REQUIRED)
 
@@ -51,7 +52,7 @@ add_custom_target(_baxter_maintenance_msgs_generate_messages_check_deps_${_filen
 )
 
 #
-#  langs = gencpp;genlisp;genpy
+#  langs = gencpp;geneus;genlisp;genpy
 #
 
 ### Section generating for lang: gencpp
@@ -134,6 +135,87 @@ add_dependencies(baxter_maintenance_msgs_gencpp baxter_maintenance_msgs_generate
 
 # register target for catkin_package(EXPORTED_TARGETS)
 list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS baxter_maintenance_msgs_generate_messages_cpp)
+
+### Section generating for lang: geneus
+### Generating Messages
+_generate_msg_eus(baxter_maintenance_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/TareEnable.msg"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/TareData.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs
+)
+_generate_msg_eus(baxter_maintenance_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/CalibrateArmData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs
+)
+_generate_msg_eus(baxter_maintenance_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/UpdateSources.msg"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/UpdateSource.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs
+)
+_generate_msg_eus(baxter_maintenance_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/UpdateSource.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs
+)
+_generate_msg_eus(baxter_maintenance_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/UpdateStatus.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs
+)
+_generate_msg_eus(baxter_maintenance_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/TareData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs
+)
+_generate_msg_eus(baxter_maintenance_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/CalibrateArmEnable.msg"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/CalibrateArmData.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs
+)
+
+### Generating Services
+
+### Generating Module File
+_generate_module_eus(baxter_maintenance_msgs
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs
+  "${ALL_GEN_OUTPUT_FILES_eus}"
+)
+
+add_custom_target(baxter_maintenance_msgs_generate_messages_eus
+  DEPENDS ${ALL_GEN_OUTPUT_FILES_eus}
+)
+add_dependencies(baxter_maintenance_msgs_generate_messages baxter_maintenance_msgs_generate_messages_eus)
+
+# add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/TareEnable.msg" NAME_WE)
+add_dependencies(baxter_maintenance_msgs_generate_messages_eus _baxter_maintenance_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/CalibrateArmData.msg" NAME_WE)
+add_dependencies(baxter_maintenance_msgs_generate_messages_eus _baxter_maintenance_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/UpdateSources.msg" NAME_WE)
+add_dependencies(baxter_maintenance_msgs_generate_messages_eus _baxter_maintenance_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/UpdateSource.msg" NAME_WE)
+add_dependencies(baxter_maintenance_msgs_generate_messages_eus _baxter_maintenance_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/UpdateStatus.msg" NAME_WE)
+add_dependencies(baxter_maintenance_msgs_generate_messages_eus _baxter_maintenance_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/TareData.msg" NAME_WE)
+add_dependencies(baxter_maintenance_msgs_generate_messages_eus _baxter_maintenance_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_maintenance_msgs/msg/CalibrateArmEnable.msg" NAME_WE)
+add_dependencies(baxter_maintenance_msgs_generate_messages_eus _baxter_maintenance_msgs_generate_messages_check_deps_${_filename})
+
+# target for backward compatibility
+add_custom_target(baxter_maintenance_msgs_geneus)
+add_dependencies(baxter_maintenance_msgs_geneus baxter_maintenance_msgs_generate_messages_eus)
+
+# register target for catkin_package(EXPORTED_TARGETS)
+list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS baxter_maintenance_msgs_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
@@ -307,6 +389,15 @@ if(gencpp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ba
   )
 endif()
 add_dependencies(baxter_maintenance_msgs_generate_messages_cpp std_msgs_generate_messages_cpp)
+
+if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs)
+  # install generated code
+  install(
+    DIRECTORY ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_maintenance_msgs
+    DESTINATION ${geneus_INSTALL_DIR}
+  )
+endif()
+add_dependencies(baxter_maintenance_msgs_generate_messages_eus std_msgs_generate_messages_eus)
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/baxter_maintenance_msgs)
   # install generated code

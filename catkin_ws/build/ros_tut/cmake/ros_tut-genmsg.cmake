@@ -6,6 +6,7 @@ set(MSG_I_FLAGS "-Iros_tut:/home/eeit/roboarm/catkin_ws/src/ros_tut/msg;-Istd_ms
 
 # Find all generators
 find_package(gencpp REQUIRED)
+find_package(geneus REQUIRED)
 find_package(genlisp REQUIRED)
 find_package(genpy REQUIRED)
 
@@ -26,7 +27,7 @@ add_custom_target(_ros_tut_generate_messages_check_deps_${_filename}
 )
 
 #
-#  langs = gencpp;genlisp;genpy
+#  langs = gencpp;geneus;genlisp;genpy
 #
 
 ### Section generating for lang: gencpp
@@ -69,6 +70,47 @@ add_dependencies(ros_tut_gencpp ros_tut_generate_messages_cpp)
 
 # register target for catkin_package(EXPORTED_TARGETS)
 list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ros_tut_generate_messages_cpp)
+
+### Section generating for lang: geneus
+### Generating Messages
+_generate_msg_eus(ros_tut
+  "/home/eeit/roboarm/catkin_ws/src/ros_tut/msg/servo.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ros_tut
+)
+_generate_msg_eus(ros_tut
+  "/home/eeit/roboarm/catkin_ws/src/ros_tut/msg/num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ros_tut
+)
+
+### Generating Services
+
+### Generating Module File
+_generate_module_eus(ros_tut
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ros_tut
+  "${ALL_GEN_OUTPUT_FILES_eus}"
+)
+
+add_custom_target(ros_tut_generate_messages_eus
+  DEPENDS ${ALL_GEN_OUTPUT_FILES_eus}
+)
+add_dependencies(ros_tut_generate_messages ros_tut_generate_messages_eus)
+
+# add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/ros_tut/msg/servo.msg" NAME_WE)
+add_dependencies(ros_tut_generate_messages_eus _ros_tut_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/ros_tut/msg/num.msg" NAME_WE)
+add_dependencies(ros_tut_generate_messages_eus _ros_tut_generate_messages_check_deps_${_filename})
+
+# target for backward compatibility
+add_custom_target(ros_tut_geneus)
+add_dependencies(ros_tut_geneus ros_tut_generate_messages_eus)
+
+# register target for catkin_package(EXPORTED_TARGETS)
+list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ros_tut_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
@@ -162,6 +204,15 @@ if(gencpp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ro
   )
 endif()
 add_dependencies(ros_tut_generate_messages_cpp std_msgs_generate_messages_cpp)
+
+if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ros_tut)
+  # install generated code
+  install(
+    DIRECTORY ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ros_tut
+    DESTINATION ${geneus_INSTALL_DIR}
+  )
+endif()
+add_dependencies(ros_tut_generate_messages_eus std_msgs_generate_messages_eus)
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ros_tut)
   # install generated code

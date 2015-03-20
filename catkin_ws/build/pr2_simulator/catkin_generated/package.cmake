@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "pr2_simulator")
+set(pr2_simulator_MAINTAINER "Dash <dash@clearpathrobotics.com>, Austin Hendrix <namniart@gmail.com>")
+set(pr2_simulator_DEPRECATED "")
+set(pr2_simulator_VERSION "2.0.5")
+set(pr2_simulator_BUILD_DEPENDS )
+set(pr2_simulator_RUN_DEPENDS "pr2_gazebo" "pr2_controller_configuration_gazebo" "pr2_gazebo_plugins")
+set(pr2_simulator_BUILDTOOL_DEPENDS "catkin")

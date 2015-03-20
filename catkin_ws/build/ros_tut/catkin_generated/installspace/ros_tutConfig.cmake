@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(ros_tut_EXPORTED_TARGETS "ros_tut_generate_messages_cpp;ros_tut_generate_messages_lisp;ros_tut_generate_messages_py")
+set(ros_tut_EXPORTED_TARGETS "ros_tut_generate_messages_cpp;ros_tut_generate_messages_eus;ros_tut_generate_messages_lisp;ros_tut_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${ros_tut_EXPORTED_TARGETS})
   if(NOT TARGET ${t})

@@ -6,6 +6,7 @@ set(MSG_I_FLAGS "-Ibaxter_core_msgs:/home/eeit/roboarm/catkin_ws/src/baxter_comm
 
 # Find all generators
 find_package(gencpp REQUIRED)
+find_package(geneus REQUIRED)
 find_package(genlisp REQUIRED)
 find_package(genpy REQUIRED)
 
@@ -166,7 +167,7 @@ add_custom_target(_baxter_core_msgs_generate_messages_check_deps_${_filename}
 )
 
 #
-#  langs = gencpp;genlisp;genpy
+#  langs = gencpp;geneus;genlisp;genpy
 #
 
 ### Section generating for lang: gencpp
@@ -433,6 +434,271 @@ add_dependencies(baxter_core_msgs_gencpp baxter_core_msgs_generate_messages_cpp)
 
 # register target for catkin_package(EXPORTED_TARGETS)
 list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS baxter_core_msgs_generate_messages_cpp)
+
+### Section generating for lang: geneus
+### Generating Messages
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CameraSettings.msg"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CameraControl.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CollisionDetectionState.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CollisionAvoidanceState.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndEffectorState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/ITBStates.msg"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/ITBState.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/DigitalIOStates.msg"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/DigitalIOState.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndEffectorCommand.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/NavigatorState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndpointState.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Wrench.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Twist.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/DigitalIOState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AnalogOutputCommand.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/NavigatorStates.msg"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/NavigatorState.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/DigitalOutputCommand.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AnalogIOState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/ITBState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/JointCommand.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AssemblyState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AnalogIOStates.msg"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AnalogIOState.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndEffectorProperties.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AssemblyStates.msg"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AssemblyState.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/RobustControllerStatus.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndpointStates.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Wrench.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndpointState.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Twist.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CameraControl.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/HeadPanCommand.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/SEAJointState.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_msg_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/HeadState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+
+### Generating Services
+_generate_srv_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/ListCameras.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_srv_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/CloseCamera.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_srv_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/OpenCamera.srv"
+  "${MSG_I_FLAGS}"
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CameraSettings.msg;/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CameraControl.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+_generate_srv_eus(baxter_core_msgs
+  "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/SolvePositionIK.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/JointState.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+)
+
+### Generating Module File
+_generate_module_eus(baxter_core_msgs
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+  "${ALL_GEN_OUTPUT_FILES_eus}"
+)
+
+add_custom_target(baxter_core_msgs_generate_messages_eus
+  DEPENDS ${ALL_GEN_OUTPUT_FILES_eus}
+)
+add_dependencies(baxter_core_msgs_generate_messages baxter_core_msgs_generate_messages_eus)
+
+# add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CameraSettings.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CollisionDetectionState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CollisionAvoidanceState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/ListCameras.srv" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndEffectorState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/ITBStates.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/DigitalIOStates.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndEffectorCommand.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/SolvePositionIK.srv" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/CloseCamera.srv" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/NavigatorState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndpointState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/DigitalIOState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AnalogOutputCommand.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/ITBState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/DigitalOutputCommand.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AnalogIOState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/NavigatorStates.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/JointCommand.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AssemblyState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AnalogIOStates.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndEffectorProperties.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/HeadState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/RobustControllerStatus.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/srv/OpenCamera.srv" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/EndpointStates.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/CameraControl.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/HeadPanCommand.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/SEAJointState.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/baxter_common/baxter_core_msgs/msg/AssemblyStates.msg" NAME_WE)
+add_dependencies(baxter_core_msgs_generate_messages_eus _baxter_core_msgs_generate_messages_check_deps_${_filename})
+
+# target for backward compatibility
+add_custom_target(baxter_core_msgs_geneus)
+add_dependencies(baxter_core_msgs_geneus baxter_core_msgs_generate_messages_eus)
+
+# register target for catkin_package(EXPORTED_TARGETS)
+list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS baxter_core_msgs_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
@@ -976,6 +1242,17 @@ endif()
 add_dependencies(baxter_core_msgs_generate_messages_cpp geometry_msgs_generate_messages_cpp)
 add_dependencies(baxter_core_msgs_generate_messages_cpp sensor_msgs_generate_messages_cpp)
 add_dependencies(baxter_core_msgs_generate_messages_cpp std_msgs_generate_messages_cpp)
+
+if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs)
+  # install generated code
+  install(
+    DIRECTORY ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/baxter_core_msgs
+    DESTINATION ${geneus_INSTALL_DIR}
+  )
+endif()
+add_dependencies(baxter_core_msgs_generate_messages_eus geometry_msgs_generate_messages_eus)
+add_dependencies(baxter_core_msgs_generate_messages_eus sensor_msgs_generate_messages_eus)
+add_dependencies(baxter_core_msgs_generate_messages_eus std_msgs_generate_messages_eus)
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/baxter_core_msgs)
   # install generated code

@@ -8,7 +8,7 @@ arm:
   elbow1_1_controller:
     type: effort_controllers/JointPositionController
     joint: elbow1_1
-    pid: {p: 100.0, i: 50.01, d: 10.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
   elbow1_2_controller:
     type: effort_controllers/JointPositionController
     joint: elbow1_2

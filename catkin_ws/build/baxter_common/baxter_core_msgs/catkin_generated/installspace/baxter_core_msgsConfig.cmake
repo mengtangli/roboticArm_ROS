@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(baxter_core_msgs_EXPORTED_TARGETS "baxter_core_msgs_generate_messages_cpp;baxter_core_msgs_generate_messages_lisp;baxter_core_msgs_generate_messages_py")
+set(baxter_core_msgs_EXPORTED_TARGETS "baxter_core_msgs_generate_messages_cpp;baxter_core_msgs_generate_messages_eus;baxter_core_msgs_generate_messages_lisp;baxter_core_msgs_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${baxter_core_msgs_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
