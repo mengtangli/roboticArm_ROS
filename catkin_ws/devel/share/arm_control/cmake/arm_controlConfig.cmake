@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(arm_control_EXPORTED_TARGETS "")
+set(arm_control_EXPORTED_TARGETS "arm_control_generate_messages_cpp;arm_control_generate_messages_eus;arm_control_generate_messages_lisp;arm_control_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${arm_control_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND arm_control_EXPORTED_TARGETS ${${arm_control_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "arm_control-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${arm_control_DIR}/${extra})

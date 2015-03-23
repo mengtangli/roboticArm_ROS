@@ -150,18 +150,332 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-arm_control/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : arm_control/CMakeFiles/_catkin_empty_exported_target.dir/rule
+arm_control/CMakeFiles/arm_control.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: arm_control/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : _catkin_empty_exported_target
+arm_control: arm_control/CMakeFiles/arm_control.dir/rule
+.PHONY : arm_control
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/_catkin_empty_exported_target.dir/build.make arm_control/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+arm_control/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/build
+.PHONY : arm_control/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/arm_control_gencpp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_gencpp.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control_gencpp.dir/rule
+
+# Convenience name for target.
+arm_control_gencpp: arm_control/CMakeFiles/arm_control_gencpp.dir/rule
+.PHONY : arm_control_gencpp
+
+# fast build rule for target.
+arm_control_gencpp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control_gencpp.dir/build.make arm_control/CMakeFiles/arm_control_gencpp.dir/build
+.PHONY : arm_control_gencpp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/arm_control_generate_messages.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_generate_messages.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control_generate_messages.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages: arm_control/CMakeFiles/arm_control_generate_messages.dir/rule
+.PHONY : arm_control_generate_messages
+
+# fast build rule for target.
+arm_control_generate_messages/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control_generate_messages.dir/build.make arm_control/CMakeFiles/arm_control_generate_messages.dir/build
+.PHONY : arm_control_generate_messages/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/arm_control_generate_messages_cpp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_generate_messages_cpp.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages_cpp: arm_control/CMakeFiles/arm_control_generate_messages_cpp.dir/rule
+.PHONY : arm_control_generate_messages_cpp
+
+# fast build rule for target.
+arm_control_generate_messages_cpp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control_generate_messages_cpp.dir/build.make arm_control/CMakeFiles/arm_control_generate_messages_cpp.dir/build
+.PHONY : arm_control_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/arm_control_generate_messages_eus.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_generate_messages_eus.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages_eus: arm_control/CMakeFiles/arm_control_generate_messages_eus.dir/rule
+.PHONY : arm_control_generate_messages_eus
+
+# fast build rule for target.
+arm_control_generate_messages_eus/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control_generate_messages_eus.dir/build.make arm_control/CMakeFiles/arm_control_generate_messages_eus.dir/build
+.PHONY : arm_control_generate_messages_eus/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/arm_control_generate_messages_lisp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_generate_messages_lisp.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages_lisp: arm_control/CMakeFiles/arm_control_generate_messages_lisp.dir/rule
+.PHONY : arm_control_generate_messages_lisp
+
+# fast build rule for target.
+arm_control_generate_messages_lisp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control_generate_messages_lisp.dir/build.make arm_control/CMakeFiles/arm_control_generate_messages_lisp.dir/build
+.PHONY : arm_control_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/arm_control_generate_messages_py.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_generate_messages_py.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control_generate_messages_py.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages_py: arm_control/CMakeFiles/arm_control_generate_messages_py.dir/rule
+.PHONY : arm_control_generate_messages_py
+
+# fast build rule for target.
+arm_control_generate_messages_py/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control_generate_messages_py.dir/build.make arm_control/CMakeFiles/arm_control_generate_messages_py.dir/build
+.PHONY : arm_control_generate_messages_py/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/arm_control_geneus.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_geneus.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control_geneus.dir/rule
+
+# Convenience name for target.
+arm_control_geneus: arm_control/CMakeFiles/arm_control_geneus.dir/rule
+.PHONY : arm_control_geneus
+
+# fast build rule for target.
+arm_control_geneus/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control_geneus.dir/build.make arm_control/CMakeFiles/arm_control_geneus.dir/build
+.PHONY : arm_control_geneus/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/arm_control_genlisp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_genlisp.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control_genlisp.dir/rule
+
+# Convenience name for target.
+arm_control_genlisp: arm_control/CMakeFiles/arm_control_genlisp.dir/rule
+.PHONY : arm_control_genlisp
+
+# fast build rule for target.
+arm_control_genlisp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control_genlisp.dir/build.make arm_control/CMakeFiles/arm_control_genlisp.dir/build
+.PHONY : arm_control_genlisp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/arm_control_genpy.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_genpy.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_control_genpy.dir/rule
+
+# Convenience name for target.
+arm_control_genpy: arm_control/CMakeFiles/arm_control_genpy.dir/rule
+.PHONY : arm_control_genpy
+
+# fast build rule for target.
+arm_control_genpy/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control_genpy.dir/build.make arm_control/CMakeFiles/arm_control_genpy.dir/build
+.PHONY : arm_control_genpy/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : arm_control/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: arm_control/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make arm_control/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : arm_control/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: arm_control/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/roscpp_generate_messages_py.dir/build.make arm_control/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : arm_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: arm_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make arm_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : arm_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: arm_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make arm_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : arm_control/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: arm_control/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make arm_control/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : arm_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: arm_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make arm_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : arm_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: arm_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make arm_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : arm_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: arm_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/std_msgs_generate_messages_py.dir/build.make arm_control/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/talker.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/talker.dir/rule
+.PHONY : arm_control/CMakeFiles/talker.dir/rule
+
+# Convenience name for target.
+talker: arm_control/CMakeFiles/talker.dir/rule
+.PHONY : talker
+
+# fast build rule for target.
+talker/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/talker.dir/build.make arm_control/CMakeFiles/talker.dir/build
+.PHONY : talker/fast
+
+src/arm_control.o: src/arm_control.cpp.o
+.PHONY : src/arm_control.o
+
+# target to build an object file
+src/arm_control.cpp.o:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/src/arm_control.cpp.o
+.PHONY : src/arm_control.cpp.o
+
+src/arm_control.i: src/arm_control.cpp.i
+.PHONY : src/arm_control.i
+
+# target to preprocess a source file
+src/arm_control.cpp.i:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/src/arm_control.cpp.i
+.PHONY : src/arm_control.cpp.i
+
+src/arm_control.s: src/arm_control.cpp.s
+.PHONY : src/arm_control.s
+
+# target to generate assembly for a file
+src/arm_control.cpp.s:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/src/arm_control.cpp.s
+.PHONY : src/arm_control.cpp.s
+
+src/talker.o: src/talker.cpp.o
+.PHONY : src/talker.o
+
+# target to build an object file
+src/talker.cpp.o:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/talker.dir/build.make arm_control/CMakeFiles/talker.dir/src/talker.cpp.o
+.PHONY : src/talker.cpp.o
+
+src/talker.i: src/talker.cpp.i
+.PHONY : src/talker.i
+
+# target to preprocess a source file
+src/talker.cpp.i:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/talker.dir/build.make arm_control/CMakeFiles/talker.dir/src/talker.cpp.i
+.PHONY : src/talker.cpp.i
+
+src/talker.s: src/talker.cpp.s
+.PHONY : src/talker.s
+
+# target to generate assembly for a file
+src/talker.cpp.s:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/talker.dir/build.make arm_control/CMakeFiles/talker.dir/src/talker.cpp.s
+.PHONY : src/talker.cpp.s
 
 # Help Target
 help:
@@ -169,14 +483,39 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... _catkin_empty_exported_target"
+	@echo "... arm_control"
+	@echo "... arm_control_gencpp"
+	@echo "... arm_control_generate_messages"
+	@echo "... arm_control_generate_messages_cpp"
+	@echo "... arm_control_generate_messages_eus"
+	@echo "... arm_control_generate_messages_lisp"
+	@echo "... arm_control_generate_messages_py"
+	@echo "... arm_control_geneus"
+	@echo "... arm_control_genlisp"
+	@echo "... arm_control_genpy"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... talker"
 	@echo "... test"
+	@echo "... src/arm_control.o"
+	@echo "... src/arm_control.i"
+	@echo "... src/arm_control.s"
+	@echo "... src/talker.o"
+	@echo "... src/talker.i"
+	@echo "... src/talker.s"
 .PHONY : help
 
 

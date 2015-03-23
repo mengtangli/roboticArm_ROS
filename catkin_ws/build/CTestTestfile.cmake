@@ -5,15 +5,14 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
-SUBDIRS(arm_control)
 SUBDIRS(arm_description)
 SUBDIRS(arm_gazebo)
 SUBDIRS(baxter_common/baxter_common)
 SUBDIRS(baxter_common/baxter_description)
 SUBDIRS(gripper)
+SUBDIRS(arm_control)
 SUBDIRS(pr2_controller_configuration_gazebo)
 SUBDIRS(pr2_simulator)
-SUBDIRS(ros_tut)
 SUBDIRS(rrbot_control)
 SUBDIRS(rrbot_description)
 SUBDIRS(rrbot_gazebo)
