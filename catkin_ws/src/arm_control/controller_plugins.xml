@@ -1,0 +1,5 @@
+<library path="lib/libarm_control_lib">
+  <class name="arm_control/MyControllerPlugin" 
+         type="arm_control_ns::MyControllerClass"           
+         base_class_type="pr2_controller_interface::Controller" />
+</library>

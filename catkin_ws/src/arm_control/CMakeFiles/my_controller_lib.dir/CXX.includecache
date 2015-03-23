@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eeit/roboarm/catkin_ws/src/arm_control/include/my_controller_pkg/my_controller_file.h
+pr2_controller_interface/controller.h
+-
+pr2_mechanism_model/joint.h
+-
+
+/home/eeit/roboarm/catkin_ws/src/arm_control/src/my_controller_file.cpp
+../include/my_controller_pkg/my_controller_file.h
+/home/eeit/roboarm/catkin_ws/src/arm_control/include/my_controller_pkg/my_controller_file.h
+pluginlib/class_list_macros.h
+-
+
