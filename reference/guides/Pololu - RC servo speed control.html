@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="Pololu%20-%20RC%20servo%20speed%20control_files/menu174.js" type="text/javascript"></script>
+<meta charset="utf-8">
+<link href="https://plus.google.com/106874607765859343033" rel="publisher">
+<link href="https://a.pololu-files.com/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<link href="Pololu%20-%20RC%20servo%20speed%20control_files/application-d6a24a2cab3b58ce4fd11a5859a81e65.css" media="all" rel="stylesheet">
+<script src="Pololu%20-%20RC%20servo%20speed%20control_files/analytics.js" async=""></script><script src="Pololu%20-%20RC%20servo%20speed%20control_files/application-a87f7d083d06266ff913ece7a2bef07d.js"></script>
+
+<link href="Pololu%20-%20RC%20servo%20speed%20control_files/print-0432d4c2bba270737130253280977c32.css" media="print" rel="stylesheet">
+
+
+
+<title>Pololu - RC servo speed control</title>
+
+<meta content="It is often desirable to control the speed and acceleration of hobby RC servos.  Understanding your options can be confusing since there are various speeds involved, many similar terms are used, and the terms are not used consistently by different companies or end users.  You might also have an idea of what you want your servo to do without knowing what to call it or how to describe it or how to implement it.  To get a good understanding of what is going on, it is helpful to picture the position of your servo in relation to the commands you are sending it.  A simple first attempt might look like this:" name="description">
+<meta content="Pololu,robotics,robot electronics,robot kits,robot parts,ir beacon,servo controller,motor controller,robot sensors,robot chassis,robot gearboxes,robot tires, ball casters, tamiya parts,elenco kits" name="keywords">
+<meta content="https://www.pololu.com/blog/22/rc-servo-speed-control" property="og:url">
+<meta content="Pololu - RC servo speed control" property="og:title">
+<meta content="https://a.pololu-files.com/picture/0J3484.1200.png?51b95121277dd6f82c0fdf7c9dcee4d6" property="og:image">
+
+<meta content="It is often desirable to control the speed and acceleration of hobby RC servos.  Understanding your options can be confusing since there are various speeds involved, many similar terms are used, and the terms are not used consistently by different companies or end users.  You might also have an idea of what you want your servo to do without knowing what to call it or how to describe it or how to implement it.  To get a good understanding of what is going on, it is helpful to picture the position of your servo in relation to the commands you are sending it.  A simple first attempt might look like this:" property="og:description">
+<link media="all" href="Pololu%20-%20RC%20servo%20speed%20control_files/widget020.css" type="text/css" rel="stylesheet"></head>
+
+<body class="math_ignore" onload="externalLinksNewWindow(); if(document.onLoadHandler){document.onLoadHandler();}  ">
+<table id="main_and_right">
+<tbody><tr id="main_and_right_row">
+<td id="main">
+<h2 id="breadcrumbs">
+<a href="https://www.pololu.com/blog">Pololu Blog</a> » <a href="https://www.pololu.com/blog/engage-your-brain">Engage Your Brain</a> »
+</h2>
+<h1 id="page_title">
+<a href="https://www.pololu.com/blog/22/rc-servo-speed-control">RC servo speed control</a>
+</h1>
+<div id="contents">
+<!-- CONTENTS_BEGIN /blog/22/rc-servo-speed-control -->
+
+<div class="web_update_item">
+
+<div class="web_update_item_header">
+<div class="web_update_item_header_left_col">
+Posted by <a href="https://www.pololu.com/user/a66c8f4/Jan">Jan</a> on 6 May 2011
+
+<div class="web_update_top_comment_count">
+<a href="https://www.pololu.com/blog/22/rc-servo-speed-control#comments">6 comments</a>
+</div>
+</div>
+<div class="web_update_item_header_right_col">
+Tags: <a href="https://www.pololu.com/blog/engage-your-brain">engage your brain</a> <a href="https://www.pololu.com/blog/hobby-servos">hobby servos</a>
+</div>
+<div class="clear"></div>
+</div>
+
+
+<div class="web_update_item_body">
+<p>It is often desirable to control the speed and acceleration of hobby 
+RC servos.  Understanding your options can be confusing since there are 
+various speeds involved, many similar terms are used, and the terms are 
+not used consistently by different companies or end users.  You might 
+also have an idea of what you want your servo to do without knowing what
+ to call it or how to describe it or how to implement it.  To get a good
+ understanding of what is going on, it is helpful to picture the 
+position of your servo in relation to the commands you are sending it.  A
+ simple first attempt might look like this:</p>
+<p></p><table class="picture_with_caption center wide"><tbody><tr><td><img src="Pololu%20-%20RC%20servo%20speed%20control_files/0J3474.png" alt="" class="wide"></td></tr></tbody></table><p></p>
+<p>I have deliberately shortened the space between <a href="https://www.pololu.com/blog/17">control pulses</a>
+ so that we can see several pulses at once.  The problem with this 
+representation is that it suggests that our servo can instantly move 
+from one position to another.  We know that our servos are not 
+infinitely fast, so we can improve the drawing by explicitly showing 
+that it takes our servo some time to move from one position to another. 
+ I hope you noticed that the diagram also suggests that our servo can 
+see into the future, moving to the new position before the pulse 
+commanding it there even finished.  So, here is a better approximation:</p>
+<p></p><table class="picture_with_caption center wide"><tbody><tr><td><img src="Pololu%20-%20RC%20servo%20speed%20control_files/0J3475.png" alt="" class="wide"></td></tr></tbody></table><p></p>
+<p>The diagram now makes explicit that the servo cannot begin moving 
+until after we have given it a new position command and that it takes 
+some time to move from one position to another.  However, since I also 
+want to include some discussion of acceleration, the diagram is still 
+too simplistic in that it suggests that our servo can instantly get up 
+to full speed.  In reality, it takes time to accelerate to that speed, 
+and the servo needs to slow down (decelerate, or accelerate in the 
+negative direction) before it gets to the new position, so the picture 
+you should have is more like this:</p>
+<p></p><table class="picture_with_caption center wide"><tbody><tr><td><img src="Pololu%20-%20RC%20servo%20speed%20control_files/0J3480.png" alt="" class="wide"></td></tr></tbody></table><p></p>
+<p>Everything so far has just been about the intrinsic properties of a 
+servo: when you tell it to go from one position to another, it’s going 
+to do that at the fastest speed it can, and there is nothing you can do 
+to increase that.  Therefore, any discussion about servo speed control 
+can only be about making a servo move more slowly than it would on its 
+own.  At this point, we should add to our mental model the idea of a 
+servo’s target position.  I have added it to the diagram as a dotted red
+ line:</p>
+<p></p><table class="picture_with_caption center wide"><tbody><tr><td><img src="Pololu%20-%20RC%20servo%20speed%20control_files/0J3483.png" alt="" class="wide"></td></tr></tbody></table><p></p>
+<p>This red target line represents the servo’s understanding of what we 
+told it to do via the command pulses: as soon as the first pulse of 
+length <i>t</i><sub>2</sub> arrives, the target is changed, and the 
+servo begins its task of actually making the position match the target. 
+ As I hope I have belabored by now, we do not get any feedback from a 
+servo: we do not know what its target is or what its output position is 
+or how hard the servo is trying to achieve what we are telling it to do.
+  All we get to do is to manipulate the target line, and trust that the 
+servo will get us there.</p>
+<p>So, to make a servo move slowly, we have to tell it to move slowly, 
+and the way to do that is to move the target slowly.  The crudest 
+implementation would be to insert some intermediate position commands, 
+like this:</p>
+<p></p><table class="picture_with_caption center wide"><tbody><tr><td><img src="Pololu%20-%20RC%20servo%20speed%20control_files/0J3484.png" alt="" class="wide"></td></tr></tbody></table><p></p>
+<p>The diagram represents what might happen if you use a dedicated servo
+ controller but do not use its speed control feature (sometimes called 
+“ramping”): if you send intermediate position commands at a speed slower
+ than the servo can achieve them, the servo will at times be moving at 
+full speed and at other times be stopped when it has caught up to the 
+target.  Therefore, the trick to smooth, low-speed movement is to change
+ every single pulse you send the servo.  This is why you have to 
+implement speed control yourself if you are directly generating the 
+speed control pulses or use a servo controller that has speed control 
+support; having to send a dedicated servo controller 50 commands per 
+second, even if you could synchronize them just right, would defeat the 
+purpose of a dedicated servo controller.  If your servo controller has a
+ speed control feature, you can set the speed at which you want the 
+servo to move, and when you send a new position command, it 
+automatically calculates and sends all the intermediate pulses.</p>
+<p>Let’s consider a specific example: we want to have a servo sweep a 
+90-degree range in five seconds.  This corresponds to approximately a 
+1&nbsp;ms (the exact amount will depend on the servo) cumulative change 
+in the pulse width over that period.  In five seconds, we will send 250 
+pulses, so we need each pulse to be 4&nbsp;microseconds longer than the 
+previous one.  Again, keep in mind that although the servo itself is 
+using closed-loop feedback, we are out of that loop.  If an external 
+force keeps the servo from moving, we can’t know that (without extra 
+sensors or electronics), so we keep gradually moving the target.  Once 
+the servo is freed, it will move to the current target position as 
+quickly as it can:</p>
+<p></p><table class="picture_with_caption center wide"><tbody><tr><td><img src="Pololu%20-%20RC%20servo%20speed%20control_files/0J3485.png" alt="" class="wide"></td></tr></tbody></table><p></p>
+<p>This situation is similar to the problem that arises on power-up: if 
+we do not know where the servo is to begin with, we cannot make the 
+first movement slow: we have to send the servo some kind of target 
+position, and it will exert all the power it can to get to that as 
+quickly as possible.</p>
+<p>I should point out that the terms “position” and “target” that I have
+ been using could mean different things depending on your perspective.  
+If you have a main robot controller, it might have its own variable that
+ is called either the position or target, which can then get sent to a 
+servo controller via a “set position” command that then sets the servo 
+controller’s idea of a target, which might be used to send the servo yet
+ another sense of target.  It should be clear from the context of what 
+you are working with, but make sure to pay attention to it.  In the 
+diagram below, I have added the dashed green line to represent a 
+“position” that might have been sent to a servo controller that has 
+speed control.  Keep in mind that even if the servo controller gives you
+ a “get position” command, it can only return the red or green value, 
+not the actual position of the servo.</p>
+<p></p><table class="picture_with_caption center wide"><tbody><tr><td><img src="Pololu%20-%20RC%20servo%20speed%20control_files/0J3487.png" alt="" class="wide"></td></tr></tbody></table><p></p>
+<p>The basic principles are the same for acceleration control and any 
+other more advanced motion control and trajectory planning: we are free 
+to calculate whatever target position curve we want to and then to send 
+the corresponding pulses; as long as the servo is capable of executing 
+that path, it will, and if is not capable of it, we will not know about 
+it.  This can get arbitrarily difficult, but in the case of 
+acceleration, you don’t need more than basic algebra (you need more math
+ to really understand the physics of acceleration than to implement the 
+corresponding servo control on a microcontroller).  Acceleration control
+ tends to make sense only on longer movements where you want to get up 
+to a fairly good speed but want to get there gradually, so if you do not
+ have a trivial way of achieving it (e.g. with a servo controller that 
+just gives you that feature), it might not be worth it unless you 
+specifically need to speed up your long movements without a lot of 
+jerking around at the beginning and end of the movement.</p>
+<h3>Conclusion (for now)</h3>
+<p>I hope I have presented enough information to show how to implement 
+speed control with hobby servos and to generally show that once you 
+understand the basic interface, you can make a servo do anything a 
+person can make it do with a joystick and that at that point, the 
+problem moves on from being specific to RC servos to a problem of 
+mathematically representing the movements you want to achieve.  <a href="https://www.pololu.com/blog/24">Next time</a>,
+ I plan on moving back to more electromechanical considerations about 
+servos.  Looking at my notes, I see there are still so many frequently 
+asked questions to cover!</p>
+<p>
+
+</p>
+
+<div class="clear"></div>
+<div class="web_update_item_footer">
+<div class="web_update_item_footer_left_col">
+<ul>
+<div class="footer_prev">Previous post</div><li class="clickable web_update">
+<div class="pic">
+<a href="https://www.pololu.com/blog/21/advanced-hobby-servo-control-using-only-a-timer-and-interrupts"><img alt="Advanced hobby servo control using only a timer and interrupts" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J3471.jpg"></a>
+</div>
+<h3 class="content_title">
+<a href="https://www.pololu.com/blog/21/advanced-hobby-servo-control-using-only-a-timer-and-interrupts">Advanced hobby servo control using only a timer and interrupts</a>
+</h3>
+<span class="author">
+by
+Jan
+</span>
+<span class="title_time">
+ - 
+5 May 2011
+
+</span>
+<p class="math">
+In this last article about generating pulses for hobby servo control, I 
+will present what I think is the best solution to controlling many 
+servos or...
+</p>
+<div class="clear"></div>
+</li>
+
+</ul>
+</div>
+<div class="web_update_item_footer_center_col"></div>
+<div class="web_update_item_footer_right_col">
+<ul>
+<div class="footer_next">Next post</div><li class="clickable web_update">
+<div class="pic">
+<a href="https://www.pololu.com/blog/150/instructable-introducing-the-wixel-usb-wireless-module"><img alt="Instructable: Introducing the Wixel USB Wireless Module" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J3486.jpg"></a>
+</div>
+<h3 class="content_title">
+<a href="https://www.pololu.com/blog/150/instructable-introducing-the-wixel-usb-wireless-module">Instructable: Introducing the Wixel USB Wireless Module</a>
+</h3>
+<span class="author">
+by
+Ben
+</span>
+<span class="title_time">
+ - 
+6 May 2011
+
+</span>
+<p class="math">
+This Instructable by customer Michael Oz introduces the reader to the Wixel through a series of basic projects.
+</p>
+<div class="clear"></div>
+</li>
+
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="web_update_share">
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style " addthis:url="https://www.pololu.com/blog/22/rc-servo-speed-control" addthis:title="RC servo speed control">
+<a href="#" title="Facebook" class="addthis_button_facebook at300b"><span style="background-color: rgb(48, 88, 145);" class="at4-icon aticon-facebook"><span class="at_a11y">Share on facebook</span></span></a>
+<a href="#" title="Tweet" class="addthis_button_twitter at300b"><span style="background-color: rgb(44, 168, 210);" class="at4-icon aticon-twitter"><span class="at_a11y">Share on twitter</span></span></a>
+<a href="#" title="Email" target="_blank" class="addthis_button_email at300b"><span style="background-color: rgb(115, 138, 141);" class="at4-icon aticon-email"><span class="at_a11y">Share on email</span></span></a>
+<a title="Google+" target="_blank" href="https://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=xa-521e79d967436ddf&amp;source=tbx-300&amp;lng=en-US&amp;s=google_plusone_share&amp;url=https%3A%2F%2Fwww.pololu.com%2Fblog%2F22%2Frc-servo-speed-control&amp;title=RC%20servo%20speed%20control&amp;ate=AT-xa-521e79d967436ddf/-/-/5510d17c80523aa1/2&amp;frommenu=1&amp;uid=5510d17c1ff24bb8&amp;ct=1&amp;pre=https%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Dt%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dweb%26cd%3D2%26ved%3D0CDUQFjAB%26url%3Dhttps%253A%252F%252Fwww.pololu.com%252Fblog%252F22%252Frc-servo-speed-control%26ei%3DatEQVe490O3yBZuNgbAL%26usg%3DAFQjCNETs8fjoB30GNQIG_66zKA_CH1gdA%26bvm%3Dbv.89184060%2Cd.dGc&amp;tt=0&amp;captcha_provider=nucaptcha" class="addthis_button_google_plusone_share at300b"><span style="background-color: rgb(206, 77, 57);" class="at4-icon aticon-google_plusone_share"><span class="at_a11y">Share on google_plusone_share</span></span></a>
+<a href="#" title="Print" class="addthis_button_print addthis_button_preferred_1 at300b"><span style="background-color: rgb(115, 138, 141);" class="at4-icon aticon-print"><span class="at_a11y">Share on print</span></span></a>
+<a href="#" title="Pinterest" target="_blank" class="addthis_button_pinterest_share addthis_button_preferred_2 at300b"><span style="background-color: rgb(200, 40, 40);" class="at4-icon aticon-pinterest_share"><span class="at_a11y">Share on pinterest_share</span></span></a>
+<a href="#" title="Favorites" class="addthis_button_favorites addthis_button_preferred_3 at300b"><span style="background-color: rgb(245, 202, 89);" class="at4-icon aticon-favorites"><span class="at_a11y">Share on favorites</span></span></a>
+<a title="Reddit" target="_blank" href="https://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=xa-521e79d967436ddf&amp;source=tbx-300&amp;lng=en-US&amp;s=reddit&amp;url=https%3A%2F%2Fwww.pololu.com%2Fblog%2F22%2Frc-servo-speed-control&amp;title=RC%20servo%20speed%20control&amp;ate=AT-xa-521e79d967436ddf/-/-/5510d17c80523aa1/3/54fa7f18ac2e32d7&amp;frommenu=1&amp;uid=54fa7f18ac2e32d7&amp;ct=1&amp;pre=https%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Dt%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dweb%26cd%3D2%26ved%3D0CDUQFjAB%26url%3Dhttps%253A%252F%252Fwww.pololu.com%252Fblog%252F22%252Frc-servo-speed-control%26ei%3DatEQVe490O3yBZuNgbAL%26usg%3DAFQjCNETs8fjoB30GNQIG_66zKA_CH1gdA%26bvm%3Dbv.89184060%2Cd.dGc&amp;tt=0&amp;captcha_provider=nucaptcha" class="addthis_button_reddit addthis_button_preferred_4 at300b"><span style="background-color: rgb(232, 232, 232);" class="at4-icon aticon-reddit"><span class="at_a11y">Share on reddit</span></span></a>
+<a href="#" class="addthis_button_compact at300m"><span style="background-color: rgb(252, 109, 76);" class="at4-icon aticon-compact"><span class="at_a11y">More Sharing Services</span></span></a>
+<div class="atclear"></div></div>
+<script type="text/javascript">
+var addthis_config = {ui_show_promo:false,services_exclude:'mailto,gmail,printfriendly,yahoomail,hotmail,aolmail,google'}
+</script>
+<script type="text/javascript" src="Pololu%20-%20RC%20servo%20speed%20control_files/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+
+</div>
+<div class="web_update_bottom_comment_count">
+
+</div>
+</div>
+
+</div>
+
+<div class="web_update_comments">
+<h2 class="web_update_show_comment_count" id="comments">
+6 comments
+</h2>
+<div class="web_update_scroll_down_comment_link"><a href="#post-comment">Scroll down to post a comment.</a></div>
+<div style="background-color: transparent;" class="web_update_comment" id="comment1J63">
+<div class="web_byline">
+<img alt="Spencer B." class="center" src="Pololu%20-%20RC%20servo%20speed%20control_files/cbd13dfafa4e504f2ec688efb58ec918.png">
+<div class="center public_name">
+Spencer B.
+</div>
+<div class="center">
+<a href="https://www.pololu.com/blog/22/rc-servo-speed-control#comment1J63">
+9 Jan 2012
+</a>
+
+</div>
+</div>
+
+<div class="web_update_comment_content">
+
+<div class="web_update_comment_body math">
+I have been playing around with the speed control option in the Maestro 
+Control center software and Micro Maestro servo control board and have 
+noticed that when I set the speed, the servo's motion can become very 
+jerky at most speed settings. Is it possible to achieve a smoother 
+behavior somehow?
+
+</div>
+</div>
+
+<div class="clear"></div>
+</div>
+<div style="background-color: transparent;" class="web_update_comment" id="comment1J64">
+<div class="web_byline">
+<a href="https://www.pololu.com/user/a66c8f4/jan"><img alt="Jan" class="center" src="Pololu%20-%20RC%20servo%20speed%20control_files/d98082f867c9e5c37c730c0e1b73d46c.jpeg"></a>
+<div class="center public_name">
+<a href="https://www.pololu.com/user/a66c8f4/jan">Jan</a>
+</div>
+<div class="center">
+<a href="https://www.pololu.com/blog/22/rc-servo-speed-control#comment1J64">
+10 Jan 2012
+</a>
+
+</div>
+</div>
+
+<div class="web_update_comment_content">
+
+<div class="web_update_comment_body math">
+Hi.
+<br>
+
+<br>
+The Maestros should give very good, smooth outputs, so the jerkiness is 
+probably because of the servo you're using or the load you have on it.  
+You're probably effectively getting a situation like the one in the last
+ two diagrams, where the commanded position is gradually changing but 
+the servo responds in jerks either because it isn't very good or because
+ you have so much load on it that it can't move until the error is quite
+ big.  Can you put the same servo setup on an RC receiver and slowly 
+move the controls on your transmitter?
+<br>
+
+<br>
+- Jan
+
+</div>
+</div>
+
+<div class="clear"></div>
+</div>
+<div style="background-color: transparent;" class="web_update_comment" id="comment1J72">
+<div class="web_byline">
+<img alt="" class="center" src="Pololu%20-%20RC%20servo%20speed%20control_files/7798b5e095098c982588a66506c574fb.png">
+<div class="center public_name">
+bll
+</div>
+<div class="center">
+<a href="https://www.pololu.com/blog/22/rc-servo-speed-control#comment1J72">
+19 Mar 2012
+</a>
+
+</div>
+</div>
+
+<div class="web_update_comment_content">
+
+<div class="web_update_comment_body math">
+hello, i want to control speed of two futaba analog servo motors, so should i construct a PID controller for that?
+
+</div>
+</div>
+
+<div class="clear"></div>
+</div>
+<div style="background-color: transparent;" class="web_update_comment" id="comment1J73">
+<div class="web_byline">
+<a href="https://www.pololu.com/user/a66c8f4/jan"><img alt="Jan" class="center" src="Pololu%20-%20RC%20servo%20speed%20control_files/d98082f867c9e5c37c730c0e1b73d46c.jpeg"></a>
+<div class="center public_name">
+<a href="https://www.pololu.com/user/a66c8f4/jan">Jan</a>
+</div>
+<div class="center">
+<a href="https://www.pololu.com/blog/22/rc-servo-speed-control#comment1J73">
+19 Mar 2012
+</a>
+
+</div>
+</div>
+
+<div class="web_update_comment_content">
+
+<div class="web_update_comment_body math">
+Have you read (and understood) these servo control posts at all?  If you
+ are serious about your question, please provide a little more detail 
+about what you are trying to do.
+<br>
+
+<br>
+- Jan
+
+</div>
+</div>
+
+<div class="clear"></div>
+</div>
+<div style="background-color: transparent;" class="web_update_comment" id="comment1J512">
+<div class="web_byline">
+<img alt="" class="center" src="Pololu%20-%20RC%20servo%20speed%20control_files/c95c77738614e372abf860e3452eda5a.png">
+<div class="center public_name">
+paco
+</div>
+<div class="center">
+<a href="https://www.pololu.com/blog/22/rc-servo-speed-control#comment1J512">
+29 Nov 2014
+</a>
+
+</div>
+</div>
+
+<div class="web_update_comment_content">
+
+<div class="web_update_comment_body math">
+Hello
+<br>
+I am working on a project using an arduino to control a servo motor 
+using the error. How can I implement impulse with modulation in my code 
+to make the servo motor speed up when the error is large and slow down 
+when the error is small? 
+<br>
+-Paco
+
+</div>
+</div>
+
+<div class="clear"></div>
+</div>
+<div style="background-color: transparent;" class="web_update_comment" id="comment1J515">
+<div class="web_byline">
+<a href="https://www.pololu.com/user/a66c8f4/jan"><img alt="Jan" class="center" src="Pololu%20-%20RC%20servo%20speed%20control_files/d98082f867c9e5c37c730c0e1b73d46c.jpeg"></a>
+<div class="center public_name">
+<a href="https://www.pololu.com/user/a66c8f4/jan">Jan</a>
+</div>
+<div class="center">
+<a href="https://www.pololu.com/blog/22/rc-servo-speed-control#comment1J515">
+2 Dec 2014
+</a>
+
+</div>
+</div>
+
+<div class="web_update_comment_content">
+
+<div class="web_update_comment_body math">
+Paco,
+<br>
+
+<br>
+The hobby servos I wrote about in this article are not well suited for 
+doing what you are asking for since they do not tell you the error.  You
+ can do something similar to the speed control I wrote about by picking a
+ virtual set point and then sending your servo appropriate commands 
+based on where you think the servo should be, having it move faster when
+ farther from the point and slower when near that set point.  However, 
+this is all just an open-loop motion sequence you would be sending the 
+servo, and depending on the resistance it encounters, the actual 
+resulting movement can be completely different from what you intend.
+<br>
+
+<br>
+If you are looking to effectively make your own servo by doing your own 
+closed-loop control system, that is outside the scope of this article, 
+and you should search online for things like "closed-loop motor control 
+with Arduino" as there are many resources available.
+<br>
+
+<br>
+- Jan
+
+</div>
+</div>
+
+<div class="clear"></div>
+</div>
+
+<div class="web_update_new_comment">
+<h2 id="post-comment">
+Post a comment
+</h2>
+<form action="/web_comment/show_comment_form" id="new_comment_form" method="post">
+<div>
+<input name="session_id" value="" type="hidden">
+<input name="account[url]" value="/blog/22/rc-servo-speed-control#post-comment" type="hidden">
+<input name="web_update_id" value="0J22" type="hidden">
+Using your Pololu account allows you to customize your avatar and manage your comments; you can also post anonymously.
+</div>
+<div class="login_widget" id="login_widget">
+<style>
+.captcha { background-image:url('/account/captcha/286769'); width:100px; height:50px;}
+</style>
+<input name="session_id" value="" type="hidden">
+<input id="javascript_on" name="javascript_on" value="true" type="hidden">
+<p style="display: none;" class="javascript_off">
+Please choose one of the following options:
+</p>
+<ol style="display: none;" class="javascript_off">
+<li>
+<a href="#login_825">I have a password.</a>
+</li>
+<li>
+<a href="#forgot_825">I forgot my password.</a>
+</li>
+<li>
+<a href="#new_825">I am a new customer.</a>
+</li>
+<li>
+<a href="#anonymous_825">I want to proceed anonymously.</a>
+</li>
+</ol>
+<table>
+<tbody><tr class="javascript_on" style="">
+<td>
+<input checked="checked" id="login_option_login_825" name="account[login_option]" value="log_in" type="radio">
+<label for="login_option_login_825">I have a password.</label>
+</td>
+</tr>
+<tr>
+<td>
+<fieldset style="" id="login_825">
+<div style="display: none;" class="header javascript_off">
+<a name="login_825">I have a password:</a>
+</div><table class="indent form">
+
+<tbody><tr><th><label for="email_0">Email:</label></th><td><input class=" text" id="email_0" name="login[email]" type="text"></td></tr><tr><th><label for="password_1">Password:</label></th><td><input id="password_1" name="login[password]" type="password"></td></tr><tr><th></th><td><input name="login[remember_me]" value="0" type="hidden"><input checked="checked" class="checkbox" id="remember_me_2" name="login[remember_me]" value="1" type="checkbox"> <label for="remember_me_2">Remember me</label></td></tr><tr id="button_login">
+<th></th>
+<td>
+<button alt="Show comment form" class="btn-green" id="login_button" name="submit" value="log_in">Show comment form</button>
+</td>
+</tr>
+</tbody></table>
+</fieldset>
+</td>
+</tr>
+<tr class="javascript_on" style="">
+<td>
+<input id="login_option_forgot_825" name="account[login_option]" value="send_password_reset_email" type="radio">
+<label for="login_option_forgot_825">I forgot my password.</label>
+</td>
+</tr>
+<tr>
+<td>
+<fieldset style="display: none;" id="forgot_password_825">
+<div style="display: none;" class="header javascript_off">
+<a name="forgot_825">I forgot my password:</a>
+</div>
+<table class="indent form">
+<tbody><tr><th><label for="email_3">Email:</label></th><td><input class=" text" id="email_3" name="forgot[email]" type="text"></td></tr><tr>
+<th></th>
+<td>
+<div class="captcha"></div>
+</td>
+</tr>
+<tr><th><label for="captcha_4">Please type the five lowercase letters:</label></th><td><input class=" text" id="captcha_4" name="forgot[captcha]" style="width:5em;" type="text"></td></tr>
+<tr id="button_forgot">
+<th></th>
+<td>
+<button alt="Send password reset email" class="btn-small btn-orange" icon="arrow" id="forgot_password_button" name="submit" value="send_password_reset_email">Send password reset email</button>
+</td>
+</tr>
+</tbody></table>
+</fieldset>
+</td>
+</tr>
+<tr class="javascript_on" style="">
+<td>
+<input id="login_option_new_825" name="account[login_option]" value="create_account" type="radio">
+<label for="login_option_new_825">I am a new customer.</label>
+</td>
+</tr>
+<tr>
+<td>
+<fieldset style="display: none;" id="create_account_825">
+<div style="display: none;" class="header javascript_off">
+<a name="new_825">I am a new customer:</a>
+</div>
+<table class="indent form">
+<tbody><tr><th><label for="first_name_5">First name:</label></th><td><input class=" text" id="first_name_5" name="account[first_name]" type="text"></td></tr><tr><th><label for="middle_name_6">Middle name (optional):</label></th><td><input class=" text" id="middle_name_6" name="account[middle_name]" type="text"></td></tr><tr class="last_in_group"><th><label for="last_name_7">Last name:</label></th><td><input class=" text" id="last_name_7" name="account[last_name]" type="text"></td></tr><tr class="last_in_group"><th><label for="email_8">Email:</label></th><td><input class=" text" id="email_8" name="account[email]" type="text"></td></tr><tr><th><label for="new_password1_9">Password:</label></th><td><input id="new_password1_9" name="account[new_password1]" type="password"></td></tr><tr><th><label for="new_password2_10">Re-type password:</label></th><td><input id="new_password2_10" name="account[new_password2]" type="password"></td></tr>
+<tr><th></th><td><input name="account[on_email_list]" value="0" type="hidden"><input class="checkbox" id="on_email_list_11" name="account[on_email_list]" value="1" type="checkbox"> <label for="on_email_list_11"><!-- email_list_description -->Send me occasional emails about Pololu products, news and specials (approximately monthly).</label></td></tr><tr>
+<th></th>
+<td>
+<div class="captcha"></div>
+</td>
+</tr>
+<tr><th><label for="captcha_12">Please type the five lowercase letters:</label></th><td><input class=" text" id="captcha_12" name="account[captcha]" style="width:5em;" type="text"></td></tr>
+<tr id="button_new">
+<th></th>
+<td>
+<button alt="Show comment form" class="btn-small btn-orange" icon="arrow" id="create_account_button" name="submit" value="create_account">Show comment form</button>
+</td>
+</tr>
+</tbody></table>
+</fieldset>
+</td>
+</tr>
+<tr class="javascript_on" style="">
+<td>
+<input id="login_option_anonymous_825" name="account[login_option]" value="proceed_without_an_account" type="radio">
+<label for="login_option_anonymous_825">I want to post anonymously.</label>
+</td>
+</tr>
+<tr>
+<td>
+<fieldset style="display: none;" id="proceed_anonymously_825">
+<div style="display: none;" class="header javascript_off">
+<a name="anonymous_825">I want to post anonymously.</a>
+</div>
+<table class="indent form">
+<tbody><tr>
+<th></th>
+<td>
+<div class="captcha"></div>
+</td>
+</tr>
+<tr><th><label for="captcha_13">Please type the five lowercase letters:</label></th><td><input class=" text" id="captcha_13" name="anon[captcha]" style="width:5em;" type="text"></td></tr>
+<tr id="button_anonymous">
+<th></th>
+<td>
+<button alt="Show comment form" class="btn-green" id="proceed_anonymously_button" name="submit" value="proceed_without_an_account">Show comment form</button>
+</td>
+</tr>
+</tbody></table>
+</fieldset>
+</td>
+</tr>
+</tbody></table>
+<script>
+  (function () {
+    var I = function(id) {return document.getElementById(id);};
+    var normalize = function(id_or_element) {
+      if (typeof(id_or_element) == 'string')
+        return I(id_or_element);
+      return id_or_element;
+    };
+    var show = function(id_or_element) {normalize(id_or_element).style.display = "";}
+    var hide = function(id_or_element) {normalize(id_or_element).style.display = "none";};
+  
+    set_display_state = function() {
+      hide("create_account_825");
+      hide("forgot_password_825");
+      if (I("proceed_anonymously_825"))
+        hide("proceed_anonymously_825");
+      hide("login_825");
+  
+      if(I("login_option_login_825").checked)
+        show("login_825");
+      else if (I("login_option_new_825").checked)
+        show("create_account_825");
+      else if (I("login_option_forgot_825").checked)
+        show("forgot_password_825");
+      else if (I("login_option_anonymous_825") && I("login_option_anonymous_825").checked)
+        show("proceed_anonymously_825");
+    }
+  
+    //this getElementByClass will not find elements added to the DOM
+    //after the function is defined.
+    var getElementByClass;
+    (function() {
+      var all_tags = document.getElementsByTagName("*");
+      getElementByClass = function(theClass) {
+        var result = new Array();
+        for(i=0; i < all_tags.length; i++)
+          if (all_tags[i].className.indexOf(theClass) > -1)
+            result.push(all_tags[i]);
+        return result;
+      }
+    })();
+  
+    if (true) {
+      set_display_state();
+      I("login_option_new_825").onclick = set_display_state;
+      I("login_option_login_825").onclick = set_display_state;
+      I("login_option_forgot_825").onclick = set_display_state;
+      if (I("login_option_anonymous_825"))
+        I("login_option_anonymous_825").onclick = set_display_state;
+  
+      var javascript_elements = getElementByClass("javascript_on")
+      for (i=0; i < javascript_elements.length; i++)
+        show(javascript_elements[i]);
+  
+      var javascript_elements = getElementByClass("javascript_off")
+      for (i=0; i < javascript_elements.length; i++)
+        hide(javascript_elements[i]);
+  
+      I("javascript_on").value = true;
+    }
+  
+  })();
+</script>
+</div>
+
+</form>
+
+</div>
+</div>
+
+<script>
+  $(window).hashchange(blogHighlightYellow)
+  blogHighlightYellow()
+</script>
+
+<!-- CONTENTS_END -->
+<div id="footer">
+<p class="share">
+<span class="image_text_link"><a href="https://www.pololu.com/blog/22/rc-servo-speed-control?print=1"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/printer-e7952e9bd7c359c02992438435c0ebfd.png"></a><a href="https://www.pololu.com/blog/22/rc-servo-speed-control?print=1">Print</a></span>
+<span class="image_text_link"><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fblog%2F22%2Frc-servo-speed-control&amp;subject"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/email-695614a9f238b748c8f5f1abd3038c3d.png"></a><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fblog%2F22%2Frc-servo-speed-control&amp;subject">Email a friend</a></span>
+<span class="image_text_link"><a href="https://www.pololu.com/feeds"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/feed-icon-12x12-50f5047f3042d459467cec4b0d6046f3.png"></a><a href="https://www.pololu.com/feeds">Feeds</a></span>
+</p>
+<p class="links">
+<a href="https://www.pololu.com/">Home</a>
+|
+<a href="http://forum.pololu.com/">Forum</a>
+|
+<a href="https://www.pololu.com/blog">Blog</a>
+|
+<a href="https://www.pololu.com/support">Support</a>
+|
+<a href="https://www.pololu.com/ordering">Ordering Information</a>
+|
+<a href="https://www.pololu.com/wishlist">Wish Lists</a>
+|
+<a href="https://www.pololu.com/distributors">Distributors</a>
+|
+<a href="https://www.pololu.com/catalog/bigorderform">BIG Order Form</a>
+|
+<a href="https://www.pololu.com/about">About</a>
+|
+<a href="https://www.pololu.com/contact">Contact</a>
+</p>
+<p id="copyright">© 2001–2015 Pololu Corporation</p>
+</div>
+</div>
+</td>
+<td id="right_col">
+
+<div class="menu"><h2>
+<a href="https://www.pololu.com/catalog/category/42">New Products</a>
+</h2>
+<div class="menu_body">
+<table>
+<tbody><tr>
+<td class="img">
+<a href="https://www.pololu.com/product/2688"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J6212.jpg"></a>
+</td>
+<td>
+<a href="https://www.pololu.com/product/2688">Traveling Nut for TR8×2 Threaded Rods</a>
+</td>
+</tr>
+<tr>
+<td class="img">
+<a href="https://www.pololu.com/product/2258"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J6182.jpg"></a>
+</td>
+<td>
+<a href="https://www.pololu.com/product/2258">Steel L-Bracket for NEMA 23 Stepper Motors</a>
+</td>
+</tr>
+<tr>
+<td class="img">
+<a href="https://www.pololu.com/product/2373"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J6180.jpg"></a>
+</td>
+<td>
+<a href="https://www.pololu.com/product/2373">1000:1 Micro Metal Gearmotor HP with Extended Motor Shaft</a>
+</td>
+</tr>
+<tr>
+<td class="img">
+<a href="https://www.pololu.com/product/2689"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J6205.jpg"></a>
+</td>
+<td>
+<a href="https://www.pololu.com/product/2689">Stepper Motor with 18cm Lead Screw: Bipolar, 200 Steps/Rev, 42×38mm, 2.8V, 1.7 A/Phase</a>
+</td>
+</tr>
+<tr>
+<td class="img">
+<a href="https://www.pololu.com/product/2690"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J6207.jpg"></a>
+</td>
+<td>
+<a href="https://www.pololu.com/product/2690">Stepper Motor with 38cm Lead Screw: Bipolar, 200 Steps/Rev, 42×38mm, 2.8V, 1.7 A/Phase</a>
+</td>
+</tr>
+<tr>
+<td class="img">
+<a href="https://www.pololu.com/product/2386"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J2814.jpg"></a>
+</td>
+<td>
+<a href="https://www.pololu.com/product/2386">150:1 Micro Metal Gearmotor HP with Extended Motor Shaft</a>
+</td>
+</tr>
+<tr>
+<td class="img">
+<a href="https://www.pololu.com/product/3124"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J6238.jpg"></a>
+</td>
+<td>
+<a href="https://www.pololu.com/product/3124">Zumo 32U4 Robot Kit (No Motors)</a>
+</td>
+</tr>
+<tr>
+<td class="img">
+<a href="https://www.pololu.com/product/2776"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/0J6224.jpg"></a>
+</td>
+<td>
+<a href="https://www.pololu.com/product/2776">SparkFun Inventor's Kit (for Arduino Uno) - V3.2</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+
+</td>
+</tr>
+</tbody></table><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"><iframe src="Pololu%20-%20RC%20servo%20speed%20control_files/sh200.html" style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px none; left: 0px;" title="AddThis utility frame" id="_atssh26"></iframe></div><script src="Pololu%20-%20RC%20servo%20speed%20control_files/core201.js" type="text/javascript"></script>
+<div id="header_holder">
+<table id="header">
+<tbody><tr id="header_top">
+<td id="header_logo" rowspan="2">
+<a href="https://www.pololu.com/"><img alt="Pololu Robotics and Electronics" class="logo" src="Pololu%20-%20RC%20servo%20speed%20control_files/header_pololu-10b6ed20a866813c2f74aff1c95cc9ac.png" height="82" width="230"></a>
+</td>
+<td colspan="16" id="header_address">
+<p class="account">
+<span class="account">
+<a href="https://www.pololu.com/account/login?account%5Burl%5D=https%3A%2F%2Fwww.pololu.com%2Fblog%2F22%2Frc-servo-speed-control">Log In</a>
+|
+<a href="https://www.pololu.com/wishlist">Wish Lists</a>
+|
+<a href="https://www.pololu.com/catalog/bigorderform">BIG Order Form</a>
+|
+<a href="https://www.pololu.com/cart">Shopping Cart <img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/cart-6fbbcf46e6132736048575d44bed9ed3.png" height="15" width="23"></a>
+</span>
+</p>
+<p class="phone_number">
+US toll free: 1-877-7-POLOLU ~
+(702) 262-6648<br>
+<a href="https://www.pololu.com/ordering">Same-day shipping, worldwide</a>
+</p>
+</td>
+</tr>
+<tr id="header_links">
+<th class="">
+<a href="https://www.pololu.com/">Catalog</a>
+</th>
+<td>&nbsp;</td>
+<th>
+<a href="http://forum.pololu.com/">Forum</a>
+</th>
+<td>&nbsp;</td>
+<th class="selected">
+<a href="https://www.pololu.com/blog">Blog</a>
+</th>
+<td>&nbsp;</td>
+<th class="">
+<a href="https://www.pololu.com/support">Support</a>
+</th>
+<td>&nbsp;</td>
+<th class="">
+<a href="https://www.pololu.com/ordering">Ordering</a>
+</th>
+<td>&nbsp;</td>
+<th class="">
+<a href="https://www.pololu.com/distributors">Distributors</a>
+</th>
+<td>&nbsp;</td>
+<th class="">
+<a href="https://www.pololu.com/about">About</a>
+</th>
+<td>&nbsp;</td>
+<th class="">
+<a href="https://www.pololu.com/contact">Contact</a>
+</th>
+<td class="last"></td>
+</tr>
+</tbody></table>
+</div>
+<div id="left_col">
+<div class="menu" id="menu_search">
+<div class="menu_body">
+<form action="/search">
+<div class="for_w3c_validation"><input class="search_input" id="search_input" name="query" placeholder="Search" type="text"><input alt="" class="search_button" id="search_button" src="Pololu%20-%20RC%20servo%20speed%20control_files/magglass-725e64aed81a6511fecc0e1f1a5fbc7a.png" value="go" type="image">
+</div>
+</form>
+</div>
+</div>
+<div class="menu">
+<h2><a href="https://www.pololu.com/feedback/new?account%5Burl%5D=https%3A%2F%2Fwww.pololu.com%2Fblog%2F22%2Frc-servo-speed-control" onclick="window.open(this.href,'feedback','height=700,width=660,scrollbars=1,resizable=1');return false;">Feedback</a></h2>
+<div class="menu_body">
+<a class="menu_visible_link" href="https://www.pololu.com/feedback/new?account%5Burl%5D=https%3A%2F%2Fwww.pololu.com%2Fblog%2F22%2Frc-servo-speed-control" onclick="window.open(this.href,'feedback','height=700,width=660,scrollbars=1,resizable=1');return false;">Comments or questions?</a>
+(opens in new window)
+</div>
+</div>
+<div class="menu">
+<h2><a href="https://www.pololu.com/category/31/services">Services</a></h2>
+<div class="menu_body">
+<ul>
+<li>
+<a href="https://www.pololu.com/product/749">Custom Laser Cutting</a>
+</li>
+<li>
+<a href="https://www.pololu.com/product/446">SMT Stencils</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="menu">
+<h2><a href="https://www.pololu.com/">Products</a></h2>
+<div class="menu_body">
+<h3>
+<span class="new_category">
+<a href="https://www.pololu.com/category/42/new-products">New Products</a>
+</span>
+</h3>
+<h3>
+<span class="specials_category">
+<a href="https://www.pololu.com/category/43/specials">Specials!</a>
+</span>
+</h3>
+<hr>
+<h3><a href="https://www.pololu.com/category/2/robot-kits">Robot Kits</a></h3>
+<ul>
+<li>
+<a href="https://www.pololu.com/category/129/zumo-robots-and-accessories">Zumo Robots and Accessories</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/48/tamiya-robot-kits">Tamiya Robot Kits</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/3/robot-kits-with-soldering">Robot Kits with Soldering</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/4/robot-kits-without-soldering">Robot Kits without Soldering</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/26/chassis">Chassis</a>
+</li>
+</ul>
+<h3><a href="https://www.pololu.com/category/6/electronics">Electronics</a></h3>
+<ul>
+<li>
+<a href="https://www.pololu.com/category/64/programmable-controllers">Programmable Controllers</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/9/motion-control-modules">Motion Control Modules</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/7/sensors">Sensors</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/84/regulators-and-power-supplies">Regulators and Power Supplies</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/39/cables-and-wire">Cables and Wire</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/19/connectors">Connectors</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/14/electronics-prototyping">Electronics Prototyping</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/144/signal-adapters-and-extenders">Signal Adapters and Extenders</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/81/switches-buttons-and-relays">Switches, Buttons, and Relays</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/13/computer-interface">Computer Interface</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/53/rc-interface">RC Interface</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/15/electronics-kits">Electronics Kits</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/20/leds">LEDs</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/75/audio">Audio</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/16/discrete-components">Discrete Components</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/44/displays">Displays</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/54/batteries">Batteries</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/55/battery-holders">Battery Holders</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/91/wireless">Wireless</a>
+</li>
+</ul>
+<h3><a href="https://www.pololu.com/category/21/mechanical-components">Mechanical Components</a></h3>
+<ul>
+<li>
+<a href="https://www.pololu.com/category/22/motors-and-gearboxes">Motors and Gearboxes</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/23/rc-servos">RC Servos</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/24/wheels-tracks-and-ball-casters">Wheels, Tracks, and Ball Casters</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/25/hardware">Hardware</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/26/chassis">Chassis</a>
+</li>
+<li>
+<a href="https://www.pololu.com/category/61/tamiya-products">Tamiya Products</a>
+</li>
+</ul>
+<h3><a href="https://www.pololu.com/category/5/tools">Tools</a></h3>
+<h3><a href="https://www.pololu.com/category/109/shirts">Shirts</a></h3>
+<h3><a href="https://www.pololu.com/category/33/combination-deals">Combination Deals</a></h3>
+<h3><a href="https://www.pololu.com/category/90/discontinued-items">Discontinued Items</a></h3>
+</div>
+</div>
+
+<div class="menu">
+<h2>Community</h2>
+<div class="menu_body">
+<ul>
+<li>
+<a href="https://www.pololu.com/blog">Pololu Blog</a>
+</li>
+<li>
+<a href="https://www.pololu.com/blog/engage-your-brain">Engage Your Brain</a>
+</li>
+<li>
+<a href="https://www.pololu.com/blog/community-projects">Community Projects</a>
+</li>
+<li>
+<span class="image_text_link"><a href="https://www.pololu.com/feeds"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/feed-icon-12x12-50f5047f3042d459467cec4b0d6046f3.png"></a><a href="https://www.pololu.com/feeds">Feeds</a></span>
+</li>
+<li>
+<span class="image_text_link"><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fblog%2F22%2Frc-servo-speed-control&amp;subject"><img alt="" src="Pololu%20-%20RC%20servo%20speed%20control_files/email-695614a9f238b748c8f5f1abd3038c3d.png"></a><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fblog%2F22%2Frc-servo-speed-control&amp;subject">Email a friend</a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script src="Pololu%20-%20RC%20servo%20speed%20control_files/syntaxhighlight-cc8445c8fbee672ec78c920fcc36b7fe.js"></script>
+<script>
+//<![CDATA[
+window.mathjax_src = "https://a.pololu-files.com/versioned/mathjax-2.5.1/MathJax.js?config=AM_HTMLorMML-full.js"
+
+//]]>
+</script><div id="mathjax"></div>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3723284-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body></html>
