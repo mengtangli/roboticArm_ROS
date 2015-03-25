@@ -37,9 +37,9 @@
     </collision>
 
     <visual>
-      <origin xyz="${width*2.0} 0.5 0" rpy="1.57 0 -1.57"/>
+      <origin xyz="${width*2} 0.5 0" rpy="1.57 0 -1.57"/>
       <geometry>
-	<mesh filename="package://arm_description/meshes/dummyBody.STL" scale="2 2.6 2"/>
+	<mesh filename="package://arm_description/meshes/square_body.STL" scale="3.55 3.55 3.55"/>
 	<!--box size="${width} ${width} ${height1}"/-->
       </geometry>
       <material name="orange"/>
