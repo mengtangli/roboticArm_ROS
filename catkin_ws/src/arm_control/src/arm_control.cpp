@@ -42,7 +42,9 @@ int main(int argc, char **argv)
    * than we can send them, the number here specifies how many messages to
    * buffer up before throwing some away.
    */
-  ros::Publisher arm_control_pub = n.advertise<std_msgs::Float64>("arm/elbow1_1_controller/command", 1);
+  ros::Publisher arm_control_pub1_2 = n.advertise<std_msgs::Float64>("arm/elbow1_2_controller/command", 1);
+  ros::Publisher arm_control_pub2_1 = n.advertise<std_msgs::Float64>("arm/elbow2_1_controller/command", 1);
+  ros::Publisher arm_control_pub2_2 = n.advertise<std_msgs::Float64>("arm/elbow2_2_controller/command", 1);
 
   ros::Rate loop_rate(0.5);
 
@@ -50,7 +52,29 @@ int main(int argc, char **argv)
    * A count of how many messages we have sent. This is used to create
    * a unique string for each message.
    */
-  float count = 0;
+    float count;
+    count =0;
+    std_msgs::Float64 msg;
+
+    msg.data = 1.57;
+    ROS_INFO("%f", msg.data);
+    arm_control_pub1_2.publish(msg);
+    ros::spinOnce();
+    loop_rate.sleep();
+
+    msg.data = 1.57;
+    ROS_INFO("%f", msg.data);
+    arm_control_pub2_1.publish(msg);
+    ros::spinOnce();
+    loop_rate.sleep();
+
+    msg.data = 1.57;
+    ROS_INFO("%f", msg.data);
+    arm_control_pub2_2.publish(msg);
+    ros::spinOnce();
+    loop_rate.sleep();
+
+    count = 1.37;
   while (ros::ok())
   {
     /**
@@ -67,15 +91,16 @@ int main(int argc, char **argv)
      * given as a template parameter to the advertise<>() call, as was done
      * in the constructor above.
      */
-    arm_control_pub.publish(msg);
+    arm_control_pub2_2.publish(msg);
 
     ros::spinOnce();
 
     loop_rate.sleep();
-    //msg.data ++;
-    count += 0.2;
+    if(count>1.8){
+	count -= 0.5;
+    } else{
+    count += 0.5;
+    }
   }
-
-
   return 0;
 }

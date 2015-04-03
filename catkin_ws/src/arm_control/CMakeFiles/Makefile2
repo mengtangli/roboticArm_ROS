@@ -47,40 +47,330 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/eeit/roboarm/catkin_ws/src/rrbot_control
+CMAKE_SOURCE_DIR = /home/eeit/roboarm/catkin_ws/src/arm_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/eeit/roboarm/catkin_ws/src/rrbot_control
+CMAKE_BINARY_DIR = /home/eeit/roboarm/catkin_ws/src/arm_control
 
 #=============================================================================
-# Target rules for target CMakeFiles/_catkin_empty_exported_target.dir
+# Target rules for target CMakeFiles/arm_control.dir
 
 # All Build rule for target.
-CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 
-	@echo "Built target _catkin_empty_exported_target"
-.PHONY : CMakeFiles/_catkin_empty_exported_target.dir/all
+CMakeFiles/arm_control.dir/all:
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles  1
+	@echo "Built target arm_control"
+.PHONY : CMakeFiles/arm_control.dir/all
+
+# Include target in all.
+all: CMakeFiles/arm_control.dir/all
+.PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/_catkin_empty_exported_target.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
-.PHONY : CMakeFiles/_catkin_empty_exported_target.dir/rule
+CMakeFiles/arm_control.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : _catkin_empty_exported_target
+arm_control: CMakeFiles/arm_control.dir/rule
+.PHONY : arm_control
 
 # clean rule for target.
-CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : CMakeFiles/_catkin_empty_exported_target.dir/clean
+CMakeFiles/arm_control.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/clean
+.PHONY : CMakeFiles/arm_control.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/_catkin_empty_exported_target.dir/clean
+clean: CMakeFiles/arm_control.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control_gencpp.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control_gencpp.dir/all: CMakeFiles/arm_control_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/arm_control_gencpp.dir/build.make CMakeFiles/arm_control_gencpp.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control_gencpp.dir/build.make CMakeFiles/arm_control_gencpp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target arm_control_gencpp"
+.PHONY : CMakeFiles/arm_control_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control_gencpp.dir/rule
+
+# Convenience name for target.
+arm_control_gencpp: CMakeFiles/arm_control_gencpp.dir/rule
+.PHONY : arm_control_gencpp
+
+# clean rule for target.
+CMakeFiles/arm_control_gencpp.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control_gencpp.dir/build.make CMakeFiles/arm_control_gencpp.dir/clean
+.PHONY : CMakeFiles/arm_control_gencpp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/arm_control_gencpp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control_generate_messages.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control_generate_messages.dir/all: CMakeFiles/arm_control_generate_messages_eus.dir/all
+CMakeFiles/arm_control_generate_messages.dir/all: CMakeFiles/arm_control_generate_messages_py.dir/all
+CMakeFiles/arm_control_generate_messages.dir/all: CMakeFiles/arm_control_generate_messages_cpp.dir/all
+CMakeFiles/arm_control_generate_messages.dir/all: CMakeFiles/arm_control_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages.dir/build.make CMakeFiles/arm_control_generate_messages.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages.dir/build.make CMakeFiles/arm_control_generate_messages.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target arm_control_generate_messages"
+.PHONY : CMakeFiles/arm_control_generate_messages.dir/all
+
+# Include target in all.
+all: CMakeFiles/arm_control_generate_messages.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control_generate_messages.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control_generate_messages.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control_generate_messages.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages: CMakeFiles/arm_control_generate_messages.dir/rule
+.PHONY : arm_control_generate_messages
+
+# clean rule for target.
+CMakeFiles/arm_control_generate_messages.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages.dir/build.make CMakeFiles/arm_control_generate_messages.dir/clean
+.PHONY : CMakeFiles/arm_control_generate_messages.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/arm_control_generate_messages.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control_generate_messages_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control_generate_messages_cpp.dir/all: CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_cpp.dir/build.make CMakeFiles/arm_control_generate_messages_cpp.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_cpp.dir/build.make CMakeFiles/arm_control_generate_messages_cpp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target arm_control_generate_messages_cpp"
+.PHONY : CMakeFiles/arm_control_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages_cpp: CMakeFiles/arm_control_generate_messages_cpp.dir/rule
+.PHONY : arm_control_generate_messages_cpp
+
+# clean rule for target.
+CMakeFiles/arm_control_generate_messages_cpp.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_cpp.dir/build.make CMakeFiles/arm_control_generate_messages_cpp.dir/clean
+.PHONY : CMakeFiles/arm_control_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/arm_control_generate_messages_cpp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control_generate_messages_eus.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control_generate_messages_eus.dir/all:
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_eus.dir/build.make CMakeFiles/arm_control_generate_messages_eus.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_eus.dir/build.make CMakeFiles/arm_control_generate_messages_eus.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles  2
+	@echo "Built target arm_control_generate_messages_eus"
+.PHONY : CMakeFiles/arm_control_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages_eus: CMakeFiles/arm_control_generate_messages_eus.dir/rule
+.PHONY : arm_control_generate_messages_eus
+
+# clean rule for target.
+CMakeFiles/arm_control_generate_messages_eus.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_eus.dir/build.make CMakeFiles/arm_control_generate_messages_eus.dir/clean
+.PHONY : CMakeFiles/arm_control_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/arm_control_generate_messages_eus.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control_generate_messages_lisp.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control_generate_messages_lisp.dir/all: CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_lisp.dir/build.make CMakeFiles/arm_control_generate_messages_lisp.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_lisp.dir/build.make CMakeFiles/arm_control_generate_messages_lisp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target arm_control_generate_messages_lisp"
+.PHONY : CMakeFiles/arm_control_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages_lisp: CMakeFiles/arm_control_generate_messages_lisp.dir/rule
+.PHONY : arm_control_generate_messages_lisp
+
+# clean rule for target.
+CMakeFiles/arm_control_generate_messages_lisp.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_lisp.dir/build.make CMakeFiles/arm_control_generate_messages_lisp.dir/clean
+.PHONY : CMakeFiles/arm_control_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/arm_control_generate_messages_lisp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control_generate_messages_py.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control_generate_messages_py.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_py.dir/build.make CMakeFiles/arm_control_generate_messages_py.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_py.dir/build.make CMakeFiles/arm_control_generate_messages_py.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target arm_control_generate_messages_py"
+.PHONY : CMakeFiles/arm_control_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control_generate_messages_py.dir/rule
+
+# Convenience name for target.
+arm_control_generate_messages_py: CMakeFiles/arm_control_generate_messages_py.dir/rule
+.PHONY : arm_control_generate_messages_py
+
+# clean rule for target.
+CMakeFiles/arm_control_generate_messages_py.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control_generate_messages_py.dir/build.make CMakeFiles/arm_control_generate_messages_py.dir/clean
+.PHONY : CMakeFiles/arm_control_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/arm_control_generate_messages_py.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control_geneus.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control_geneus.dir/all: CMakeFiles/arm_control_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/arm_control_geneus.dir/build.make CMakeFiles/arm_control_geneus.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control_geneus.dir/build.make CMakeFiles/arm_control_geneus.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target arm_control_geneus"
+.PHONY : CMakeFiles/arm_control_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control_geneus.dir/rule
+
+# Convenience name for target.
+arm_control_geneus: CMakeFiles/arm_control_geneus.dir/rule
+.PHONY : arm_control_geneus
+
+# clean rule for target.
+CMakeFiles/arm_control_geneus.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control_geneus.dir/build.make CMakeFiles/arm_control_geneus.dir/clean
+.PHONY : CMakeFiles/arm_control_geneus.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/arm_control_geneus.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control_genlisp.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control_genlisp.dir/all: CMakeFiles/arm_control_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/arm_control_genlisp.dir/build.make CMakeFiles/arm_control_genlisp.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control_genlisp.dir/build.make CMakeFiles/arm_control_genlisp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target arm_control_genlisp"
+.PHONY : CMakeFiles/arm_control_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control_genlisp.dir/rule
+
+# Convenience name for target.
+arm_control_genlisp: CMakeFiles/arm_control_genlisp.dir/rule
+.PHONY : arm_control_genlisp
+
+# clean rule for target.
+CMakeFiles/arm_control_genlisp.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control_genlisp.dir/build.make CMakeFiles/arm_control_genlisp.dir/clean
+.PHONY : CMakeFiles/arm_control_genlisp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/arm_control_genlisp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control_genpy.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control_genpy.dir/all: CMakeFiles/arm_control_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/arm_control_genpy.dir/build.make CMakeFiles/arm_control_genpy.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control_genpy.dir/build.make CMakeFiles/arm_control_genpy.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target arm_control_genpy"
+.PHONY : CMakeFiles/arm_control_genpy.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control_genpy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control_genpy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control_genpy.dir/rule
+
+# Convenience name for target.
+arm_control_genpy: CMakeFiles/arm_control_genpy.dir/rule
+.PHONY : arm_control_genpy
+
+# clean rule for target.
+CMakeFiles/arm_control_genpy.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control_genpy.dir/build.make CMakeFiles/arm_control_genpy.dir/clean
+.PHONY : CMakeFiles/arm_control_genpy.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/arm_control_genpy.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -90,15 +380,15 @@ clean: CMakeFiles/_catkin_empty_exported_target.dir/clean
 CMakeFiles/clean_test_results.dir/all:
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
 	@echo "Built target clean_test_results"
 .PHONY : CMakeFiles/clean_test_results.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 .PHONY : CMakeFiles/clean_test_results.dir/rule
 
 # Convenience name for target.
@@ -121,15 +411,15 @@ clean: CMakeFiles/clean_test_results.dir/clean
 CMakeFiles/doxygen.dir/all:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/depend
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
 	@echo "Built target doxygen"
 .PHONY : CMakeFiles/doxygen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/doxygen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 .PHONY : CMakeFiles/doxygen.dir/rule
 
 # Convenience name for target.
@@ -146,21 +436,207 @@ clean: CMakeFiles/doxygen.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/roscpp_generate_messages_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target roscpp_generate_messages_cpp"
+.PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : roscpp_generate_messages_cpp
+
+# clean rule for target.
+CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/roscpp_generate_messages_lisp.dir
+
+# All Build rule for target.
+CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target roscpp_generate_messages_lisp"
+.PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : roscpp_generate_messages_lisp
+
+# clean rule for target.
+CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/roscpp_generate_messages_py.dir
+
+# All Build rule for target.
+CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target roscpp_generate_messages_py"
+.PHONY : CMakeFiles/roscpp_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : roscpp_generate_messages_py
+
+# clean rule for target.
+CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : CMakeFiles/roscpp_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target rosgraph_msgs_generate_messages_lisp"
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# clean rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/run_tests.dir
 
 # All Build rule for target.
 CMakeFiles/run_tests.dir/all:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
 	@echo "Built target run_tests"
 .PHONY : CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
 
 # Convenience name for target.
@@ -177,21 +653,149 @@ clean: CMakeFiles/run_tests.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/std_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target std_msgs_generate_messages_cpp"
+.PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : std_msgs_generate_messages_cpp
+
+# clean rule for target.
+CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/std_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target std_msgs_generate_messages_lisp"
+.PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : std_msgs_generate_messages_lisp
+
+# clean rule for target.
+CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/std_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+CMakeFiles/std_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
+	@echo "Built target std_msgs_generate_messages_py"
+.PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : std_msgs_generate_messages_py
+
+# clean rule for target.
+CMakeFiles/std_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/talker.dir
+
+# All Build rule for target.
+CMakeFiles/talker.dir/all:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/depend
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles  5
+	@echo "Built target talker"
+.PHONY : CMakeFiles/talker.dir/all
+
+# Include target in all.
+all: CMakeFiles/talker.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/talker.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/talker.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+.PHONY : CMakeFiles/talker.dir/rule
+
+# Convenience name for target.
+talker: CMakeFiles/talker.dir/rule
+.PHONY : talker
+
+# clean rule for target.
+CMakeFiles/talker.dir/clean:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/clean
+.PHONY : CMakeFiles/talker.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/talker.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/tests.dir
 
 # All Build rule for target.
 CMakeFiles/tests.dir/all:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 
 	@echo "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -230,15 +834,15 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles  3
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 .PHONY : gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -261,15 +865,15 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles  4
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/rrbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
 .PHONY : gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.

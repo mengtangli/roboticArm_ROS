@@ -292,7 +292,7 @@ hardware_interface_DIR:PATH=/opt/ros/indigo/share/hardware_interface/cmake
 kdl_parser_DIR:PATH=/opt/ros/indigo/share/kdl_parser/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/indigo/lib/libkdl_parser.so
+lib:FILEPATH=/opt/ros/indigo/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake

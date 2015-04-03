@@ -14,13 +14,14 @@
 
   <author email="davetcoleman@gmail.com">Dave Coleman</author>
 
-<buildtool_depend>catkin</buildtool_depend><build_depend>pluginlib</build_depend><build_depend>pr2_controller_interface</build_depend><build_depend>pr2_mechanism_model</build_depend><run_depend>pluginlib</run_depend><run_depend>pr2_controller_interface</run_depend><run_depend>pr2_mechanism_model</run_depend>
+<build_depend>message_generation</build_depend><!-- Use buildtool_depend for build tool packages: --><!--   <buildtool_depend>catkin</buildtool_depend> --><!-- Use run_depend for packages you need at runtime: -->
+<run_depend>message_runtime</run_depend>
 
-<build_depend>message_generation</build_depend>
-  <run_depend>message_runtime</run_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>controller_manager</run_depend>
 
   <export>
-	<pr2_controller_interface plugin="${prefix}/controller_plugins.xml" />
   </export>
 
 </package>
