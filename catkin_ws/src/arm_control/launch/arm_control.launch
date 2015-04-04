@@ -8,7 +8,7 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-	output="screen" ns="/arm" args="elbow1_1_controller elbow1_2_controller elbow2_1_controller elbow2_2_controller elbow3_1_controller"/>
+	output="screen" ns="/arm" args="elbow1_1_controller elbow1_2_controller elbow2_1_controller elbow2_2_controller elbow3_1_controller left_elbow1_1_controller left_elbow1_2_controller left_elbow2_1_controller left_elbow2_2_controller left_elbow3_1_controller"/>
 
 <!--node name="spawn_controller_pr2" pkg="pr2_controller_manager" type="spawner" args="elbow1_1_controller elbow1_2_controller elbow2_1_controller elbow2_2_controller elbow3_1_controller" respawn="false" output="screen" /-->
 
@@ -17,5 +17,16 @@
 	respawn="false" output="screen">
     <remap from="/joint_states" to="/arm/joint_states" />
   </node>
+
+  <node pkg="rostopic" type="rostopic" name="init_right_arm"
+        args="pub -1 /arm/elbow1_2_controller/command std_msgs/Float64 'data: 0.5'" output="screen" />
+  <node pkg="rostopic" type="rostopic" name="init_right_arm2"
+        args="pub -1 /arm/elbow2_2_controller/command std_msgs/Float64 'data: -0.5'" output="screen" />
+
+  <node pkg="rostopic" type="rostopic" name="init_left_arm"
+        args="pub -1 /arm/left_elbow1_2_controller/command std_msgs/Float64 'data: 0.5'" output="screen" />
+  <node pkg="rostopic" type="rostopic" name="init_left_arm2"
+        args="pub -1 /arm/left_elbow2_2_controller/command std_msgs/Float64 'data: -0.5'" output="screen" />
+
 
 </launch>
