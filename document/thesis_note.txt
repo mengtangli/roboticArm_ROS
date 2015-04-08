@@ -1,0 +1,9 @@
+Abstract
+intro
+state of the art
+	kinematics/inverse
+development and analysis
+implementation
+conclusion
+reference
+

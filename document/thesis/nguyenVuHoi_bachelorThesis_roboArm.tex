@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+
+\title{\textbf{Thesis Name}}
+\date{2015-04-08 (to be changed)}
+\author{\underline{Nguyen} Vu Hoi}
+
+\begin{document}
+  \pagenumbering{gobble}
+  \centering
+  \maketitle
+\begin{tikzpicture}[overlay,remember picture]
+    \draw [line width=1mm,decorate,decoration={
+        }]
+        ($ (current page.north west) + (1cm,-1cm) $)
+        rectangle
+        ($ (current page.south east) + (-1cm,1cm) $);
+   
+\end{tikzpicture}
+  
+  \newpage
+  \tableofcontents
+  \listoffigures
+  
+  \newpage
+  \pagenumbering{roman}
+  
+  \section{Abstract}
+  This document describes the sequence to build a robotic arm; including modelling, simulation, real-time control and implementation.
+  
+  \newpage
+  \pagenumbering{arabic}
+  
+  \section{Introduction}
+  Introduction
+  
+  \newpage
+  \section{State of the art}
+  State of the art
+  
+  \newpage
+  \subsection{Kinematics}
+  
+  \newpage
+  \subsection{Inverse Kinematics}
+  
+  \newpage
+  \section{Development and analysis}
+  Abstract
+  
+  \newpage
+  \section{Implementation}
+  Abstract
+  
+  \newpage
+  \section{Conclusion}
+  Abstract
+  
+\end{document}
