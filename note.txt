@@ -1,3 +1,5 @@
 Robot Modelling and Control (Wiley):
 	page 17: control the path: most advanced - our goal
 	page 21: a robot is only as good as its hand or end-effector
+Command to manually control the joints:
+	rostopic pub -1 /rrbot/joint1_position_controller/command std_msgs/Float64 "data: 1.5"
