@@ -2,7 +2,8 @@
 (cl:in-package :asdf)
 
 (defsystem "baxter_core_msgs-srv"
-  :depends-on (:roslisp-msg-protocol :roslisp-utils :geometry_msgs-msg
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :baxter_core_msgs-msg
+               :geometry_msgs-msg
                :sensor_msgs-msg
 )
   :components ((:file "_package")

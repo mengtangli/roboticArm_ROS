@@ -21,8 +21,6 @@ void setup()
 {
   nh.initNode();
   nh.subscribe(sub1);
-  nh.subscribe(sub2);
-  nh.subscribe(sub3);
   servo1.attach(2);
   servo2.attach(3);
   servo3.attach(4);

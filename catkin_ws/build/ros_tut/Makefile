@@ -178,20 +178,6 @@ _ros_tut_generate_messages_check_deps_servo/fast:
 .PHONY : _ros_tut_generate_messages_check_deps_servo/fast
 
 # Convenience name for target.
-ros_tut/CMakeFiles/listener.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/listener.dir/rule
-.PHONY : ros_tut/CMakeFiles/listener.dir/rule
-
-# Convenience name for target.
-listener: ros_tut/CMakeFiles/listener.dir/rule
-.PHONY : listener
-
-# fast build rule for target.
-listener/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/listener.dir/build.make ros_tut/CMakeFiles/listener.dir/build
-.PHONY : listener/fast
-
-# Convenience name for target.
 ros_tut/CMakeFiles/pub1.dir/rule:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/pub1.dir/rule
 .PHONY : ros_tut/CMakeFiles/pub1.dir/rule
@@ -204,20 +190,6 @@ pub1: ros_tut/CMakeFiles/pub1.dir/rule
 pub1/fast:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/pub1.dir/build.make ros_tut/CMakeFiles/pub1.dir/build
 .PHONY : pub1/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/pub2.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/pub2.dir/rule
-.PHONY : ros_tut/CMakeFiles/pub2.dir/rule
-
-# Convenience name for target.
-pub2: ros_tut/CMakeFiles/pub2.dir/rule
-.PHONY : pub2
-
-# fast build rule for target.
-pub2/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/pub2.dir/build.make ros_tut/CMakeFiles/pub2.dir/build
-.PHONY : pub2/fast
 
 # Convenience name for target.
 ros_tut/CMakeFiles/ros_tut_gencpp.dir/rule:
@@ -345,170 +317,6 @@ ros_tut_genpy/fast:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/ros_tut_genpy.dir/build.make ros_tut/CMakeFiles/ros_tut_genpy.dir/build
 .PHONY : ros_tut_genpy/fast
 
-# Convenience name for target.
-ros_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : ros_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: ros_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make ros_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : ros_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: ros_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make ros_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : ros_tut/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: ros_tut/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/roscpp_generate_messages_py.dir/build.make ros_tut/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make ros_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : ros_tut/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: ros_tut/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ros_tut/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : ros_tut/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: ros_tut/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make ros_tut/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : ros_tut/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: ros_tut/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/std_msgs_generate_messages_py.dir/build.make ros_tut/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ros_tut/CMakeFiles/talker.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_tut/CMakeFiles/talker.dir/rule
-.PHONY : ros_tut/CMakeFiles/talker.dir/rule
-
-# Convenience name for target.
-talker: ros_tut/CMakeFiles/talker.dir/rule
-.PHONY : talker
-
-# fast build rule for target.
-talker/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/talker.dir/build.make ros_tut/CMakeFiles/talker.dir/build
-.PHONY : talker/fast
-
-src/listener.o: src/listener.cpp.o
-.PHONY : src/listener.o
-
-# target to build an object file
-src/listener.cpp.o:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/listener.dir/build.make ros_tut/CMakeFiles/listener.dir/src/listener.cpp.o
-.PHONY : src/listener.cpp.o
-
-src/listener.i: src/listener.cpp.i
-.PHONY : src/listener.i
-
-# target to preprocess a source file
-src/listener.cpp.i:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/listener.dir/build.make ros_tut/CMakeFiles/listener.dir/src/listener.cpp.i
-.PHONY : src/listener.cpp.i
-
-src/listener.s: src/listener.cpp.s
-.PHONY : src/listener.s
-
-# target to generate assembly for a file
-src/listener.cpp.s:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/listener.dir/build.make ros_tut/CMakeFiles/listener.dir/src/listener.cpp.s
-.PHONY : src/listener.cpp.s
-
 src/pub1.o: src/pub1.cpp.o
 .PHONY : src/pub1.o
 
@@ -533,54 +341,6 @@ src/pub1.cpp.s:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/pub1.dir/build.make ros_tut/CMakeFiles/pub1.dir/src/pub1.cpp.s
 .PHONY : src/pub1.cpp.s
 
-src/pub2.o: src/pub2.cpp.o
-.PHONY : src/pub2.o
-
-# target to build an object file
-src/pub2.cpp.o:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/pub2.dir/build.make ros_tut/CMakeFiles/pub2.dir/src/pub2.cpp.o
-.PHONY : src/pub2.cpp.o
-
-src/pub2.i: src/pub2.cpp.i
-.PHONY : src/pub2.i
-
-# target to preprocess a source file
-src/pub2.cpp.i:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/pub2.dir/build.make ros_tut/CMakeFiles/pub2.dir/src/pub2.cpp.i
-.PHONY : src/pub2.cpp.i
-
-src/pub2.s: src/pub2.cpp.s
-.PHONY : src/pub2.s
-
-# target to generate assembly for a file
-src/pub2.cpp.s:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/pub2.dir/build.make ros_tut/CMakeFiles/pub2.dir/src/pub2.cpp.s
-.PHONY : src/pub2.cpp.s
-
-src/talker.o: src/talker.cpp.o
-.PHONY : src/talker.o
-
-# target to build an object file
-src/talker.cpp.o:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/talker.dir/build.make ros_tut/CMakeFiles/talker.dir/src/talker.cpp.o
-.PHONY : src/talker.cpp.o
-
-src/talker.i: src/talker.cpp.i
-.PHONY : src/talker.i
-
-# target to preprocess a source file
-src/talker.cpp.i:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/talker.dir/build.make ros_tut/CMakeFiles/talker.dir/src/talker.cpp.i
-.PHONY : src/talker.cpp.i
-
-src/talker.s: src/talker.cpp.s
-.PHONY : src/talker.s
-
-# target to generate assembly for a file
-src/talker.cpp.s:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f ros_tut/CMakeFiles/talker.dir/build.make ros_tut/CMakeFiles/talker.dir/src/talker.cpp.s
-.PHONY : src/talker.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -594,9 +354,7 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... listener"
 	@echo "... pub1"
-	@echo "... pub2"
 	@echo "... rebuild_cache"
 	@echo "... ros_tut_gencpp"
 	@echo "... ros_tut_generate_messages"
@@ -607,29 +365,10 @@ help:
 	@echo "... ros_tut_geneus"
 	@echo "... ros_tut_genlisp"
 	@echo "... ros_tut_genpy"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... talker"
 	@echo "... test"
-	@echo "... src/listener.o"
-	@echo "... src/listener.i"
-	@echo "... src/listener.s"
 	@echo "... src/pub1.o"
 	@echo "... src/pub1.i"
 	@echo "... src/pub1.s"
-	@echo "... src/pub2.o"
-	@echo "... src/pub2.i"
-	@echo "... src/pub2.s"
-	@echo "... src/talker.o"
-	@echo "... src/talker.i"
-	@echo "... src/talker.s"
 .PHONY : help
 
 
