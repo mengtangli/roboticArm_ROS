@@ -1,10 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(WARNING "Invoking generate_messages() without having added any message or service file before.
-You should either add add_message_files() and/or add_service_files() calls or remove the invocation of generate_messages().")
-message(STATUS "arm_control: 0 messages, 0 services")
+message(STATUS "arm_control: 2 messages, 0 services")
 
-set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iarm_control:/home/eeit/roboarm/catkin_ws/src/arm_control/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -18,12 +16,34 @@ add_custom_target(arm_control_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg" NAME_WE)
+add_custom_target(_arm_control_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm_control" "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg" ""
+)
+
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg" NAME_WE)
+add_custom_target(_arm_control_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm_control" "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(arm_control
+  "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm_control
+)
+_generate_msg_cpp(arm_control
+  "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm_control
+)
 
 ### Generating Services
 
@@ -39,6 +59,10 @@ add_custom_target(arm_control_generate_messages_cpp
 add_dependencies(arm_control_generate_messages arm_control_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg" NAME_WE)
+add_dependencies(arm_control_generate_messages_cpp _arm_control_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg" NAME_WE)
+add_dependencies(arm_control_generate_messages_cpp _arm_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(arm_control_gencpp)
@@ -49,6 +73,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS arm_control_generate_messages_cpp)
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(arm_control
+  "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm_control
+)
+_generate_msg_eus(arm_control
+  "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm_control
+)
 
 ### Generating Services
 
@@ -64,6 +100,10 @@ add_custom_target(arm_control_generate_messages_eus
 add_dependencies(arm_control_generate_messages arm_control_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg" NAME_WE)
+add_dependencies(arm_control_generate_messages_eus _arm_control_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg" NAME_WE)
+add_dependencies(arm_control_generate_messages_eus _arm_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(arm_control_geneus)
@@ -74,6 +114,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS arm_control_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(arm_control
+  "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm_control
+)
+_generate_msg_lisp(arm_control
+  "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm_control
+)
 
 ### Generating Services
 
@@ -89,6 +141,10 @@ add_custom_target(arm_control_generate_messages_lisp
 add_dependencies(arm_control_generate_messages arm_control_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg" NAME_WE)
+add_dependencies(arm_control_generate_messages_lisp _arm_control_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg" NAME_WE)
+add_dependencies(arm_control_generate_messages_lisp _arm_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(arm_control_genlisp)
@@ -99,6 +155,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS arm_control_generate_messages_lisp)
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(arm_control
+  "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm_control
+)
+_generate_msg_py(arm_control
+  "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm_control
+)
 
 ### Generating Services
 
@@ -114,6 +182,10 @@ add_custom_target(arm_control_generate_messages_py
 add_dependencies(arm_control_generate_messages arm_control_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg" NAME_WE)
+add_dependencies(arm_control_generate_messages_py _arm_control_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg" NAME_WE)
+add_dependencies(arm_control_generate_messages_py _arm_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(arm_control_genpy)

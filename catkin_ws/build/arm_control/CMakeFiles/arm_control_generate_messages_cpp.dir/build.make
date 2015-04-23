@@ -45,9 +45,26 @@ CMAKE_BINARY_DIR = /home/eeit/roboarm/catkin_ws/build
 # Include the progress variables for this target.
 include arm_control/CMakeFiles/arm_control_generate_messages_cpp.dir/progress.make
 
-arm_control/CMakeFiles/arm_control_generate_messages_cpp:
+arm_control/CMakeFiles/arm_control_generate_messages_cpp: /home/eeit/roboarm/catkin_ws/devel/include/arm_control/servo.h
+arm_control/CMakeFiles/arm_control_generate_messages_cpp: /home/eeit/roboarm/catkin_ws/devel/include/arm_control/num.h
+
+/home/eeit/roboarm/catkin_ws/devel/include/arm_control/servo.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/eeit/roboarm/catkin_ws/devel/include/arm_control/servo.h: /home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg
+/home/eeit/roboarm/catkin_ws/devel/include/arm_control/servo.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from arm_control/servo.msg"
+	cd /home/eeit/roboarm/catkin_ws/build/arm_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg -Iarm_control:/home/eeit/roboarm/catkin_ws/src/arm_control/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p arm_control -o /home/eeit/roboarm/catkin_ws/devel/include/arm_control -e /opt/ros/indigo/share/gencpp/cmake/..
+
+/home/eeit/roboarm/catkin_ws/devel/include/arm_control/num.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/eeit/roboarm/catkin_ws/devel/include/arm_control/num.h: /home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg
+/home/eeit/roboarm/catkin_ws/devel/include/arm_control/num.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from arm_control/num.msg"
+	cd /home/eeit/roboarm/catkin_ws/build/arm_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg -Iarm_control:/home/eeit/roboarm/catkin_ws/src/arm_control/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p arm_control -o /home/eeit/roboarm/catkin_ws/devel/include/arm_control -e /opt/ros/indigo/share/gencpp/cmake/..
 
 arm_control_generate_messages_cpp: arm_control/CMakeFiles/arm_control_generate_messages_cpp
+arm_control_generate_messages_cpp: /home/eeit/roboarm/catkin_ws/devel/include/arm_control/servo.h
+arm_control_generate_messages_cpp: /home/eeit/roboarm/catkin_ws/devel/include/arm_control/num.h
 arm_control_generate_messages_cpp: arm_control/CMakeFiles/arm_control_generate_messages_cpp.dir/build.make
 .PHONY : arm_control_generate_messages_cpp
 

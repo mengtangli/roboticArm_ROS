@@ -3,3 +3,5 @@ Robot Modelling and Control (Wiley):
 	page 21: a robot is only as good as its hand or end-effector
 Command to manually control the joints:
 	rostopic pub -1 /rrbot/joint1_position_controller/command std_msgs/Float64 "data: 1.5"
+RDS3115:
+	scale 0-132 degrees == 0-180 degrees of normal servo

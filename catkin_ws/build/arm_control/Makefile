@@ -150,6 +150,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_num.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_num.dir/rule
+.PHONY : arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_num.dir/rule
+
+# Convenience name for target.
+_arm_control_generate_messages_check_deps_num: arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_num.dir/rule
+.PHONY : _arm_control_generate_messages_check_deps_num
+
+# fast build rule for target.
+_arm_control_generate_messages_check_deps_num/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_num.dir/build.make arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_num.dir/build
+.PHONY : _arm_control_generate_messages_check_deps_num/fast
+
+# Convenience name for target.
+arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_servo.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_servo.dir/rule
+.PHONY : arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_servo.dir/rule
+
+# Convenience name for target.
+_arm_control_generate_messages_check_deps_servo: arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_servo.dir/rule
+.PHONY : _arm_control_generate_messages_check_deps_servo
+
+# fast build rule for target.
+_arm_control_generate_messages_check_deps_servo/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_servo.dir/build.make arm_control/CMakeFiles/_arm_control_generate_messages_check_deps_servo.dir/build
+.PHONY : _arm_control_generate_messages_check_deps_servo/fast
+
+# Convenience name for target.
 arm_control/CMakeFiles/arm_control.dir/rule:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control.dir/rule
 .PHONY : arm_control/CMakeFiles/arm_control.dir/rule
@@ -290,6 +318,20 @@ arm_control_genpy/fast:
 .PHONY : arm_control_genpy/fast
 
 # Convenience name for target.
+arm_control/CMakeFiles/pub1.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/pub1.dir/rule
+.PHONY : arm_control/CMakeFiles/pub1.dir/rule
+
+# Convenience name for target.
+pub1: arm_control/CMakeFiles/pub1.dir/rule
+.PHONY : pub1
+
+# fast build rule for target.
+pub1/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/build
+.PHONY : pub1/fast
+
+# Convenience name for target.
 arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -415,20 +457,6 @@ std_msgs_generate_messages_py/fast:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/std_msgs_generate_messages_py.dir/build.make arm_control/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-arm_control/CMakeFiles/talker.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/talker.dir/rule
-.PHONY : arm_control/CMakeFiles/talker.dir/rule
-
-# Convenience name for target.
-talker: arm_control/CMakeFiles/talker.dir/rule
-.PHONY : talker
-
-# fast build rule for target.
-talker/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/talker.dir/build.make arm_control/CMakeFiles/talker.dir/build
-.PHONY : talker/fast
-
 src/arm_control.o: src/arm_control.cpp.o
 .PHONY : src/arm_control.o
 
@@ -453,29 +481,29 @@ src/arm_control.cpp.s:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/src/arm_control.cpp.s
 .PHONY : src/arm_control.cpp.s
 
-src/talker.o: src/talker.cpp.o
-.PHONY : src/talker.o
+src/pub1.o: src/pub1.cpp.o
+.PHONY : src/pub1.o
 
 # target to build an object file
-src/talker.cpp.o:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/talker.dir/build.make arm_control/CMakeFiles/talker.dir/src/talker.cpp.o
-.PHONY : src/talker.cpp.o
+src/pub1.cpp.o:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o
+.PHONY : src/pub1.cpp.o
 
-src/talker.i: src/talker.cpp.i
-.PHONY : src/talker.i
+src/pub1.i: src/pub1.cpp.i
+.PHONY : src/pub1.i
 
 # target to preprocess a source file
-src/talker.cpp.i:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/talker.dir/build.make arm_control/CMakeFiles/talker.dir/src/talker.cpp.i
-.PHONY : src/talker.cpp.i
+src/pub1.cpp.i:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.i
+.PHONY : src/pub1.cpp.i
 
-src/talker.s: src/talker.cpp.s
-.PHONY : src/talker.s
+src/pub1.s: src/pub1.cpp.s
+.PHONY : src/pub1.s
 
 # target to generate assembly for a file
-src/talker.cpp.s:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/talker.dir/build.make arm_control/CMakeFiles/talker.dir/src/talker.cpp.s
-.PHONY : src/talker.cpp.s
+src/pub1.cpp.s:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.s
+.PHONY : src/pub1.cpp.s
 
 # Help Target
 help:
@@ -483,6 +511,8 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... _arm_control_generate_messages_check_deps_num"
+	@echo "... _arm_control_generate_messages_check_deps_servo"
 	@echo "... arm_control"
 	@echo "... arm_control_gencpp"
 	@echo "... arm_control_generate_messages"
@@ -498,6 +528,7 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... pub1"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
@@ -508,14 +539,13 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... talker"
 	@echo "... test"
 	@echo "... src/arm_control.o"
 	@echo "... src/arm_control.i"
 	@echo "... src/arm_control.s"
-	@echo "... src/talker.o"
-	@echo "... src/talker.i"
-	@echo "... src/talker.s"
+	@echo "... src/pub1.o"
+	@echo "... src/pub1.i"
+	@echo "... src/pub1.s"
 .PHONY : help
 
 

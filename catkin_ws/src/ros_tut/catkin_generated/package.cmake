@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "ros_tut")
-set(ros_tut_MAINTAINER "eeit <eeit@todo.todo>")
-set(ros_tut_DEPRECATED "")
-set(ros_tut_VERSION "0.0.0")
-set(ros_tut_BUILD_DEPENDS "message_generation")
-set(ros_tut_RUN_DEPENDS "message_runtime")
-set(ros_tut_BUILDTOOL_DEPENDS "catkin")

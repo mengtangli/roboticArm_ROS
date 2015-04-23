@@ -45,14 +45,30 @@ CMAKE_BINARY_DIR = /home/eeit/roboarm/catkin_ws/build
 # Include the progress variables for this target.
 include arm_control/CMakeFiles/arm_control_generate_messages_eus.dir/progress.make
 
+arm_control/CMakeFiles/arm_control_generate_messages_eus: /home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg/servo.l
+arm_control/CMakeFiles/arm_control_generate_messages_eus: /home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg/num.l
 arm_control/CMakeFiles/arm_control_generate_messages_eus: /home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/manifest.l
 
-/home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/manifest.l: /opt/ros/indigo/share/geneus/cmake/../../../lib/geneus/gen_eus.py
+/home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg/servo.l: /opt/ros/indigo/share/geneus/cmake/../../../lib/geneus/gen_eus.py
+/home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg/servo.l: /home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating EusLisp code from arm_control/servo.msg"
+	cd /home/eeit/roboarm/catkin_ws/build/arm_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/eeit/roboarm/catkin_ws/src/arm_control/msg/servo.msg -Iarm_control:/home/eeit/roboarm/catkin_ws/src/arm_control/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p arm_control -o /home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg
+
+/home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg/num.l: /opt/ros/indigo/share/geneus/cmake/../../../lib/geneus/gen_eus.py
+/home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg/num.l: /home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating EusLisp code from arm_control/num.msg"
+	cd /home/eeit/roboarm/catkin_ws/build/arm_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/eeit/roboarm/catkin_ws/src/arm_control/msg/num.msg -Iarm_control:/home/eeit/roboarm/catkin_ws/src/arm_control/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p arm_control -o /home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg
+
+/home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/manifest.l: /opt/ros/indigo/share/geneus/cmake/../../../lib/geneus/gen_eus.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating EusLisp manifest code for arm_control"
 	cd /home/eeit/roboarm/catkin_ws/build/arm_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control arm_control std_msgs
 
 arm_control_generate_messages_eus: arm_control/CMakeFiles/arm_control_generate_messages_eus
+arm_control_generate_messages_eus: /home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg/servo.l
+arm_control_generate_messages_eus: /home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/msg/num.l
 arm_control_generate_messages_eus: /home/eeit/roboarm/catkin_ws/devel/share/roseus/ros/arm_control/manifest.l
 arm_control_generate_messages_eus: arm_control/CMakeFiles/arm_control_generate_messages_eus.dir/build.make
 .PHONY : arm_control_generate_messages_eus

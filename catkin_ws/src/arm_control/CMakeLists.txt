@@ -9,6 +9,12 @@ find_package(catkin REQUIRED COMPONENTS
 	genmsg
 )
 
+add_message_files(
+	FILES
+	num.msg
+	servo.msg
+)
+
 ## Generate added messages and services with any dependencies listed here
  generate_messages(
    DEPENDENCIES
@@ -33,10 +39,10 @@ catkin_package()
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(talker src/talker.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
-add_dependencies(talker beginner_tutorials_generate_messages_cpp)
-
 add_executable(arm_control src/arm_control.cpp)
 target_link_libraries(arm_control ${catkin_LIBRARIES})
 add_dependencies(arm_control beginner_tutorials_generate_messages_cpp)
+
+add_executable(pub1 src/pub1.cpp)
+target_link_libraries(pub1 ${catkin_LIBRARIES})
+add_dependencies(pub1 arm_control_generate_messages_cpp)

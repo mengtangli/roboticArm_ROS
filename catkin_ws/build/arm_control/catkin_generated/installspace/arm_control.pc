@@ -3,6 +3,6 @@ prefix=/home/eeit/roboarm/catkin_ws/install
 Name: arm_control
 Description: Description of arm_control
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/eeit/roboarm/catkin_ws/install/include
 Libs: -L/home/eeit/roboarm/catkin_ws/install/lib 
 Requires: 

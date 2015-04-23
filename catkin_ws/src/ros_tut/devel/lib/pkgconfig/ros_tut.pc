@@ -1,8 +1,0 @@
-prefix=/home/eeit/roboarm/catkin_ws/src/ros_tut/devel
-
-Name: ros_tut
-Description: Description of ros_tut
-Version: 0.0.0
-Cflags: -I/home/eeit/roboarm/catkin_ws/src/ros_tut/devel/include
-Libs: -L/home/eeit/roboarm/catkin_ws/src/ros_tut/devel/lib 
-Requires: message_runtime
