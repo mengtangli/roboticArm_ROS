@@ -6,16 +6,18 @@ import struct
 
 
 class servo(genpy.Message):
-  _md5sum = "a857454193b3801feabc5fd6d0dba368"
+  _md5sum = "418e6ef17161af8b9a9f73f67b2c84e6"
   _type = "arm_control/servo"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """int16 first
 int16 second
 int16 third
+int16 forth
+int16 fifth
 
 """
-  __slots__ = ['first','second','third']
-  _slot_types = ['int16','int16','int16']
+  __slots__ = ['first','second','third','forth','fifth']
+  _slot_types = ['int16','int16','int16','int16','int16']
 
   def __init__(self, *args, **kwds):
     """
@@ -25,7 +27,7 @@ int16 third
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       first,second,third
+       first,second,third,forth,fifth
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -40,10 +42,16 @@ int16 third
         self.second = 0
       if self.third is None:
         self.third = 0
+      if self.forth is None:
+        self.forth = 0
+      if self.fifth is None:
+        self.fifth = 0
     else:
       self.first = 0
       self.second = 0
       self.third = 0
+      self.forth = 0
+      self.fifth = 0
 
   def _get_types(self):
     """
@@ -58,7 +66,7 @@ int16 third
     """
     try:
       _x = self
-      buff.write(_struct_3h.pack(_x.first, _x.second, _x.third))
+      buff.write(_struct_5h.pack(_x.first, _x.second, _x.third, _x.forth, _x.fifth))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -71,8 +79,8 @@ int16 third
       end = 0
       _x = self
       start = end
-      end += 6
-      (_x.first, _x.second, _x.third,) = _struct_3h.unpack(str[start:end])
+      end += 10
+      (_x.first, _x.second, _x.third, _x.forth, _x.fifth,) = _struct_5h.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -86,7 +94,7 @@ int16 third
     """
     try:
       _x = self
-      buff.write(_struct_3h.pack(_x.first, _x.second, _x.third))
+      buff.write(_struct_5h.pack(_x.first, _x.second, _x.third, _x.forth, _x.fifth))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -100,11 +108,11 @@ int16 third
       end = 0
       _x = self
       start = end
-      end += 6
-      (_x.first, _x.second, _x.third,) = _struct_3h.unpack(str[start:end])
+      end += 10
+      (_x.first, _x.second, _x.third, _x.forth, _x.fifth,) = _struct_5h.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_3h = struct.Struct("<3h")
+_struct_5h = struct.Struct("<5h")

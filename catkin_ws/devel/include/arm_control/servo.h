@@ -26,12 +26,16 @@ struct servo_
   servo_()
     : first(0)
     , second(0)
-    , third(0)  {
+    , third(0)
+    , forth(0)
+    , fifth(0)  {
     }
   servo_(const ContainerAllocator& _alloc)
     : first(0)
     , second(0)
-    , third(0)  {
+    , third(0)
+    , forth(0)
+    , fifth(0)  {
     }
 
 
@@ -44,6 +48,12 @@ struct servo_
 
    typedef int16_t _third_type;
   _third_type third;
+
+   typedef int16_t _forth_type;
+  _forth_type forth;
+
+   typedef int16_t _fifth_type;
+  _fifth_type fifth;
 
 
 
@@ -122,12 +132,12 @@ struct MD5Sum< ::arm_control::servo_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "a857454193b3801feabc5fd6d0dba368";
+    return "418e6ef17161af8b9a9f73f67b2c84e6";
   }
 
   static const char* value(const ::arm_control::servo_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xa857454193b3801fULL;
-  static const uint64_t static_value2 = 0xeabc5fd6d0dba368ULL;
+  static const uint64_t static_value1 = 0x418e6ef17161af8bULL;
+  static const uint64_t static_value2 = 0x9a9f73f67b2c84e6ULL;
 };
 
 template<class ContainerAllocator>
@@ -149,6 +159,8 @@ struct Definition< ::arm_control::servo_<ContainerAllocator> >
     return "int16 first\n\
 int16 second\n\
 int16 third\n\
+int16 forth\n\
+int16 fifth\n\
 ";
   }
 
@@ -170,6 +182,8 @@ namespace serialization
       stream.next(m.first);
       stream.next(m.second);
       stream.next(m.third);
+      stream.next(m.forth);
+      stream.next(m.fifth);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -194,6 +208,10 @@ struct Printer< ::arm_control::servo_<ContainerAllocator> >
     Printer<int16_t>::stream(s, indent + "  ", v.second);
     s << indent << "third: ";
     Printer<int16_t>::stream(s, indent + "  ", v.third);
+    s << indent << "forth: ";
+    Printer<int16_t>::stream(s, indent + "  ", v.forth);
+    s << indent << "fifth: ";
+    Printer<int16_t>::stream(s, indent + "  ", v.fifth);
   }
 };
 

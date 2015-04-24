@@ -15,6 +15,8 @@ namespace arm_control
       int16_t first;
       int16_t second;
       int16_t third;
+      int16_t forth;
+      int16_t fifth;
 
     virtual int serialize(unsigned char *outbuffer) const
     {
@@ -43,6 +45,22 @@ namespace arm_control
       *(outbuffer + offset + 0) = (u_third.base >> (8 * 0)) & 0xFF;
       *(outbuffer + offset + 1) = (u_third.base >> (8 * 1)) & 0xFF;
       offset += sizeof(this->third);
+      union {
+        int16_t real;
+        uint16_t base;
+      } u_forth;
+      u_forth.real = this->forth;
+      *(outbuffer + offset + 0) = (u_forth.base >> (8 * 0)) & 0xFF;
+      *(outbuffer + offset + 1) = (u_forth.base >> (8 * 1)) & 0xFF;
+      offset += sizeof(this->forth);
+      union {
+        int16_t real;
+        uint16_t base;
+      } u_fifth;
+      u_fifth.real = this->fifth;
+      *(outbuffer + offset + 0) = (u_fifth.base >> (8 * 0)) & 0xFF;
+      *(outbuffer + offset + 1) = (u_fifth.base >> (8 * 1)) & 0xFF;
+      offset += sizeof(this->fifth);
       return offset;
     }
 
@@ -76,11 +94,30 @@ namespace arm_control
       u_third.base |= ((uint16_t) (*(inbuffer + offset + 1))) << (8 * 1);
       this->third = u_third.real;
       offset += sizeof(this->third);
+      union {
+        int16_t real;
+        uint16_t base;
+      } u_forth;
+      u_forth.base = 0;
+      u_forth.base |= ((uint16_t) (*(inbuffer + offset + 0))) << (8 * 0);
+      u_forth.base |= ((uint16_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      this->forth = u_forth.real;
+      offset += sizeof(this->forth);
+      union {
+        int16_t real;
+        uint16_t base;
+      } u_fifth;
+      u_fifth.base = 0;
+      u_fifth.base |= ((uint16_t) (*(inbuffer + offset + 0))) << (8 * 0);
+      u_fifth.base |= ((uint16_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      this->fifth = u_fifth.real;
+      offset += sizeof(this->fifth);
+
      return offset;
     }
 
     const char * getType(){ return "arm_control/servo"; };
-    const char * getMD5(){ return "a857454193b3801feabc5fd6d0dba368"; };
+    const char * getMD5(){ return "418e6ef17161af8b9a9f73f67b2c84e6"; };
 
   };
 
