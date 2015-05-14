@@ -46,31 +46,39 @@ int main(int argc, char **argv)
    */
   ros::Publisher pub1 = pub1_node.advertise<arm_control::servo>("pub1", 1000);
 
-  ros::Rate loop_rate(1);
+  ros::Rate loop_rate(5);
 
   /**
    * A count of how many messages we have sent. This is used to create
    * a unique string for each message.  */
   int count = 0;
+  int move_direction = 1; //1 = anti-clockwise, -1 = cw
+  arm_control::servo msg;
   while (ros::ok())
   {
     /**
      * This is a message object. You stuff it with data, and then publish it.
      */
-    arm_control::servo msg;
 
-    //msg.data =(std_msgs::Int16)count;
     msg.first = count;
     ROS_INFO("First: %d", msg.first);
+
+    pub1.publish(msg);
+    ros::spinOnce();
+    loop_rate.sleep();
+
     msg.second = count;
     ROS_INFO("Second: %d", msg.second);
+
     msg.third = count;
     ROS_INFO("Third: %d", msg.third);
+
     msg.forth = count;
     ROS_INFO("Forth: %d", msg.forth);
+
     msg.fifth = count;
     ROS_INFO("Fifth: %d", msg.fifth);
-
+  
     /**
      * The publish() function is how you send messages. The parameter
      * is the message object. The type of this object must agree with the type
@@ -78,18 +86,17 @@ int main(int argc, char **argv)
      * in the constructor above.
      */
     pub1.publish(msg);
-    //pub2.publish(msg);
-    //pub3.publish(msg);
-
     ros::spinOnce();
 
     loop_rate.sleep();
-    count+=90;
-    if(count>180){
-        count = 0;
+    count+=2*move_direction;
+    if(count>179){
+	move_direction =-1;
+    }
+    else if(count<30){
+	move_direction = 1;
     }
   }
-
 
   return 0;
 }
