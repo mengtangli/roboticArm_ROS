@@ -60,4 +60,4 @@ arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o
  /opt/ros/indigo/include/ros/wall_timer.h
  /opt/ros/indigo/include/ros/wall_timer_options.h
  /opt/ros/indigo/include/rosconsole/macros_generated.h
- /opt/ros/indigo/include/std_msgs/Int16.h
+ /opt/ros/indigo/include/std_msgs/Float64.h

@@ -59,5 +59,5 @@ arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /opt/ros/indigo/include/ros/type
 arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /opt/ros/indigo/include/ros/wall_timer.h
 arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /opt/ros/indigo/include/ros/wall_timer_options.h
 arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
-arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /opt/ros/indigo/include/std_msgs/Int16.h
+arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /opt/ros/indigo/include/std_msgs/Float64.h
 

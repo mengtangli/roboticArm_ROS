@@ -27,8 +27,8 @@ ros/ros.h
 /home/eeit/roboarm/catkin_ws/src/arm_control/src/ros/ros.h
 arm_control/servo.h
 /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control/servo.h
-std_msgs/Int16.h
-/home/eeit/roboarm/catkin_ws/src/arm_control/src/std_msgs/Int16.h
+std_msgs/Float64.h
+/home/eeit/roboarm/catkin_ws/src/arm_control/src/std_msgs/Float64.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h
@@ -670,7 +670,7 @@ ros/forwards.h
 
 /opt/ros/indigo/include/rosconsole/macros_generated.h
 
-/opt/ros/indigo/include/std_msgs/Int16.h
+/opt/ros/indigo/include/std_msgs/Float64.h
 string
 -
 vector
