@@ -1,7 +1,13 @@
 Robot Modelling and Control (Wiley):
 	page 17: control the path: most advanced - our goal
 	page 21: a robot is only as good as its hand or end-effector
-Command to manually control the joints:
-	rostopic pub -1 /rrbot/joint1_position_controller/command std_msgs/Float64 "data: 1.5"
+Commands to manually control the joints:
+	roscore
+	rosrun rosserial_python serial_node.py /dev/ttyACM0
+	rostopic pub -1 /arm_control/elbow1_1_controller/command std_msgs/Float64 "1.5"
+	OR
+	rostopic pub pub1 arm_control/servo "{first: 0, second: 0, third: 0, forth: 0, fifth: 90}"
+	OR
+	rosrun arm_control pub1
 RDS3115:
 	scale 0-132 degrees == 0-180 degrees of normal servo

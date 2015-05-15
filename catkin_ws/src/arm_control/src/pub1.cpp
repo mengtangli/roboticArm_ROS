@@ -2,6 +2,22 @@
 #include "arm_control/servo.h"
 #include "std_msgs/Int16.h"
 
+/**
+ * Global variables and defines
+ */
+#define FIRST 1
+#define SECOND 2
+#define THIRD 3
+#define FORTH 4
+#define FIFTH 5
+arm_control::servo msg;
+
+/**
+ * Functions
+ */
+void move(int servo_number, int data, ros::Publisher publisher);
+bool sleep(ros::Rate sleep_rate, long no_ms);
+
 
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
@@ -46,26 +62,24 @@ int main(int argc, char **argv)
    */
   ros::Publisher pub1 = pub1_node.advertise<arm_control::servo>("pub1", 1000);
 
-  ros::Rate loop_rate(5);
+  ros::Rate loop_rate(1000);
 
   /**
    * A count of how many messages we have sent. This is used to create
    * a unique string for each message.  */
   int count = 0;
   int move_direction = 1; //1 = anti-clockwise, -1 = cw
-  arm_control::servo msg;
   while (ros::ok())
   {
     /**
      * This is a message object. You stuff it with data, and then publish it.
      */
-
+/*
     msg.first = count;
     ROS_INFO("First: %d", msg.first);
 
     pub1.publish(msg);
-    ros::spinOnce();
-    loop_rate.sleep();
+    ros::spinOnce(); loop_rate.sleep();
 
     msg.second = count;
     ROS_INFO("Second: %d", msg.second);
@@ -78,18 +92,19 @@ int main(int argc, char **argv)
 
     msg.fifth = count;
     ROS_INFO("Fifth: %d", msg.fifth);
-  
+*/
+ 
     /**
      * The publish() function is how you send messages. The parameter
      * is the message object. The type of this object must agree with the type
      * given as a template parameter to the advertise<>() call, as was done
      * in the constructor above.
      */
-    pub1.publish(msg);
+/*    pub1.publish(msg);
     ros::spinOnce();
 
     loop_rate.sleep();
-    count+=2*move_direction;
+    count+=10*move_direction;
     if(count>179){
 	move_direction =-1;
     }
@@ -97,6 +112,72 @@ int main(int argc, char **argv)
 	move_direction = 1;
     }
   }
-
+*/
+	count+=10*move_direction;
+    	if(count>179){
+		move_direction = -1;
+    	} else if(count<30){
+		move_direction = 1;
+    	}
+	move(FIRST,count,pub1);
+	move(SECOND,count,pub1);
+	move(THIRD,count,pub1);
+	move(FORTH,count,pub1);
+	move(FIFTH,count,pub1);
+	sleep(loop_rate,1000);
+  }
   return 0;
+}
+
+/**
+ * Move servo an angle
+ */
+void move(int servo_number, int data, ros::Publisher publisher)
+{
+	switch(servo_number){
+	case 1:
+		msg.first = data;
+		ROS_INFO("First: %d", msg.first);
+    		publisher.publish(msg);
+    		ros::spinOnce();
+		break;
+	case 2:
+		msg.second = data;
+		ROS_INFO("Second: %d", msg.second);
+    		publisher.publish(msg);
+    		ros::spinOnce();
+		break;
+	case 3:
+		msg.third = data;
+		ROS_INFO("Third: %d", msg.third);
+    		publisher.publish(msg);
+    		ros::spinOnce();
+		break;
+	case 4:
+		msg.forth = data;
+		ROS_INFO("Forth: %d", msg.forth);
+    		publisher.publish(msg);
+    		ros::spinOnce();
+		break;
+	case 5:
+		msg.fifth = data;
+		ROS_INFO("Fifth: %d", msg.fifth);
+    		publisher.publish(msg);
+    		ros::spinOnce();
+		break;
+	default:
+		break;
+	}
+}
+
+/**
+ * Sleep function
+ * unit: miliseconds
+ * return: true if sleep duration ends
+ */
+bool sleep(ros::Rate sleep_rate, long no_of_loops)
+{
+	for(long i=0; i<no_of_loops; i++)
+		sleep_rate.sleep();
+	return true;
 }
