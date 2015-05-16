@@ -1,10 +1,11 @@
 #include "ros/ros.h"
 #include "arm_control/servo.h"
 #include "std_msgs/Float64.h"
+#include "../include/arm_control.h"
 
 /**
  * Global variables and defines
- */
+ *
 #define FIRST	1
 #define SECOND	2
 #define THIRD	3
@@ -15,9 +16,9 @@ std_msgs::Float64 gazebo_msg;
 
 /**
  * Functions
- */
+ *
 void move(int servo_number, int data, ros::Publisher publisher, ros::Publisher gazebo_publisher);
-bool sleep(ros::Rate sleep_rate, long no_ms);
+void sleep(ros::Rate sleep_rate, long no_ms);
 
 /**
  * This file demonstrates simple sending of messages over the ROS system.
@@ -25,11 +26,12 @@ bool sleep(ros::Rate sleep_rate, long no_ms);
 int main(int argc, char **argv)
 {
   /**
-   * The ros::init() function needs to see argc and argv so that it can perform
-   * any ROS arguments and name remapping that were provided at the command line. For programmatic
-   * remappings you can use a different version of init() which takes remappings
-   * directly, but for most command-line programs, passing argc and argv is the easiest
-   * way to do it.  The third argument to init() is the name of the node.
+   * The ros::init() function needs to see argc and argv so that it can
+   * perform any ROS arguments and name remapping that were provided at the
+   * command line. For programmatic remappings you can use a different
+   * version of init() which takes remappings directly, but for most
+   * command-line programs, passing argc and argv is the easiest way to do
+   * it.  The third argument to init() is the name of the node.
    *
    * You must call one of the versions of ros::init() before using any other
    * part of the ROS system.
@@ -66,11 +68,11 @@ int main(int argc, char **argv)
   ros::Publisher gazebo_pub3 = pub1_node.advertise<std_msgs::Float64>("/arm/elbow2_1_controller/command",100);
   ros::Publisher gazebo_pub4 = pub1_node.advertise<std_msgs::Float64>("/arm/elbow2_2_controller/command",100);
   ros::Publisher gazebo_pub5 = pub1_node.advertise<std_msgs::Float64>("/arm/elbow3_1_controller/command",100);
+
   ros::Rate loop_rate(1000);
 
   /**
    * Local variables
-   * a unique string for each message.  
    */
   int count = 0;
   int move_direction = 1; //1 = anti-clockwise, -1 = cw
@@ -97,50 +99,61 @@ int main(int argc, char **argv)
 }
 
 /**
- * Move servo an angle
- * both on real life and gazebo simulation
- */
+ * move() - Move servo an angle(in degrees) both on real life and gazebo
+ * simulation
+ *
+ * @servo_number:	The number of servo to be moved.
+ * @data:		Angle to move the servo (in degrees).
+ * @publisher:		Publisher to publish the data to servo
+ * @gazebo_publisher:	Publisher to publish the data to gazebo
+ *
+ * Choose which servo to move using switch(). First, assign data to msg
+ * variables. Second, queue (publish) msg of both real-life and
+ * simulation. Third, print debug info with ROS_INFO. Finally,
+ * spinOnce() to execute the publish.
+ *
+ *
 void move(int servo_number, int data, ros::Publisher publisher, ros::Publisher gazebo_publisher)
 {
 	switch(servo_number){
 	case 1:
 		msg.first = data;
-		ROS_INFO("First: %d", msg.first);
 		publisher.publish(msg);
 		gazebo_msg.data = data;
 		gazebo_publisher.publish(gazebo_msg);
+		ROS_INFO("First: %d", msg.first);
     		ros::spinOnce();
 		break;
 	case 2:
 		msg.second = data;
-		ROS_INFO("Second: %d", msg.second);
     		publisher.publish(msg);
 		gazebo_msg.data = data;
 		gazebo_publisher.publish(gazebo_msg);
+		ROS_INFO("Second: %d", msg.second);
     		ros::spinOnce();
 		break;
 	case 3:
 		msg.third = data;
-		ROS_INFO("Third: %d", msg.third);
     		publisher.publish(msg);
 		gazebo_msg.data = data;
 		gazebo_publisher.publish(gazebo_msg);
+		ROS_INFO("Third: %d", msg.third);
     		ros::spinOnce();
 		break;
 	case 4:
 		msg.forth = data;
-		ROS_INFO("Forth: %d", msg.forth);
     		publisher.publish(msg);
 		gazebo_msg.data = data;
 		gazebo_publisher.publish(gazebo_msg);
+		ROS_INFO("Forth: %d", msg.forth);
     		ros::spinOnce();
 		break;
 	case 5:
 		msg.fifth = data;
-		ROS_INFO("Fifth: %d", msg.fifth);
     		publisher.publish(msg);
 		gazebo_msg.data = data;
 		gazebo_publisher.publish(gazebo_msg);
+		ROS_INFO("Fifth: %d", msg.fifth);
     		ros::spinOnce();
 		break;
 	default:
@@ -149,13 +162,17 @@ void move(int servo_number, int data, ros::Publisher publisher, ros::Publisher g
 }
 
 /**
- * Sleep function
- * unit: miliseconds
- * return: true if sleep duration ends
- */
-bool sleep(ros::Rate sleep_rate, long no_of_loops)
+ * sleep() - Sleep the ROS system a given time(ms).
+ *
+ * @sleep_rate:	Standard rate(Hz) defined in the main function.
+ * 		default: 1KHz
+ * @no_of_loops:Number of times the sleep_rate will be repeated.
+ *
+ *
+void sleep(ros::Rate sleep_rate, long no_of_loops)
 {
 	for(long i=0; i<no_of_loops; i++)
 		sleep_rate.sleep();
 	return true;
 }
+*/

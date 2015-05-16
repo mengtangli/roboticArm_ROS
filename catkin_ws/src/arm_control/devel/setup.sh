@@ -8,7 +8,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/eeit/roboarm/catkin_ws/src/arm_control/devel}
+: ${_CATKIN_SETUP_DIR:=/home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/devel}
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 

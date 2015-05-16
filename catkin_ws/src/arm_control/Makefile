@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/eeit/roboarm/catkin_ws/src/arm_control
+CMAKE_SOURCE_DIR = /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/eeit/roboarm/catkin_ws/src/arm_control
+CMAKE_BINARY_DIR = /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,9 +110,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/CMakeFiles /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -140,17 +140,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named arm_control
+# Target rules for targets named _arm_control_generate_messages_check_deps_num
 
 # Build rule for target.
-arm_control: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 arm_control
-.PHONY : arm_control
+_arm_control_generate_messages_check_deps_num: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _arm_control_generate_messages_check_deps_num
+.PHONY : _arm_control_generate_messages_check_deps_num
 
 # fast build rule for target.
-arm_control/fast:
-	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/build
-.PHONY : arm_control/fast
+_arm_control_generate_messages_check_deps_num/fast:
+	$(MAKE) -f CMakeFiles/_arm_control_generate_messages_check_deps_num.dir/build.make CMakeFiles/_arm_control_generate_messages_check_deps_num.dir/build
+.PHONY : _arm_control_generate_messages_check_deps_num/fast
+
+#=============================================================================
+# Target rules for targets named _arm_control_generate_messages_check_deps_servo
+
+# Build rule for target.
+_arm_control_generate_messages_check_deps_servo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _arm_control_generate_messages_check_deps_servo
+.PHONY : _arm_control_generate_messages_check_deps_servo
+
+# fast build rule for target.
+_arm_control_generate_messages_check_deps_servo/fast:
+	$(MAKE) -f CMakeFiles/_arm_control_generate_messages_check_deps_servo.dir/build.make CMakeFiles/_arm_control_generate_messages_check_deps_servo.dir/build
+.PHONY : _arm_control_generate_messages_check_deps_servo/fast
 
 #=============================================================================
 # Target rules for targets named arm_control_gencpp
@@ -192,19 +205,6 @@ arm_control_generate_messages_cpp/fast:
 .PHONY : arm_control_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named arm_control_generate_messages_eus
-
-# Build rule for target.
-arm_control_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 arm_control_generate_messages_eus
-.PHONY : arm_control_generate_messages_eus
-
-# fast build rule for target.
-arm_control_generate_messages_eus/fast:
-	$(MAKE) -f CMakeFiles/arm_control_generate_messages_eus.dir/build.make CMakeFiles/arm_control_generate_messages_eus.dir/build
-.PHONY : arm_control_generate_messages_eus/fast
-
-#=============================================================================
 # Target rules for targets named arm_control_generate_messages_lisp
 
 # Build rule for target.
@@ -229,19 +229,6 @@ arm_control_generate_messages_py: cmake_check_build_system
 arm_control_generate_messages_py/fast:
 	$(MAKE) -f CMakeFiles/arm_control_generate_messages_py.dir/build.make CMakeFiles/arm_control_generate_messages_py.dir/build
 .PHONY : arm_control_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named arm_control_geneus
-
-# Build rule for target.
-arm_control_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 arm_control_geneus
-.PHONY : arm_control_geneus
-
-# fast build rule for target.
-arm_control_geneus/fast:
-	$(MAKE) -f CMakeFiles/arm_control_geneus.dir/build.make CMakeFiles/arm_control_geneus.dir/build
-.PHONY : arm_control_geneus/fast
 
 #=============================================================================
 # Target rules for targets named arm_control_genlisp
@@ -294,6 +281,19 @@ doxygen: cmake_check_build_system
 doxygen/fast:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
 .PHONY : doxygen/fast
+
+#=============================================================================
+# Target rules for targets named pub1
+
+# Build rule for target.
+pub1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pub1
+.PHONY : pub1
+
+# fast build rule for target.
+pub1/fast:
+	$(MAKE) -f CMakeFiles/pub1.dir/build.make CMakeFiles/pub1.dir/build
+.PHONY : pub1/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
@@ -426,19 +426,6 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named talker
-
-# Build rule for target.
-talker: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 talker
-.PHONY : talker
-
-# fast build rule for target.
-talker/fast:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
-.PHONY : talker/fast
-
-#=============================================================================
 # Target rules for targets named tests
 
 # Build rule for target.
@@ -477,53 +464,29 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/arm_control.o: src/arm_control.cpp.o
-.PHONY : src/arm_control.o
+src/pub1.o: src/pub1.cpp.o
+.PHONY : src/pub1.o
 
 # target to build an object file
-src/arm_control.cpp.o:
-	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/src/arm_control.cpp.o
-.PHONY : src/arm_control.cpp.o
+src/pub1.cpp.o:
+	$(MAKE) -f CMakeFiles/pub1.dir/build.make CMakeFiles/pub1.dir/src/pub1.cpp.o
+.PHONY : src/pub1.cpp.o
 
-src/arm_control.i: src/arm_control.cpp.i
-.PHONY : src/arm_control.i
-
-# target to preprocess a source file
-src/arm_control.cpp.i:
-	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/src/arm_control.cpp.i
-.PHONY : src/arm_control.cpp.i
-
-src/arm_control.s: src/arm_control.cpp.s
-.PHONY : src/arm_control.s
-
-# target to generate assembly for a file
-src/arm_control.cpp.s:
-	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/src/arm_control.cpp.s
-.PHONY : src/arm_control.cpp.s
-
-src/talker.o: src/talker.cpp.o
-.PHONY : src/talker.o
-
-# target to build an object file
-src/talker.cpp.o:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.o
-.PHONY : src/talker.cpp.o
-
-src/talker.i: src/talker.cpp.i
-.PHONY : src/talker.i
+src/pub1.i: src/pub1.cpp.i
+.PHONY : src/pub1.i
 
 # target to preprocess a source file
-src/talker.cpp.i:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.i
-.PHONY : src/talker.cpp.i
+src/pub1.cpp.i:
+	$(MAKE) -f CMakeFiles/pub1.dir/build.make CMakeFiles/pub1.dir/src/pub1.cpp.i
+.PHONY : src/pub1.cpp.i
 
-src/talker.s: src/talker.cpp.s
-.PHONY : src/talker.s
+src/pub1.s: src/pub1.cpp.s
+.PHONY : src/pub1.s
 
 # target to generate assembly for a file
-src/talker.cpp.s:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.s
-.PHONY : src/talker.cpp.s
+src/pub1.cpp.s:
+	$(MAKE) -f CMakeFiles/pub1.dir/build.make CMakeFiles/pub1.dir/src/pub1.cpp.s
+.PHONY : src/pub1.cpp.s
 
 # Help Target
 help:
@@ -531,14 +494,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... arm_control"
+	@echo "... _arm_control_generate_messages_check_deps_num"
+	@echo "... _arm_control_generate_messages_check_deps_servo"
 	@echo "... arm_control_gencpp"
 	@echo "... arm_control_generate_messages"
 	@echo "... arm_control_generate_messages_cpp"
-	@echo "... arm_control_generate_messages_eus"
 	@echo "... arm_control_generate_messages_lisp"
 	@echo "... arm_control_generate_messages_py"
-	@echo "... arm_control_geneus"
 	@echo "... arm_control_genlisp"
 	@echo "... arm_control_genpy"
 	@echo "... clean_test_results"
@@ -547,6 +509,7 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... list_install_components"
+	@echo "... pub1"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
@@ -558,17 +521,13 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... talker"
 	@echo "... test"
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... src/arm_control.o"
-	@echo "... src/arm_control.i"
-	@echo "... src/arm_control.s"
-	@echo "... src/talker.o"
-	@echo "... src/talker.i"
-	@echo "... src/talker.s"
+	@echo "... src/pub1.o"
+	@echo "... src/pub1.i"
+	@echo "... src/pub1.s"
 .PHONY : help
 
 

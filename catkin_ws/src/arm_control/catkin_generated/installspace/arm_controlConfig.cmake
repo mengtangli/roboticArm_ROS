@@ -67,8 +67,8 @@ set(arm_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(arm_control_SOURCE_PREFIX /home/eeit/roboarm/catkin_ws/src/arm_control)
-  set(arm_control_DEVEL_PREFIX /home/eeit/roboarm/catkin_ws/src/arm_control/devel)
+  set(arm_control_SOURCE_PREFIX /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control)
+  set(arm_control_DEVEL_PREFIX /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/devel)
   set(arm_control_INSTALL_PREFIX "")
   set(arm_control_PREFIX ${arm_control_DEVEL_PREFIX})
 else()
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(arm_control_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "" STREQUAL "")
+if(NOT "include" STREQUAL "")
   set(arm_control_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /usr/local/lib;/home/eeit/roboarm/catkin_ws/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /usr/local/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(arm_control_EXPORTED_TARGETS "arm_control_generate_messages_cpp;arm_control_generate_messages_eus;arm_control_generate_messages_lisp;arm_control_generate_messages_py")
+set(arm_control_EXPORTED_TARGETS "arm_control_generate_messages_cpp;arm_control_generate_messages_lisp;arm_control_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${arm_control_EXPORTED_TARGETS})
   if(NOT TARGET ${t})

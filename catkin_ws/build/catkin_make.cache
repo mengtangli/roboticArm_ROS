@@ -1,2 +1,2 @@
-arm_control:arm_description:arm_gazebo:baxter_common/baxter_common:baxter_common/baxter_core_msgs:baxter_common/baxter_description:baxter_common/baxter_maintenance_msgs:brazo_fer:brazo_fer_modelo:gripper:my_controller_pkg:pr2_controller_configuration_gazebo:pr2_gazebo:pr2_gazebo_plugins:pr2_simulator:rrbot_control:rrbot_description:rrbot_gazebo:test_description:test_gazebo:testbot_description
--DCATKIN_DEVEL_PREFIX=/home/eeit/roboarm/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/eeit/roboarm/catkin_ws/install -G Unix Makefiles
+arm_control:arm_description:arm_gazebo:brazo_fer:brazo_fer_modelo:gripper:my_controller_pkg:pr2_controller_configuration_gazebo:pr2_gazebo:pr2_gazebo_plugins:pr2_simulator:rrbot_control:rrbot_description:rrbot_gazebo:test_description:test_gazebo:testbot_description
+-DCATKIN_DEVEL_PREFIX=/home/nagas/roboticArm_ROS/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nagas/roboticArm_ROS/catkin_ws/install -G Unix Makefiles
