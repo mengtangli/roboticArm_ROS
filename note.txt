@@ -11,3 +11,4 @@ Commands to manually control the joints:
 	rosrun arm_control pub1
 RDS3115:
 	scale 0-132 degrees == 0-180 degrees of normal servo
+tac ke dan: van oc vo thanh truc tron

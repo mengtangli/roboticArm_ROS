@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {subsection}{\numberline {1.1}Reasons for simulation}{2}
+\contentsline {subsection}{\numberline {1.2}Why Linux, Gazebo, ROS?}{2}
+\contentsline {section}{\numberline {2}Working with ROS}{3}
+\contentsline {subsection}{\numberline {2.1}Basic parts of ROS}{3}
+\contentsline {subsection}{\numberline {2.2}Publishers and Subscribers}{4}
+\contentsline {section}{\numberline {3}Gazebo Simulation}{5}
+\contentsline {section}{\numberline {4}Control Gazebo by ROS}{6}
+\contentsline {section}{\numberline {5}Project operating timeline}{7}
+\contentsline {section}{\numberline {6}Conclusion}{8}
+\contentsline {section}{\numberline {7}Reference}{9}

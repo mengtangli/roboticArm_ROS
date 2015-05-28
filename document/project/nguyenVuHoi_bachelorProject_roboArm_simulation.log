@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.16)  29 MAY 2015 00:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.16)  29 MAY 2015 00:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**nguyenVuHoi_bachelorThesis_roboArm.tex
-(./nguyenVuHoi_bachelorThesis_roboArm.tex
+**nguyenVuHoi_bachelorProject_roboArm_simulation.tex
+(./nguyenVuHoi_bachelorProject_roboArm_simulation.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -622,8 +622,8 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 )
-(./nguyenVuHoi_bachelorThesis_roboArm.aux)
-\openout1 = `nguyenVuHoi_bachelorThesis_roboArm.aux'.
+(./nguyenVuHoi_bachelorProject_roboArm_simulation.aux)
+\openout1 = `nguyenVuHoi_bachelorProject_roboArm_simulation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
@@ -701,7 +701,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count134
- (./VGU_thesis_title_page.tex
+ (./VGU_project_title_page.tex
 <./image/vgu_logo.png, id=4, 117.43875pt x 42.1575pt>
 File: ./image/vgu_logo.png Graphic file (type png)
 
@@ -710,69 +710,48 @@ Package pdftex.def Info: ./image/vgu_logo.png used on input line 6.
 (pdftex.def)             Requested size: 117.00119pt x 42.00041pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./image/vgu_logo.png>]) (.
-/nguyenVuHoi_bachelorThesis_roboArm.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./image/vgu_logo.png>])
+(./nguyenVuHoi_bachelorProject_roboArm_simulation.toc)
 \tf@toc=\write4
-\openout4 = `nguyenVuHoi_bachelorThesis_roboArm.toc'.
+\openout4 = `nguyenVuHoi_bachelorProject_roboArm_simulation.toc'.
 
 
-(./nguyenVuHoi_bachelorThesis_roboArm.lof)
+(./nguyenVuHoi_bachelorProject_roboArm_simulation.lof)
 \tf@lof=\write5
-\openout5 = `nguyenVuHoi_bachelorThesis_roboArm.lof'.
+\openout5 = `nguyenVuHoi_bachelorProject_roboArm_simulation.lof'.
 
  [1]
 Underfull \hbox (badness 10000) in paragraph at lines 58--64
 
  []
 
-[1] [2]
-Overfull \hbox (0.74455pt too wide) in paragraph at lines 80--102
-\OT1/cmr/m/n/12 1969, Stan-ford Arm, first suc-cess-ful electrically-powered, c
-omputer-controlled
- []
+[1] <image/WL-9DR-1980.jpg, id=22, 228.855pt x 321.2pt>
+File: image/WL-9DR-1980.jpg Graphic file (type jpg)
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
-
- []
-
-[3] [4] [5] [6] [7] [8] [9] [10]
-Overfull \hbox (113.96562pt too wide) in paragraph at lines 133--139
-\OT1/cmr/m/n/12 http://www.robotshop.com/media/files/PDF/timeline.pdf http://ww
-w.allonrobots.com/leonardo-
- []
-
-
-Overfull \hbox (69.42023pt too wide) in paragraph at lines 133--139
-\OT1/cmr/m/n/12 da-vinci.html https://www.sharelatex.com/learn/ http://cybernet
-iczoo.com/robots/1928-
- []
-
-[11] (./nguyenVuHoi_bachelorThesis_roboArm.aux) ) 
+<use image/WL-9DR-1980.jpg>
+Package pdftex.def Info: image/WL-9DR-1980.jpg used on input line 71.
+(pdftex.def)             Requested size: 214.50119pt x 301.06544pt.
+ [2 <./image/WL-9DR-1980.jpg>] [3] [4] [5] [6]
+[7] [8] [9] (./nguyenVuHoi_bachelorProject_roboArm_simulation.aux) ) 
 Here is how much of TeX's memory you used:
- 12815 strings out of 495028
- 233028 string characters out of 6181497
- 291769 words of memory out of 5000000
- 15761 multiletter control sequences out of 15000+600000
+ 12820 strings out of 495028
+ 233279 string characters out of 6181497
+ 290769 words of memory out of 5000000
+ 15763 multiletter control sequences out of 15000+600000
  11193 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,5n,57p,681b,1168s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmtt10.pfb>
-Output written on nguyenVuHoi_bachelorThesis_roboArm.pdf (13 pages, 87658 bytes
-).
+ 56i,6n,57p,693b,1168s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on nguyenVuHoi_bachelorProject_roboArm_simulation.pdf (11 pages,
+ 120514 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
