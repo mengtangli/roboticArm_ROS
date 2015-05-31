@@ -1,4 +1,17 @@
 \select@language {english}
-\contentsline {figure}{\numberline {1}{\ignorespaces A rover robot simulated by NASA}}{3}
-\contentsline {figure}{\numberline {2}{\ignorespaces PR2 - researching robot running primarily ROS}}{4}
-\contentsline {figure}{\numberline {3}{\ignorespaces A humanoid robot simulated in Gazebo}}{5}
+\contentsline {figure}{\numberline {1}{\ignorespaces A rover robot simulated by NASA}}{5}
+\contentsline {figure}{\numberline {2}{\ignorespaces PR2 - researching robot running primarily ROS}}{6}
+\contentsline {figure}{\numberline {3}{\ignorespaces A humanoid robot simulated in Gazebo}}{7}
+\contentsline {figure}{\numberline {4}{\ignorespaces An example world in Gazebo}}{19}
+\contentsline {figure}{\numberline {5}{\ignorespaces The default interface of Gazebo}}{21}
+\contentsline {figure}{\numberline {6}{\ignorespaces The arm model with links and joints}}{24}
+\contentsline {figure}{\numberline {7}{\ignorespaces The dual arm model in Gazebo with links shown}}{26}
+\contentsline {figure}{\numberline {8}{\ignorespaces Click a model in Insert tab to spawn them to the world}}{27}
+\contentsline {figure}{\numberline {9}{\ignorespaces Joints in dual arm model}}{28}
+\contentsline {figure}{\numberline {10}{\ignorespaces Rendered brushed metal arm}}{29}
+\contentsline {figure}{\numberline {11}{\ignorespaces Dual arm model with meshes}}{31}
+\contentsline {figure}{\numberline {12}{\ignorespaces Apply force/torque to links}}{33}
+\contentsline {figure}{\numberline {13}{\ignorespaces ROS control in relationship with a real robot}}{34}
+\contentsline {figure}{\numberline {14}{\ignorespaces ROS control in Gazebo vs. Reality}}{35}
+\contentsline {figure}{\numberline {15}{\ignorespaces Comparison between controlling signal and actual position.}}{42}
+\contentsline {figure}{\numberline {16}{\ignorespaces The arm moving its hands, like a simple exercise}}{44}
