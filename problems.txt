@@ -9,3 +9,5 @@
 	Solution: Download and use aptitude to install ros-ROSVERSION-desktop-full with dependencies taken care of.
 4. Cannot run rosbuild commands:
 	Solution: Working with ROS indigo or newer, users must use catkin. Read how to migrate to indigo here: http://wiki.ros.org/catkin/migrating_from_rosbuild
+5. shaking inside gazebo: not enough initial param
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "move servo"
+bc <<< 'scale=2; 100/3'
+rostopic pub pub1 arm_control/servo "{first: $2, second: 0, third: 0, forth: 0, fifth: 0}"
+rostopic pub --once /arm/elbow1_1_controller/command std_msgs/Float64 $2
