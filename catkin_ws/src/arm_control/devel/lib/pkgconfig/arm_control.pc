@@ -1,8 +1,8 @@
-prefix=/home/eeit/roboarm/catkin_ws/src/arm_control/devel
+prefix=/home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/devel
 
 Name: arm_control
 Description: Description of arm_control
 Version: 0.0.0
-Cflags: 
-Libs: -L/home/eeit/roboarm/catkin_ws/src/arm_control/devel/lib 
+Cflags: -I/home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/devel/include
+Libs: -L/home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/devel/lib 
 Requires: 

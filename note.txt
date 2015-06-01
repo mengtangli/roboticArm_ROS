@@ -16,3 +16,4 @@ Arm servo init angles:
 	elbow1_2: 180
 	elbow2_1: 0
 	elbow2_2: 0
+tac ke dan: van oc vo thanh truc tron

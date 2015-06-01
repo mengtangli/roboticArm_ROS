@@ -1,0 +1,33 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {subsection}{\numberline {1.1}Simulation and its significance}{4}
+\contentsline {subsection}{\numberline {1.2}Why Linux, ROS and Gazebo?}{6}
+\contentsline {section}{\numberline {2}Analysis and Development}{9}
+\contentsline {subsection}{\numberline {2.1}ROS basics}{9}
+\contentsline {subsubsection}{\numberline {2.1.1}ROS first-time installation}{9}
+\contentsline {subsubsection}{\numberline {2.1.2}ROS workspace}{11}
+\contentsline {subsubsection}{\numberline {2.1.3}Basic definitions in ROS}{12}
+\contentsline {subsubsection}{\numberline {2.1.4}Navigating inside ROS}{14}
+\contentsline {subsubsection}{\numberline {2.1.5}Create ROS package}{15}
+\contentsline {subsubsection}{\numberline {2.1.6}Custom messages, publishers and subscribers}{17}
+\contentsline {subsection}{\numberline {2.2}Gazebo Simulation}{19}
+\contentsline {subsubsection}{\numberline {2.2.1}Basic components of Gazebo}{19}
+\contentsline {subsubsection}{\numberline {2.2.2}Xacro file structure}{22}
+\contentsline {subsubsection}{\numberline {2.2.3}Write xacro file for robot}{24}
+\contentsline {subsubsection}{\numberline {2.2.4}Arm design}{29}
+\contentsline {subsubsection}{\numberline {2.2.5}Import meshes}{30}
+\contentsline {subsubsection}{\numberline {2.2.6}Make a launch file}{32}
+\contentsline {subsubsection}{\numberline {2.2.7}Applying force/torque}{33}
+\contentsline {subsection}{\numberline {2.3}Control Gazebo by ROS}{34}
+\contentsline {subsubsection}{\numberline {2.3.1}Overview about ROS-Gazebo relationship}{34}
+\contentsline {subsubsection}{\numberline {2.3.2}Add transmission element}{36}
+\contentsline {subsubsection}{\numberline {2.3.3}Add gazebo\_ros\_control plugin}{37}
+\contentsline {subsubsection}{\numberline {2.3.4}Create arm\_control package}{38}
+\contentsline {subsubsection}{\numberline {2.3.5}Start controllers and manually send commands}{40}
+\contentsline {subsubsection}{\numberline {2.3.6}Use RQT to send commands}{41}
+\contentsline {subsubsection}{\numberline {2.3.7}Use SQT to visualize controller's performance}{42}
+\contentsline {subsection}{\numberline {2.4}Project studying timeline}{43}
+\contentsline {section}{\numberline {3}Implementation}{44}
+\contentsline {subsection}{\numberline {3.1}A simple task of exercising}{44}
+\contentsline {section}{\numberline {4}Conclusion}{45}
+\contentsline {section}{\numberline {5}Reference}{46}

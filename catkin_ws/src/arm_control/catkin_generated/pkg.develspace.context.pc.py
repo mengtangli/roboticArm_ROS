@@ -1,8 +1,8 @@
 # generated from catkin/cmake/template/pkg.context.pc.in
 CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/devel/include".split(';') if "/home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/devel/include" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "arm_control"
-PROJECT_SPACE_DIR = "/home/eeit/roboarm/catkin_ws/src/arm_control/devel"
+PROJECT_SPACE_DIR = "/home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/devel"
 PROJECT_VERSION = "0.0.0"

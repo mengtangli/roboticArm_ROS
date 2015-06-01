@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/eeit/roboarm/catkin_ws/src/arm_control
+CMAKE_SOURCE_DIR = /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/eeit/roboarm/catkin_ws/src/arm_control
+CMAKE_BINARY_DIR = /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control
 
 # Utility rule file for arm_control_generate_messages.
 
@@ -60,6 +60,6 @@ CMakeFiles/arm_control_generate_messages.dir/clean:
 .PHONY : CMakeFiles/arm_control_generate_messages.dir/clean
 
 CMakeFiles/arm_control_generate_messages.dir/depend:
-	cd /home/eeit/roboarm/catkin_ws/src/arm_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/eeit/roboarm/catkin_ws/src/arm_control /home/eeit/roboarm/catkin_ws/src/arm_control /home/eeit/roboarm/catkin_ws/src/arm_control /home/eeit/roboarm/catkin_ws/src/arm_control /home/eeit/roboarm/catkin_ws/src/arm_control/CMakeFiles/arm_control_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/CMakeFiles/arm_control_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/arm_control_generate_messages.dir/depend
 

@@ -1,0 +1,50 @@
+\begin{titlepage}
+\begin{center}
+
+% Upper part of the page. The '~' is needed because \\
+% only works if a paragraph has started.
+\includegraphics[width=0.3\textwidth]{./image/vgu_logo}~\\[1cm]
+\textsc{\LARGE vietnamese-german university}~\\[0.2cm]
+Electrical Engineering and Information Technology Department ~\\[3cm]
+\textsc{\Large pre-thesis project}\\[0.5cm]
+
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries Humanoid Robotic Arm \\ Simulating and controlling \\on Linux \\[0.5cm] }
+
+\HRule \\[3cm]
+
+% Author and supervisor
+\noindent
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Vu Hoi \textsc{NGUYEN}
+\end{flushleft}
+\end{minipage}%
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisor:} \\
+Dr.~Peter \textsc{NAUTH} \\
+MEng. Dinh Than \textsc{LE}
+\end{flushright}
+\end{minipage}
+\vfill
+
+% Bottom of the page
+~\\[1cm]
+{\large \today}
+
+\end{center}
+
+\begin{tikzpicture}[overlay,remember picture]
+
+    \draw [line width=1mm,decorate,decoration={
+        }]
+        ($ (current page.north west) + (1cm,-1cm) $)
+        rectangle
+        ($ (current page.south east) + (-1cm,1cm) $);
+        
+\end{tikzpicture}
+
+\end{titlepage}

@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/eeit/roboarm/catkin_ws/src/arm_control/devel/setup.sh
+    local-name: /home/nagas/roboticArm_ROS/catkin_ws/src/arm_control/devel/setup.sh
