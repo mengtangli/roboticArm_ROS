@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.16)  1 JUN 2015 02:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.16)  1 JUN 2015 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,16 +749,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
 [1] [2] [3] [4] <image/107988main_Sim3.jpg, id=35, 276.03125pt x 350.30875pt>
 File: image/107988main_Sim3.jpg Graphic file (type jpg)
 
@@ -827,139 +817,148 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 File: image/gazebo_links.jpg Graphic file (type jpg)
 
 <use image/gazebo_links.jpg>
-Package pdftex.def Info: image/gazebo_links.jpg used on input line 567.
+Package pdftex.def Info: image/gazebo_links.jpg used on input line 577.
 (pdftex.def)             Requested size: 195.0pt x 252.34154pt.
  [24 <./image/gazebo_links.jpg>] [25]
-<image/FH-Frankfurt.jpg, id=110, 160.6pt x 160.6pt>
-File: image/FH-Frankfurt.jpg Graphic file (type jpg)
+<image/arm_gazebo_links.png, id=110, 1618.045pt x 1053.9375pt>
+File: image/arm_gazebo_links.png Graphic file (type png)
 
-<use image/FH-Frankfurt.jpg>
-Package pdftex.def Info: image/FH-Frankfurt.jpg used on input line 630.
-(pdftex.def)             Requested size: 195.0pt x 195.00539pt.
- [26 <./image/FH-Frankfurt.jpg>]
+<use image/arm_gazebo_links.png>
+Package pdftex.def Info: image/arm_gazebo_links.png used on input line 640.
+(pdftex.def)             Requested size: 312.00119pt x 203.22533pt.
+ [26 <./image/arm_gazebo_links.png>]
 <image/gazebo_insert.png, id=114, 1371.1225pt x 770.88pt>
 File: image/gazebo_insert.png Graphic file (type png)
 
 <use image/gazebo_insert.png>
-Package pdftex.def Info: image/gazebo_insert.png used on input line 639.
+Package pdftex.def Info: image/gazebo_insert.png used on input line 649.
 (pdftex.def)             Requested size: 350.99762pt x 197.34225pt.
  [27 <./image/gazebo_insert.png>]
-File: image/FH-Frankfurt.jpg Graphic file (type jpg)
+<image/arm_gazebo_joints.png, id=118, 1618.045pt x 1053.9375pt>
+File: image/arm_gazebo_joints.png Graphic file (type png)
 
-<use image/FH-Frankfurt.jpg>
-Package pdftex.def Info: image/FH-Frankfurt.jpg used on input line 675.
-(pdftex.def)             Requested size: 195.0pt x 195.00539pt.
- [28]
-<image/arm_brushedmetal.JPG, id=122, 6322.62125pt x 2735.21875pt>
+<use image/arm_gazebo_joints.png>
+Package pdftex.def Info: image/arm_gazebo_joints.png used on input line 685.
+(pdftex.def)             Requested size: 350.99762pt x 228.61845pt.
+ [28 <./image/arm_gazebo_joints.png>]
+<image/arm_brushedmetal.JPG, id=123, 6322.62125pt x 2735.21875pt>
 File: image/arm_brushedmetal.JPG Graphic file (type jpg)
 
 <use image/arm_brushedmetal.JPG>
-Package pdftex.def Info: image/arm_brushedmetal.JPG used on input line 692.
+Package pdftex.def Info: image/arm_brushedmetal.JPG used on input line 702.
 (pdftex.def)             Requested size: 350.99762pt x 151.83565pt.
  [29 <./image/arm_brushedmetal.JPG>] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+Underfull \hbox (badness 10000) in paragraph at lines 744--745
 
  []
 
-File: image/FH-Frankfurt.jpg Graphic file (type jpg)
-<use image/FH-Frankfurt.jpg>
-Package pdftex.def Info: image/FH-Frankfurt.jpg used on input line 752.
-(pdftex.def)             Requested size: 234.00238pt x 234.01088pt.
- [31] [32]
-File: image/FH-Frankfurt.jpg Graphic file (type jpg)
- <use image/FH-Frankfurt.jpg>
-Package pdftex.def Info: image/FH-Frankfurt.jpg used on input line 799.
-(pdftex.def)             Requested size: 234.00238pt x 234.01088pt.
- [33]
-<image/gazebo_ros_control.png, id=138, 455.2441pt x 351.67606pt>
+<image/arm_gazebo.png, id=130, 1609.01125pt x 1053.9375pt>
+File: image/arm_gazebo.png Graphic file (type png)
+
+<use image/arm_gazebo.png>
+Package pdftex.def Info: image/arm_gazebo.png used on input line 762.
+(pdftex.def)             Requested size: 312.00119pt x 204.36714pt.
+ [31 <./image/arm_gazebo.png>] [32]
+<image/arm_gazebo_applyForce.png, id=137, 1618.045pt x 1053.9375pt>
+File: image/arm_gazebo_applyForce.png Graphic file (type png)
+
+<use image/arm_gazebo_applyForce.png>
+Package pdftex.def Info: image/arm_gazebo_applyForce.png used on input line 809
+.
+(pdftex.def)             Requested size: 390.0pt x 254.02765pt.
+ [33 <./image/arm_gazebo_applyForce.png>]
+<image/gazebo_ros_control.png, id=141, 455.2441pt x 351.67606pt>
 File: image/gazebo_ros_control.png Graphic file (type png)
 
 <use image/gazebo_ros_control.png>
-Package pdftex.def Info: image/gazebo_ros_control.png used on input line 811.
+Package pdftex.def Info: image/gazebo_ros_control.png used on input line 821.
 (pdftex.def)             Requested size: 350.99762pt x 271.15628pt.
  [34 <./image/gazebo_ros_control.png>]
-<image/Gazebo_ros_transmission.png, id=143, 794.97pt x 614.295pt>
+<image/Gazebo_ros_transmission.png, id=146, 794.97pt x 614.295pt>
 File: image/Gazebo_ros_transmission.png Graphic file (type png)
 
 <use image/Gazebo_ros_transmission.png>
 Package pdftex.def Info: image/Gazebo_ros_transmission.png used on input line 8
-22.
+32.
 (pdftex.def)             Requested size: 350.99762pt x 271.22797pt.
  [35 <./image/Gazebo_ros_transmission.png>] [36]
-Overfull \hbox (8.53346pt too wide) in paragraph at lines 860--862
+Overfull \hbox (8.53346pt too wide) in paragraph at lines 870--872
 \OT1/cmr/m/n/12 XACRO, I made an-other arm.gazebo file in-side the same di-rec-
 tory as arm.xacro
  []
 
 
-Overfull \hbox (25.05496pt too wide) in paragraph at lines 870--871
-[][][][][][][][][][][][][]  
+Overfull \hbox (25.05496pt too wide) in paragraph at lines 880--881
+[][][][][][][][][][][][][][][][][]  
  []
 
 [37] [38] [39] [40]
-Underfull \hbox (badness 10000) in paragraph at lines 990--991
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
 
  []
 
-[41]
-File: image/FH-Frankfurt.jpg Graphic file (type jpg)
- <use image/FH-Frankfurt.jpg>
-Package pdftex.def Info: image/FH-Frankfurt.jpg used on input line 1015.
-(pdftex.def)             Requested size: 234.00238pt x 234.01088pt.
- [42] [43]
-File: image/FH-Frankfurt.jpg Graphic file (type jpg)
- <use image/FH-Frankfurt.jpg>
-Package pdftex.def Info: image/FH-Frankfurt.jpg used on input line 1039.
-(pdftex.def)             Requested size: 234.00238pt x 234.01088pt.
+[41] <image/gazebo_rqt.png, id=169, 2714.14pt x 1053.9375pt>
+File: image/gazebo_rqt.png Graphic file (type png)
 
-[44] [45]
-Overfull \hbox (17.67642pt too wide) in paragraph at lines 1056--1057
+<use image/gazebo_rqt.png>
+Package pdftex.def Info: image/gazebo_rqt.png used on input line 1025.
+(pdftex.def)             Requested size: 350.99762pt x 136.293pt.
+ [42 <./image/gazebo_rqt.png>] [43]
+<image/arm_gazebo_exercise.png, id=176, 1606.0pt x 1204.5pt>
+File: image/arm_gazebo_exercise.png Graphic file (type png)
+
+<use image/arm_gazebo_exercise.png>
+Package pdftex.def Info: image/arm_gazebo_exercise.png used on input line 1049.
+
+(pdftex.def)             Requested size: 390.0pt x 292.50443pt.
+ [44 <./image/arm_gazebo_exercise.png (PNG copy)>] [45]
+Overfull \hbox (17.67642pt too wide) in paragraph at lines 1066--1067
 []\OT1/cmr/m/n/12 A His-tory of ROS, http://www.ros.org/history/, last re-triev
 ed 07/05/2015. 
  []
 
 
-Overfull \hbox (112.09767pt too wide) in paragraph at lines 1057--1058
+Overfull \hbox (112.09767pt too wide) in paragraph at lines 1067--1068
 []\OT1/cmr/m/n/12 ROS In-digo Tu-to-rial, http://www.coppeliarobotics.com/helpF
 iles/en/rosTutorialIndigo.htm,
  []
 
 
-Overfull \hbox (32.13452pt too wide) in paragraph at lines 1059--1060
+Overfull \hbox (32.13452pt too wide) in paragraph at lines 1069--1070
 []\OT1/cmr/m/n/12 ROS: an open-source Robot Op-er-at-ing Sys-tem, VA, last re-t
 rieved 10/05/2015. 
  []
 
 
-Overfull \hbox (34.98448pt too wide) in paragraph at lines 1061--1062
+Overfull \hbox (34.98448pt too wide) in paragraph at lines 1071--1072
 []\OT1/cmr/m/n/12 Linux is the plat-form for robotics, http://www.linuxuser.co.
 uk/features/linux-
  []
 
 
-Overfull \hbox (27.33179pt too wide) in paragraph at lines 1062--1063
+Overfull \hbox (27.33179pt too wide) in paragraph at lines 1072--1073
 []\OT1/cmr/m/n/12 Gazebo Tu-to-ri-als, http://gazebosim.org/tutorials, last re-
 trieved 26/05/2015. 
  []
 
 
-Overfull \hbox (34.53127pt too wide) in paragraph at lines 1063--1064
+Overfull \hbox (34.53127pt too wide) in paragraph at lines 1073--1074
 []\OT1/cmr/m/n/12 LaTeX List Struc-tures, http://en.wikibooks.org/wiki/LaTeX/Li
 st[]Structures,
  []
 
 
-Overfull \hbox (28.15965pt too wide) in paragraph at lines 1064--1065
+Overfull \hbox (28.15965pt too wide) in paragraph at lines 1074--1075
 []\OT1/cmr/m/n/12 ROS Tu-to-rial, http://wiki.ros.org/ROS/Tutorials, last re-tr
 ieved 29/05/2015. 
  []
 
 [46] (./nguyenVuHoi_bachelorProject_roboArm_simulation.aux) ) 
 Here is how much of TeX's memory you used:
- 13951 strings out of 495028
- 248822 string characters out of 6181497
- 336183 words of memory out of 5000000
- 16854 multiletter control sequences out of 15000+600000
+ 13976 strings out of 495028
+ 249542 string characters out of 6181497
+ 336838 words of memory out of 5000000
+ 16874 multiletter control sequences out of 15000+600000
  11540 words of font info for 41 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,7n,58p,879b,1254s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -972,10 +971,10 @@ s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
 c/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmtt10.pfb>
 Output written on nguyenVuHoi_bachelorProject_roboArm_simulation.pdf (49 pages,
- 6377404 bytes).
+ 13373036 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
+ 214 PDF objects out of 1000 (max. 8388607)
  136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

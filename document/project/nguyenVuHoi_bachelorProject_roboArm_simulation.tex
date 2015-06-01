@@ -88,9 +88,9 @@
   \newpage
   \pagenumbering{arabic}
   \section*{Disclaimer}
-  I declare that this report is a product of our own work, unless otherwise referenced. I also declare that all opinions, results, conclusions and recommendations are my own and may not represent the policies of opinions of the Vietnamese – German University.\\ \\ \\
+  I declare that this report is a product of our own work, unless otherwise referenced. I also declare that all opinions, results, conclusions and recommendations are my own and may not represent the policies of opinions of the Vietnamese – German University.~\\[4cm]
   \begin{flushright}
-  \textup{Nguyen Vu Hoi}
+  Nguyen Vu Hoi
   \end{flushright}
   
   \newpage
@@ -489,12 +489,22 @@
     	include, pr2\_wheel,
     	geometry,origin, circle,
     	link, collision, box, inertial,
-    	mass
+    	mass, joint, parent, child,
+    	axis, dynamics, sdf, world, uri,
+    	model, pose, static, visual,,
+    	mesh, arg, param, node,
+    	transmission, actuator,
+    	hardwareInterface, mechanicalReduction, gazebo,
+    	plugin, robotNamespace, robotSimType,
+    	rosparam, remap, inertia
     },
     morekeywords=[2]{
     	name, value, type, radius, length,
     	xyz, rpy, circumference, filename,
-    	size, ixx, ixy, ixz, iyy, iyz, izz
+    	size, ixx, ixy, ixz, iyy, iyz, izz,
+    	damping, scale, command, pkg,
+    	respawn, output, args, file, command,
+    	ns, from, to
     },
     morekeywords=[3]{
      	xacro:property, xacro:insert\_block,
@@ -627,7 +637,7 @@
   Here's an image of my model (with 2 arms already) containing the links (shown as basic shapes/ boxes).
   \begin{figure}[h]
       \centering
-      \includegraphics[width=0.5\linewidth]{image/FH-Frankfurt.jpg}
+      \includegraphics[width=0.8\linewidth]{image/arm_gazebo_links.png}
       \caption{The dual arm model in Gazebo with links shown}
       \label{fig:arm_gazebo_link}
   \end{figure}
@@ -672,7 +682,7 @@
   Below is the arms with joints displayed.
   \begin{figure}[h]
       \centering
-      \includegraphics[width=0.5\linewidth]{image/FH-Frankfurt.jpg}
+      \includegraphics[width=0.9\linewidth]{image/arm_gazebo_joints.png}
       \caption{Joints in dual arm model}
       \label{fig:arm_gazebo_joint}
   \end{figure}
@@ -749,7 +759,7 @@
   As shown above, the mesh can be scaled, moved and rotated just like the collision. Copy and modify the code above to all links. Here is the model with meshes attached.
   \begin{figure}[h]
       \centering
-      \includegraphics[width=0.6\linewidth]{image/FH-Frankfurt.jpg}
+      \includegraphics[width=0.8\linewidth]{image/arm_gazebo.png}
       \caption{Dual arm model with meshes}
       \label{fig:arm_gazebo_mesh}
   \end{figure}
@@ -791,12 +801,12 @@
   
   \newpage
   \subsubsection{Applying force/torque}
-  Let's open Gazebo and insert the arm into it (using roslaunch)with the simulation not paused.\\
-  In the World tab, right click on a link to apply force/torque. Then choose the force or torque, its axis, and click Apply. The force is applied in a millisecond, so if the arm is to move noticeably, a large amount (about 100N) should be entered.\\
-  Note that "Mag" is the total magnitude of the force which will be applied, which is the Euclidean norm of the 3 forces.
+  Let's open Gazebo and insert the arm into it (using roslaunch) with the simulation not paused.\\
+  Hold the three white dots on the right of the window, stroke left. There should be three tabs appears, named Force, Position and Velocity. However, there's nothing in those tabs.\\
+  Left click on the robot, all the links would show up on the right. Enter the desired force for each link. The value should be small and increasing, or else it would move crazily fast. Experiment all three tabs and study the behavior of the model. In figure \ref{fig:arm_gazebo_applyForce} is GUI when Force applying is available.//
   \begin{figure}[h]
       \centering
-      \includegraphics[width=0.6\linewidth]{image/FH-Frankfurt.jpg}
+      \includegraphics[width=1\linewidth]{image/arm_gazebo_applyForce.png}
       \caption{Apply force/torque to links}
       \label{fig:arm_gazebo_applyForce}
   \end{figure}
@@ -1006,13 +1016,13 @@
   Click the green add button, that displays a sine wave being plotted on the screen.\\
   Add another topic to the Plot plugin that tracks the error between the commanded position and actual position of the actuator being controlled.
   \begin{lstlisting}
-  /arm_control/joint1_1_controller/state/process_value
+  /arm_control/joint1_1_controller/state/error
   \end{lstlisting}
   If things get strange after a while running Plot plugin, click the blue refresh button at the top right of the plugin.\\
   The result of above experiment should look like this:
   \begin{figure}[h]
       \centering
-      \includegraphics[width=0.6\linewidth]{image/FH-Frankfurt.jpg}
+      \includegraphics[width=0.9\linewidth]{image/gazebo_rqt.png}
       \caption{Comparison between controlling signal and actual position.}
       \label{fig:gazebo_rqt}
   \end{figure}
@@ -1036,7 +1046,7 @@
   For the implementation part of this project, I will make the arms of the robot move, imitating the movement of humans while exercising. The result is shown below:
   \begin{figure}[h]
       \centering
-      \includegraphics[width=0.6\linewidth]{image/FH-Frankfurt.jpg}
+      \includegraphics[width=1\linewidth]{image/arm_gazebo_exercise.png}
       \caption{The arm moving its hands, like a simple exercise}
       \label{fig:arm_exercise}
   \end{figure}
