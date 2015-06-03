@@ -6,7 +6,7 @@ Commands to manually control the joints:
 	rosrun rosserial_python serial_node.py /dev/ttyACM0
 	rostopic pub --once /arm/elbow1_1_controller/command std_msgs/Float64 0.7
 	OR
-	rostopic pub pub1 arm_control/servo "{first: 0, second: 0, third: 0, forth: 0, fifth: 90}"
+	rostopic pub pub1 arm_control/servo "{first: 15, second: 180, third: 0, forth: 0, fifth: 90}"
 	OR
 	rosrun arm_control pub1
 RDS3115:

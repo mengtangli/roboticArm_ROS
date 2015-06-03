@@ -10,4 +10,5 @@
 4. Cannot run rosbuild commands:
 	Solution: Working with ROS indigo or newer, users must use catkin. Read how to migrate to indigo here: http://wiki.ros.org/catkin/migrating_from_rosbuild
 5. shaking inside gazebo: not enough initial param
-
+6. Need to assemble the servos so that their initial position (in the middle of the workspace) should be 90 degrees, because you cannot input a minus degree into servo, we need to be able to reach the farthest point in the negative side of the servo.
+7. Cannot upload to the Arduino, because serial_node.py (see more in note.txt, use this to connect ros to arduino) is running. Unplug the USB cable, re-plug, and upload. Sometimes you must change ACM0 to ACM1.
