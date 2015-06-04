@@ -5,6 +5,8 @@
 
 #define RDS3115; //comment this line if you're not using RDS3115
 
+const int servo_step = 7; //step to run in 100ms
+
 Servo servo1;
 Servo servo2;
 Servo servo3;
@@ -94,14 +96,14 @@ boolean move_servo(Servo servo_no, int dest_angle, int last_angle)
     int temp_angle = last_angle;
     signed int diff = dest_angle - last_angle;
     if (diff >0){
-      while(temp_angle < dest_angle - 5){
-        temp_angle += 5;
+      while(temp_angle < dest_angle - servo_step){
+        temp_angle += servo_step;
         servo_no.write(temp_angle);
         delay(100);
       }
     } else{
-      while(temp_angle > dest_angle + 5){
-        temp_angle -= 5;
+      while(temp_angle > dest_angle + servo_step){
+        temp_angle -= servo_step;
         servo_no.write(temp_angle);
         delay(100);
       }

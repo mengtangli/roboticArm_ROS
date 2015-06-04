@@ -17,3 +17,11 @@ Arm servo init angles:
 	elbow2_1: 0
 	elbow2_2: 0
 tac ke dan: van oc vo thanh truc tron
+change the image of kinematic model can efficiently reduce work. for example to move from Origin 2 to Origin 5? really? can it? double check
+
+1 motor was killed because of dust inside the servo. Be careful
+
+the hardware design has some flaws:
+	decrease workspace because of the position of the joint between servo and the cover (cant get right down)
+	collision between th ecovers: may case damage
+
