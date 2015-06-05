@@ -88,7 +88,7 @@
   \newpage
   \pagenumbering{arabic}
   \section*{Disclaimer}
-  I declare that this report is a product of our own work, unless otherwise referenced. I also declare that all opinions, results, conclusions and recommendations are my own and may not represent the policies of opinions of the Vietnamese – German University.~\\[4cm]
+  I declare that this report is a product of my own work, unless otherwise referenced. I also declare that all opinions, results, conclusions and recommendations are my own and may not represent the policies of opinions of the Vietnamese – German University.~\\[4cm]
   \begin{flushright}
   Nguyen Vu Hoi
   \end{flushright}
@@ -223,7 +223,7 @@
   Inside the workspace, the source code of all your projects are stored in /src folder, and are separated into "packages".\\
   \textbf{Packages} are the software organization unit of ROS code. They contain libraries, executables, scripts and other artifacts of the unit. Each package often serves only one purpose, for example describing the model, working with Gazebo, or controlling the actuators. \\
   \textbf{Manifest (package.xml)} is a file containing the description of the package. It is often placed directly in (one level down) the package folder. It defines dependencies between different packages and captures meta information of the package like version, maintainer, license, etc...\par
-  \textbf{Nodes} are executables that uses ROS to communicate with other nodes, using ROS client library. ROS are designed to be modular with a peer-to-peer communication topology. To be easier to imagine, nodes in a ROS network are like computers in a LAN network. You can check the list of running nodes by the command:
+  \textbf{Nodes} are executables that uses ROS to communicate with other nodes, using ROS client library. ROS is designed to be modular with a peer-to-peer communication topology. To be easier to imagine, nodes in a ROS network are like computers in a LAN network. You can check the list of running nodes by the command:
   \begin{lstlisting}
   rosnode list
   \end{lstlisting}
@@ -1056,7 +1056,8 @@
   The project has been completed fulfilling the initial goal. We can now control a model inside Gazebo either with messages published on a topic in ROS or by SQT GUI.\par
   We can simulate the robot in a virtual environment, knowing how it would move in real life if a command is given.\par
   The ROS structure and basic skills have been studied. It doesn't only promote my skill with working on Command Line Interface, but also provide a solid knowledge about the way to work with an infrastructure in Linux. The configurations and modeling based on files is an interesting topic to learn about.\par
-  And finally, I could perform a simple implementation with the model in virtual world, proving the accurate controlling potential of this method.
+  And finally, I could perform a simple implementation with the model in virtual world, proving the accurate controlling potential of this method.\par
+  For the future work, the project is supposed to be expanded to a real-life system. There should be a microcontroller to subscribe the controlling topic of ROS, using them to move the servos, which are attached to a humanoid arm. The system would also be able to do simple kinematics and inverse kinematics of the arm, resulting in easier control of the arm. That means, instead of having to control each of the servos, the robot can receive some command like "move your fingertip to the coordinate (50cm,30cm) and calculate the angles of each servo. It should also plan a trajectory to move the arm.
   
   \newpage
   \section{Reference}
