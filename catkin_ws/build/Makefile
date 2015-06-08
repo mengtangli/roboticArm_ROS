@@ -267,19 +267,6 @@ _arm_control_generate_messages_check_deps_servo/fast:
 .PHONY : _arm_control_generate_messages_check_deps_servo/fast
 
 #=============================================================================
-# Target rules for targets named arm_control
-
-# Build rule for target.
-arm_control: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 arm_control
-.PHONY : arm_control
-
-# fast build rule for target.
-arm_control/fast:
-	$(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/build
-.PHONY : arm_control/fast
-
-#=============================================================================
 # Target rules for targets named arm_control_gencpp
 
 # Build rule for target.
@@ -2238,7 +2225,6 @@ help:
 	@echo "... _catkin_empty_exported_target"
 	@echo "... _arm_control_generate_messages_check_deps_num"
 	@echo "... _arm_control_generate_messages_check_deps_servo"
-	@echo "... arm_control"
 	@echo "... arm_control_gencpp"
 	@echo "... arm_control_generate_messages"
 	@echo "... arm_control_generate_messages_cpp"

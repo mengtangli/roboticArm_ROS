@@ -22,7 +22,7 @@ add_message_files(
  )
 
 catkin_package(
-#  INCLUDE_DIRS include
+  INCLUDE_DIRS include
 #  LIBRARIES ros_tut
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
@@ -39,6 +39,6 @@ catkin_package()
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(pub1 src/pub1.cpp)
+add_executable(pub1 src/pub1.cpp src/arm_control.cpp)
 target_link_libraries(pub1 ${catkin_LIBRARIES})
 add_dependencies(pub1 arm_control_generate_messages_cpp)

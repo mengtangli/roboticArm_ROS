@@ -72,14 +72,39 @@ arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o.provides: arm_control/CMakeFiles/
 
 arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o.provides.build: arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o
 
+arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o: arm_control/CMakeFiles/pub1.dir/flags.make
+arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o: /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/eeit/roboarm/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o"
+	cd /home/eeit/roboarm/catkin_ws/build/arm_control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pub1.dir/src/arm_control.cpp.o -c /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.cpp
+
+arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pub1.dir/src/arm_control.cpp.i"
+	cd /home/eeit/roboarm/catkin_ws/build/arm_control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.cpp > CMakeFiles/pub1.dir/src/arm_control.cpp.i
+
+arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pub1.dir/src/arm_control.cpp.s"
+	cd /home/eeit/roboarm/catkin_ws/build/arm_control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.cpp -o CMakeFiles/pub1.dir/src/arm_control.cpp.s
+
+arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o.requires:
+.PHONY : arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o.requires
+
+arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o.provides: arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o.requires
+	$(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o.provides.build
+.PHONY : arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o.provides
+
+arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o.provides.build: arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o
+
 # Object files for target pub1
 pub1_OBJECTS = \
-"CMakeFiles/pub1.dir/src/pub1.cpp.o"
+"CMakeFiles/pub1.dir/src/pub1.cpp.o" \
+"CMakeFiles/pub1.dir/src/arm_control.cpp.o"
 
 # External object files for target pub1
 pub1_EXTERNAL_OBJECTS =
 
 /home/eeit/roboarm/catkin_ws/devel/lib/arm_control/pub1: arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o
+/home/eeit/roboarm/catkin_ws/devel/lib/arm_control/pub1: arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o
 /home/eeit/roboarm/catkin_ws/devel/lib/arm_control/pub1: arm_control/CMakeFiles/pub1.dir/build.make
 /home/eeit/roboarm/catkin_ws/devel/lib/arm_control/pub1: /opt/ros/indigo/lib/libroscpp.so
 /home/eeit/roboarm/catkin_ws/devel/lib/arm_control/pub1: /usr/lib/x86_64-linux-gnu/libboost_signals.so
@@ -107,6 +132,7 @@ arm_control/CMakeFiles/pub1.dir/build: /home/eeit/roboarm/catkin_ws/devel/lib/ar
 .PHONY : arm_control/CMakeFiles/pub1.dir/build
 
 arm_control/CMakeFiles/pub1.dir/requires: arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o.requires
+arm_control/CMakeFiles/pub1.dir/requires: arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o.requires
 .PHONY : arm_control/CMakeFiles/pub1.dir/requires
 
 arm_control/CMakeFiles/pub1.dir/clean:

@@ -1,7 +1,12 @@
 #include "ros/ros.h"
 #include "arm_control/servo.h"
 #include "std_msgs/Float64.h"
-#include "../include/arm_control.h"
+//#include "../include/arm_control.h"
+#include "arm_control.h"
+#include "arm_control.cpp"
+
+arm_control::servo msg;
+std_msgs::Float64 gazebo_msg;
 
 /**
  * Global variables and defines
@@ -88,11 +93,11 @@ int main(int argc, char **argv)
     	} else if(count<30){
 		move_direction = 1;
     	}
-	move(FIRST,count,pub1,gazebo_pub1);
-	move(SECOND,count,pub1,gazebo_pub2);
-	move(THIRD,count,pub1,gazebo_pub3);
-	move(FORTH,count,pub1,gazebo_pub4);
-	move(FIFTH,count,pub1,gazebo_pub5);
+	move(FIRST,count, msg, gazebo_msg, pub1,gazebo_pub1);
+	move(SECOND,count, msg, gazebo_msg, pub1,gazebo_pub2);
+	move(THIRD,count, msg, gazebo_msg,pub1,gazebo_pub3);
+	move(FORTH,count, msg, gazebo_msg,pub1,gazebo_pub4);
+	move(FIFTH,count, msg, gazebo_msg,pub1,gazebo_pub5);
 	sleep(loop_rate,5000);
   }
   return 0;
@@ -173,6 +178,5 @@ void sleep(ros::Rate sleep_rate, long no_of_loops)
 {
 	for(long i=0; i<no_of_loops; i++)
 		sleep_rate.sleep();
-	return true;
 }
 */

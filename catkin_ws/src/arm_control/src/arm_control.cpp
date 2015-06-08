@@ -1,4 +1,9 @@
+//#include "../include/arm_control.h"
 #include "arm_control.h"
+
+
+//void move(int servo_number, int data, arm_control::servo msg, std_msgs::Float64 gazebo_msg, ros::Publisher publisher, ros::Publisher gazebo_publisher);
+//void sleep(ros::Rate sleep_rate, long no_ms);
 
 /**
  * move() - Move servo an angle(in degrees) both on real life and gazebo
@@ -15,7 +20,7 @@
  * spinOnce() to execute the publish.
  *
  */
-void move(int servo_number, int data, ros::Publisher publisher, ros::Publisher gazebo_publisher)
+void move(int servo_number, int data, arm_control::servo msg, std_msgs::Float64 gazebo_msg, ros::Publisher publisher, ros::Publisher gazebo_publisher)
 {
 	switch(servo_number){
 	case 1:

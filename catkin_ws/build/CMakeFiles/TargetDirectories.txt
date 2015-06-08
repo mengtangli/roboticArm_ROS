@@ -47,7 +47,6 @@
 /home/eeit/roboarm/catkin_ws/build/brazo_fer_modelo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir
 /home/eeit/roboarm/catkin_ws/build/brazo_fer_modelo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir
 /home/eeit/roboarm/catkin_ws/build/brazo_fer_modelo/CMakeFiles/actionlib_msgs_generate_messages_py.dir
-/home/eeit/roboarm/catkin_ws/build/arm_control/CMakeFiles/arm_control.dir
 /home/eeit/roboarm/catkin_ws/build/arm_control/CMakeFiles/arm_control_gencpp.dir
 /home/eeit/roboarm/catkin_ws/build/arm_control/CMakeFiles/arm_control_generate_messages.dir
 /home/eeit/roboarm/catkin_ws/build/arm_control/CMakeFiles/arm_control_generate_messages_cpp.dir

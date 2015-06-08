@@ -25,3 +25,6 @@ the hardware design has some flaws:
 	decrease workspace because of the position of the joint between servo and the cover (cant get right down)
 	collision between th ecovers: may case damage
 
+Viet 1 class cho robot arm, bao gom:
+	public: publishers for ROS and gazebo, vi tri tung khop canh tay (su dung forward kinematic)
+	private: nhung cai con lai

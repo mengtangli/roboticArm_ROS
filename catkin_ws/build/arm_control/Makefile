@@ -178,20 +178,6 @@ _arm_control_generate_messages_check_deps_servo/fast:
 .PHONY : _arm_control_generate_messages_check_deps_servo/fast
 
 # Convenience name for target.
-arm_control/CMakeFiles/arm_control.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control.dir/rule
-.PHONY : arm_control/CMakeFiles/arm_control.dir/rule
-
-# Convenience name for target.
-arm_control: arm_control/CMakeFiles/arm_control.dir/rule
-.PHONY : arm_control
-
-# fast build rule for target.
-arm_control/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/build
-.PHONY : arm_control/fast
-
-# Convenience name for target.
 arm_control/CMakeFiles/arm_control_gencpp.dir/rule:
 	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_control_gencpp.dir/rule
 .PHONY : arm_control/CMakeFiles/arm_control_gencpp.dir/rule
@@ -462,7 +448,7 @@ src/arm_control.o: src/arm_control.cpp.o
 
 # target to build an object file
 src/arm_control.cpp.o:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/src/arm_control.cpp.o
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o
 .PHONY : src/arm_control.cpp.o
 
 src/arm_control.i: src/arm_control.cpp.i
@@ -470,7 +456,7 @@ src/arm_control.i: src/arm_control.cpp.i
 
 # target to preprocess a source file
 src/arm_control.cpp.i:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/src/arm_control.cpp.i
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.i
 .PHONY : src/arm_control.cpp.i
 
 src/arm_control.s: src/arm_control.cpp.s
@@ -478,7 +464,7 @@ src/arm_control.s: src/arm_control.cpp.s
 
 # target to generate assembly for a file
 src/arm_control.cpp.s:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_control.dir/build.make arm_control/CMakeFiles/arm_control.dir/src/arm_control.cpp.s
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.s
 .PHONY : src/arm_control.cpp.s
 
 src/pub1.o: src/pub1.cpp.o
@@ -513,7 +499,6 @@ help:
 	@echo "... depend"
 	@echo "... _arm_control_generate_messages_check_deps_num"
 	@echo "... _arm_control_generate_messages_check_deps_servo"
-	@echo "... arm_control"
 	@echo "... arm_control_gencpp"
 	@echo "... arm_control_generate_messages"
 	@echo "... arm_control_generate_messages_cpp"
