@@ -34,18 +34,6 @@ std_msgs/Float64.h
 arm_control.h
 /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.h
 
-/home/eeit/roboarm/catkin_ws/src/arm_control/src/pub1.cpp
-ros/ros.h
-/home/eeit/roboarm/catkin_ws/src/arm_control/src/ros/ros.h
-arm_control/servo.h
-/home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control/servo.h
-std_msgs/Float64.h
-/home/eeit/roboarm/catkin_ws/src/arm_control/src/std_msgs/Float64.h
-arm_control.h
-/home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.h
-arm_control.cpp
-/home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.cpp
-
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h
 -

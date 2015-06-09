@@ -1,18 +1,23 @@
-//#include "../include/arm_control.h"
 #include "arm_control.h"
 
+RobotArm::RobotArm(ros::NodeHandle arm_node): ros_rate(1000)
+{
+	cnt = 0;
+	controller_publisher = arm_node.advertise<arm_control::servo>("pub1", 100);
+	gazebo_publisher1 = arm_node.advertise<std_msgs::Float64>("/arm/elbow1_1_controller/command",100);
+	gazebo_publisher2 = arm_node.advertise<std_msgs::Float64>("/arm/elbow1_2_controller/command",100);
+	gazebo_publisher3 = arm_node.advertise<std_msgs::Float64>("/arm/elbow2_1_controller/command",100);
+	gazebo_publisher4 = arm_node.advertise<std_msgs::Float64>("/arm/elbow2_2_controller/command",100);
+	gazebo_publisher5 = arm_node.advertise<std_msgs::Float64>("/arm/elbow3_1_controller/command",100);
 
-//void move(int servo_number, int data, arm_control::servo msg, std_msgs::Float64 gazebo_msg, ros::Publisher publisher, ros::Publisher gazebo_publisher);
-//void sleep(ros::Rate sleep_rate, long no_ms);
 
+}
 /**
  * move() - Move servo an angle(in degrees) both on real life and gazebo
  * simulation
  *
  * @servo_number:	The number of servo to be moved.
  * @data:		Angle to move the servo (in degrees).
- * @publisher:		Publisher to publish the data to servo
- * @gazebo_publisher:	Publisher to publish the data to gazebo
  *
  * Choose which servo to move using switch(). First, assign data to msg
  * variables. Second, queue (publish) msg of both real-life and
@@ -20,47 +25,47 @@
  * spinOnce() to execute the publish.
  *
  */
-void move(int servo_number, int data, arm_control::servo msg, std_msgs::Float64 gazebo_msg, ros::Publisher publisher, ros::Publisher gazebo_publisher)
+void RobotArm::move(int servo_number, int data)
 {
 	switch(servo_number){
 	case 1:
-		msg.first = data;
-		publisher.publish(msg);
+		controller_msg.first = data;
+		controller_publisher.publish(controller_msg);
 		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("First: %d", msg.first);
+		gazebo_publisher1.publish(gazebo_msg);
+		ROS_INFO("First: %d", controller_msg.first);
     		ros::spinOnce();
 		break;
 	case 2:
-		msg.second = data;
-    		publisher.publish(msg);
+		controller_msg.second = data;
+    		controller_publisher.publish(controller_msg);
 		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("Second: %d", msg.second);
+		gazebo_publisher2.publish(gazebo_msg);
+		ROS_INFO("Second: %d", controller_msg.second);
     		ros::spinOnce();
 		break;
 	case 3:
-		msg.third = data;
-    		publisher.publish(msg);
+		controller_msg.third = data;
+    		controller_publisher.publish(controller_msg);
 		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("Third: %d", msg.third);
+		gazebo_publisher3.publish(gazebo_msg);
+		ROS_INFO("Third: %d", controller_msg.third);
     		ros::spinOnce();
 		break;
 	case 4:
-		msg.forth = data;
-    		publisher.publish(msg);
+		controller_msg.forth = data;
+    		controller_publisher.publish(controller_msg);
 		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("Forth: %d", msg.forth);
+		gazebo_publisher4.publish(gazebo_msg);
+		ROS_INFO("Forth: %d", controller_msg.forth);
     		ros::spinOnce();
 		break;
 	case 5:
-		msg.fifth = data;
-    		publisher.publish(msg);
+		controller_msg.fifth = data;
+    		controller_publisher.publish(controller_msg);
 		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("Fifth: %d", msg.fifth);
+		gazebo_publisher5.publish(gazebo_msg);
+		ROS_INFO("Fifth: %d", controller_msg.fifth);
     		ros::spinOnce();
 		break;
 	default:
@@ -71,13 +76,11 @@ void move(int servo_number, int data, arm_control::servo msg, std_msgs::Float64 
 /**
  * sleep() - Sleep the ROS system a given time(ms).
  *
- * @sleep_rate:	Standard rate(Hz) defined in the main function.
- * 		default: 1KHz
- * @no_of_loops:Number of times the sleep_rate will be repeated.
+ * @no_of_ms:Number of times the ros_rate will be repeated by miliseconds
  *
  */
-void sleep(ros::Rate sleep_rate, long no_of_loops)
+void RobotArm::sleep(long no_of_ms)
 {
-	for(long i=0; i<no_of_loops; i++)
-		sleep_rate.sleep();
+	for(long i=0; i<no_of_ms; i++)
+		ros_rate.sleep();
 }

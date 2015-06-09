@@ -64,7 +64,6 @@ arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o: /opt/ros/indigo/include/s
 
 arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /home/eeit/roboarm/catkin_ws/devel/include/arm_control/servo.h
 arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /home/eeit/roboarm/catkin_ws/src/arm_control/include/arm_control.h
-arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.cpp
 arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /home/eeit/roboarm/catkin_ws/src/arm_control/src/pub1.cpp
 arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h

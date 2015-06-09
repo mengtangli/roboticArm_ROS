@@ -1,29 +1,4 @@
-#include "ros/ros.h"
-#include "arm_control/servo.h"
-#include "std_msgs/Float64.h"
-//#include "../include/arm_control.h"
 #include "arm_control.h"
-#include "arm_control.cpp"
-
-arm_control::servo msg;
-std_msgs::Float64 gazebo_msg;
-
-/**
- * Global variables and defines
- *
-#define FIRST	1
-#define SECOND	2
-#define THIRD	3
-#define FORTH	4
-#define FIFTH	5
-arm_control::servo msg;
-std_msgs::Float64 gazebo_msg;
-
-/**
- * Functions
- *
-void move(int servo_number, int data, ros::Publisher publisher, ros::Publisher gazebo_publisher);
-void sleep(ros::Rate sleep_rate, long no_ms);
 
 /**
  * This file demonstrates simple sending of messages over the ROS system.
@@ -41,14 +16,14 @@ int main(int argc, char **argv)
    * You must call one of the versions of ros::init() before using any other
    * part of the ROS system.
    */
-  ros::init(argc, argv, "pub1");
+	ros::init(argc, argv, "pub1");
 
   /**
    * NodeHandle is the main access point to communications with the ROS system.
    * The first NodeHandle constructed will fully initialize this node, and the last
    * NodeHandle destructed will close down the node.
    */
-  ros::NodeHandle pub1_node;
+	ros::NodeHandle vgu_arm_node;
 
   /**
    * The advertise() function is how you tell ROS that you want to
@@ -67,116 +42,26 @@ int main(int argc, char **argv)
    * than we can send them, the number here specifies how many messages to
    * buffer up before throwing some away.
    */
-  ros::Publisher pub1 = pub1_node.advertise<arm_control::servo>("pub1", 100);
-  ros::Publisher gazebo_pub1 = pub1_node.advertise<std_msgs::Float64>("/arm/elbow1_1_controller/command",100);
-  ros::Publisher gazebo_pub2 = pub1_node.advertise<std_msgs::Float64>("/arm/elbow1_2_controller/command",100);
-  ros::Publisher gazebo_pub3 = pub1_node.advertise<std_msgs::Float64>("/arm/elbow2_1_controller/command",100);
-  ros::Publisher gazebo_pub4 = pub1_node.advertise<std_msgs::Float64>("/arm/elbow2_2_controller/command",100);
-  ros::Publisher gazebo_pub5 = pub1_node.advertise<std_msgs::Float64>("/arm/elbow3_1_controller/command",100);
 
-  ros::Rate loop_rate(1000);
-
-  /**
-   * Local variables
-   */
-  int count = 0;
-  int move_direction = 1; //1 = anti-clockwise, -1 = cw
+	RobotArm robot_arm(vgu_arm_node);
 
   /**
    * Main program
    */
-  while (ros::ok())
-  {
-	count+=10*move_direction;
-    	if(count>179){
-		move_direction = -1;
-    	} else if(count<30){
-		move_direction = 1;
-    	}
-	move(FIRST,count, msg, gazebo_msg, pub1,gazebo_pub1);
-	move(SECOND,count, msg, gazebo_msg, pub1,gazebo_pub2);
-	move(THIRD,count, msg, gazebo_msg,pub1,gazebo_pub3);
-	move(FORTH,count, msg, gazebo_msg,pub1,gazebo_pub4);
-	move(FIFTH,count, msg, gazebo_msg,pub1,gazebo_pub5);
-	sleep(loop_rate,5000);
-  }
-  return 0;
-}
-
-/**
- * move() - Move servo an angle(in degrees) both on real life and gazebo
- * simulation
- *
- * @servo_number:	The number of servo to be moved.
- * @data:		Angle to move the servo (in degrees).
- * @publisher:		Publisher to publish the data to servo
- * @gazebo_publisher:	Publisher to publish the data to gazebo
- *
- * Choose which servo to move using switch(). First, assign data to msg
- * variables. Second, queue (publish) msg of both real-life and
- * simulation. Third, print debug info with ROS_INFO. Finally,
- * spinOnce() to execute the publish.
- *
- *
-void move(int servo_number, int data, ros::Publisher publisher, ros::Publisher gazebo_publisher)
-{
-	switch(servo_number){
-	case 1:
-		msg.first = data;
-		publisher.publish(msg);
-		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("First: %d", msg.first);
-    		ros::spinOnce();
-		break;
-	case 2:
-		msg.second = data;
-    		publisher.publish(msg);
-		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("Second: %d", msg.second);
-    		ros::spinOnce();
-		break;
-	case 3:
-		msg.third = data;
-    		publisher.publish(msg);
-		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("Third: %d", msg.third);
-    		ros::spinOnce();
-		break;
-	case 4:
-		msg.forth = data;
-    		publisher.publish(msg);
-		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("Forth: %d", msg.forth);
-    		ros::spinOnce();
-		break;
-	case 5:
-		msg.fifth = data;
-    		publisher.publish(msg);
-		gazebo_msg.data = data;
-		gazebo_publisher.publish(gazebo_msg);
-		ROS_INFO("Fifth: %d", msg.fifth);
-    		ros::spinOnce();
-		break;
-	default:
-		break;
+	while (ros::ok())
+	{
+		robot_arm.cnt+=10*robot_arm.move_direction;
+		if(robot_arm.cnt>179){
+			robot_arm.move_direction = -1;
+		} else if(robot_arm.cnt<30){
+			robot_arm.move_direction = 1;
+		}
+		robot_arm.move(FIRST,robot_arm.cnt);
+		robot_arm.move(SECOND,robot_arm.cnt);
+		robot_arm.move(THIRD,robot_arm.cnt);
+		robot_arm.move(FORTH,robot_arm.cnt);
+		robot_arm.move(FIFTH,robot_arm.cnt);
+		robot_arm.sleep(5000);
 	}
+	return 0;
 }
-
-/**
- * sleep() - Sleep the ROS system a given time(ms).
- *
- * @sleep_rate:	Standard rate(Hz) defined in the main function.
- * 		default: 1KHz
- * @no_of_loops:Number of times the sleep_rate will be repeated.
- *
- *
-void sleep(ros::Rate sleep_rate, long no_of_loops)
-{
-	for(long i=0; i<no_of_loops; i++)
-		sleep_rate.sleep();
-}
-*/
