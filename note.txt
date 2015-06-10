@@ -28,3 +28,5 @@ the hardware design has some flaws:
 Viet 1 class cho robot arm, bao gom:
 	public: publishers for ROS and gazebo, vi tri tung khop canh tay (su dung forward kinematic)
 	private: nhung cai con lai
+
+http://www.maketecheasier.com/backup-ubuntu-with-remastersys/
