@@ -304,18 +304,18 @@ arm_control_genpy/fast:
 .PHONY : arm_control_genpy/fast
 
 # Convenience name for target.
-arm_control/CMakeFiles/pub1.dir/rule:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/pub1.dir/rule
-.PHONY : arm_control/CMakeFiles/pub1.dir/rule
+arm_control/CMakeFiles/arm_test.dir/rule:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_control/CMakeFiles/arm_test.dir/rule
+.PHONY : arm_control/CMakeFiles/arm_test.dir/rule
 
 # Convenience name for target.
-pub1: arm_control/CMakeFiles/pub1.dir/rule
-.PHONY : pub1
+arm_test: arm_control/CMakeFiles/arm_test.dir/rule
+.PHONY : arm_test
 
 # fast build rule for target.
-pub1/fast:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/build
-.PHONY : pub1/fast
+arm_test/fast:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_test.dir/build.make arm_control/CMakeFiles/arm_test.dir/build
+.PHONY : arm_test/fast
 
 # Convenience name for target.
 arm_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
@@ -448,7 +448,7 @@ src/arm_control.o: src/arm_control.cpp.o
 
 # target to build an object file
 src/arm_control.cpp.o:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.o
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_test.dir/build.make arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o
 .PHONY : src/arm_control.cpp.o
 
 src/arm_control.i: src/arm_control.cpp.i
@@ -456,7 +456,7 @@ src/arm_control.i: src/arm_control.cpp.i
 
 # target to preprocess a source file
 src/arm_control.cpp.i:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.i
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_test.dir/build.make arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.i
 .PHONY : src/arm_control.cpp.i
 
 src/arm_control.s: src/arm_control.cpp.s
@@ -464,32 +464,32 @@ src/arm_control.s: src/arm_control.cpp.s
 
 # target to generate assembly for a file
 src/arm_control.cpp.s:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/arm_control.cpp.s
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_test.dir/build.make arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.s
 .PHONY : src/arm_control.cpp.s
 
-src/pub1.o: src/pub1.cpp.o
-.PHONY : src/pub1.o
+src/arm_test.o: src/arm_test.cpp.o
+.PHONY : src/arm_test.o
 
 # target to build an object file
-src/pub1.cpp.o:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.o
-.PHONY : src/pub1.cpp.o
+src/arm_test.cpp.o:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_test.dir/build.make arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o
+.PHONY : src/arm_test.cpp.o
 
-src/pub1.i: src/pub1.cpp.i
-.PHONY : src/pub1.i
+src/arm_test.i: src/arm_test.cpp.i
+.PHONY : src/arm_test.i
 
 # target to preprocess a source file
-src/pub1.cpp.i:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.i
-.PHONY : src/pub1.cpp.i
+src/arm_test.cpp.i:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_test.dir/build.make arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.i
+.PHONY : src/arm_test.cpp.i
 
-src/pub1.s: src/pub1.cpp.s
-.PHONY : src/pub1.s
+src/arm_test.s: src/arm_test.cpp.s
+.PHONY : src/arm_test.s
 
 # target to generate assembly for a file
-src/pub1.cpp.s:
-	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/pub1.dir/build.make arm_control/CMakeFiles/pub1.dir/src/pub1.cpp.s
-.PHONY : src/pub1.cpp.s
+src/arm_test.cpp.s:
+	cd /home/eeit/roboarm/catkin_ws/build && $(MAKE) -f arm_control/CMakeFiles/arm_test.dir/build.make arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.s
+.PHONY : src/arm_test.cpp.s
 
 # Help Target
 help:
@@ -508,12 +508,12 @@ help:
 	@echo "... arm_control_geneus"
 	@echo "... arm_control_genlisp"
 	@echo "... arm_control_genpy"
+	@echo "... arm_test"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... pub1"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
@@ -528,9 +528,9 @@ help:
 	@echo "... src/arm_control.o"
 	@echo "... src/arm_control.i"
 	@echo "... src/arm_control.s"
-	@echo "... src/pub1.o"
-	@echo "... src/pub1.i"
-	@echo "... src/pub1.s"
+	@echo "... src/arm_test.o"
+	@echo "... src/arm_test.i"
+	@echo "... src/arm_test.s"
 .PHONY : help
 
 

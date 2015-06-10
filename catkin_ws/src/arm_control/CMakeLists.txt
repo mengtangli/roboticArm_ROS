@@ -39,6 +39,6 @@ catkin_package()
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(pub1 src/pub1.cpp src/arm_control.cpp)
-target_link_libraries(pub1 ${catkin_LIBRARIES})
-add_dependencies(pub1 arm_control_generate_messages_cpp)
+add_executable(arm_test src/arm_test.cpp src/arm_control.cpp)
+target_link_libraries(arm_test ${catkin_LIBRARIES})
+add_dependencies(arm_test arm_control_generate_messages_cpp)

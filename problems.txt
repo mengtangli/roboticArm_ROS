@@ -14,3 +14,11 @@
 7. Cannot upload to the Arduino, because serial_node.py (see more in note.txt, use this to connect ros to arduino) is running. Unplug the USB cable, re-plug, and upload. Sometimes you must change ACM0 to ACM1.
 8. Gets the error "multiple definition" while including a .h file.
 	Solution: not yet found
+9. Not compile executable.
+	Solution: Add to CMakeList.txt
+10. Cant init structure with no argument. Not yet found solution
+11. Init class structure with one argument. Read arm_control.cpp for more
+information. This is not a problem, but interesting to know.
+12. Cant establish command to the node. Must specify the node name in the
+package's CMakeLists.txt. In this case arm_test in CMakeLists. arm_test is the
+name of node. arm_test_node is the handler. arm_command is the topic

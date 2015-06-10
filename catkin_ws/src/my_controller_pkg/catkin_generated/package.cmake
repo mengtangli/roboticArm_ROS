@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "my_controller_pkg")
-set(my_controller_pkg_MAINTAINER "eeit <eeit@todo.todo>")
-set(my_controller_pkg_DEPRECATED "")
-set(my_controller_pkg_VERSION "0.0.0")
-set(my_controller_pkg_BUILD_DEPENDS "pluginlib" "pr2_controller_interface" "pr2_mechanism_model")
-set(my_controller_pkg_RUN_DEPENDS "pluginlib" "pr2_controller_interface" "pr2_mechanism_model")
-set(my_controller_pkg_BUILDTOOL_DEPENDS "catkin")

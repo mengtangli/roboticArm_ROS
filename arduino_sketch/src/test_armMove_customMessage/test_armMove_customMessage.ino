@@ -29,7 +29,7 @@ const float angle_scale = 133;
 
 ros::NodeHandle nh;
  
-void mover1( const arm_control::servo& pub1){
+void mover1( const arm_control::servo& arm_command){
   
   //Save the last angle
   last_final_angle_first = final_angle_first;
@@ -41,18 +41,18 @@ void mover1( const arm_control::servo& pub1){
   //Change angle according to RDS3115
   #ifdef RDS3115
   Serial.println("Using RDS");
-  final_angle_first = (float)pub1.first/180*angle_scale;
-  final_angle_second = (float)pub1.second/180*angle_scale;
-  final_angle_third = (float)pub1.third/180*angle_scale;
-  final_angle_forth = (float)pub1.forth/180*angle_scale;
-  final_angle_fifth = (float)pub1.fifth/180*angle_scale;
+  final_angle_first = (float)arm_command.first/180*angle_scale;
+  final_angle_second = (float)arm_command.second/180*angle_scale;
+  final_angle_third = (float)arm_command.third/180*angle_scale;
+  final_angle_forth = (float)arm_command.forth/180*angle_scale;
+  final_angle_fifth = (float)arm_command.fifth/180*angle_scale;
   #else
   Serial.println("Not using RDS");
-  final_angle_first = pub1.first;
-  final_angle_second = pub1.second;
-  final_angle_third = pub1.third;
-  final_angle_forth = pub1.forth;
-  final_angle_fifth = pub1.fifth;
+  final_angle_first = arm_command.first;
+  final_angle_second = arm_command.second;
+  final_angle_third = arm_command.third;
+  final_angle_forth = arm_command.forth;
+  final_angle_fifth = arm_command.fifth;
   #endif
   
   //command servo to rotate
@@ -62,13 +62,13 @@ void mover1( const arm_control::servo& pub1){
   move_servo(servo4, final_angle_forth, last_final_angle_forth);
   move_servo(servo5, final_angle_fifth, last_final_angle_fifth);
 }
-ros::Subscriber<arm_control::servo> sub1("pub1", &mover1 );
+ros::Subscriber<arm_control::servo> arm_sub("arm_command", &mover1 );
 
 void setup()
 {
   Serial.begin(57600);
   nh.initNode();
-  nh.subscribe(sub1);
+  nh.subscribe(arm_sub);
   servo1.attach(2);
   servo2.attach(3);
   servo3.attach(4);
