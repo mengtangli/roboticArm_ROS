@@ -1,6 +1,17 @@
 #include "arm_control.h"
 #include "math.h"
 
+/**
+ * RobotArm() - Initialize a RobotArm class
+ *
+ * @arm_node_handl:	The handler for the working node.
+ *
+ * Initialize a class object to has a global rate of 1kHz. The publisher of
+ * each servo should be registered to the its respective topic as well. Change
+ * this if there are any change in the design or add more servos to the robot. 
+ * Note that this method(constructor) has no type, not even void.
+ *
+ */
 RobotArm::RobotArm(ros::NodeHandle arm_node): ros_rate(1000)
 {
 	cnt = 0;
@@ -11,6 +22,7 @@ RobotArm::RobotArm(ros::NodeHandle arm_node): ros_rate(1000)
 	gazebo_publisher4 = arm_node.advertise<std_msgs::Float64>("/arm/elbow2_2_controller/command",100);
 	gazebo_publisher5 = arm_node.advertise<std_msgs::Float64>("/arm/elbow3_1_controller/command",100);
 }
+
 /**
  * move() - Move servo an angle(in degrees) both on real life and gazebo
  * simulation

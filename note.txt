@@ -28,3 +28,9 @@ the hardware design has some flaws:
 Viet 1 class cho robot arm, bao gom:
 	public: publishers for ROS and gazebo, vi tri tung khop canh tay (su dung forward kinematic)
 	private: nhung cai con lai
+
+Using a custom message is quite cool, but we should use a standard message
+(std_msgs type). Write this in the report, however, to discuss the possibilities
+of ROS.
+
+use geometry_msgs/Point to save point coordinate
