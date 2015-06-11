@@ -7,6 +7,7 @@ arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o
  /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.cpp
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
+ /opt/ros/indigo/include/geometry_msgs/Point.h
  /opt/ros/indigo/include/ros/advertise_options.h
  /opt/ros/indigo/include/ros/advertise_service_options.h
  /opt/ros/indigo/include/ros/assert.h
@@ -68,6 +69,7 @@ arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o
  /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_test.cpp
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
+ /opt/ros/indigo/include/geometry_msgs/Point.h
  /opt/ros/indigo/include/ros/advertise_options.h
  /opt/ros/indigo/include/ros/advertise_service_options.h
  /opt/ros/indigo/include/ros/assert.h

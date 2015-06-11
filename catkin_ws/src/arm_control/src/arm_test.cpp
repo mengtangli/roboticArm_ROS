@@ -59,6 +59,8 @@ int main(int argc, char **argv)
 		robot_arm.move(FIRST,robot_arm.cnt);
 		robot_arm.move(SECOND,robot_arm.cnt);
 		robot_arm.move(THIRD,robot_arm.cnt);
+		geometry_msgs::Point temp = robot_arm.get_position(THIRD);
+		ROS_INFO("position THIRD: %f %f %f",temp.x, temp.y, temp.z);
 		robot_arm.move(FORTH,robot_arm.cnt);
 		robot_arm.move(FIFTH,robot_arm.cnt);
 		robot_arm.sleep(3000);

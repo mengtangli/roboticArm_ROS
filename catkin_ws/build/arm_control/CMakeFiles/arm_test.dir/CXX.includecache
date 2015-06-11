@@ -29,6 +29,8 @@ arm_control/servo.h
 /home/eeit/roboarm/catkin_ws/src/arm_control/include/arm_control/servo.h
 std_msgs/Float64.h
 /home/eeit/roboarm/catkin_ws/src/arm_control/include/std_msgs/Float64.h
+geometry_msgs/Point.h
+/home/eeit/roboarm/catkin_ws/src/arm_control/include/geometry_msgs/Point.h
 
 /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.cpp
 arm_control.h
@@ -54,6 +56,22 @@ string
 vector
 -
 time.h
+-
+
+/opt/ros/indigo/include/geometry_msgs/Point.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/indigo/include/ros/advertise_options.h

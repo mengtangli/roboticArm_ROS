@@ -6,6 +6,7 @@ arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o: /home/eeit/roboarm/ca
 arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o: /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_control.cpp
 arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
+arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o: /opt/ros/indigo/include/geometry_msgs/Point.h
 arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o: /opt/ros/indigo/include/ros/advertise_options.h
 arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o: /opt/ros/indigo/include/ros/advertise_service_options.h
 arm_control/CMakeFiles/arm_test.dir/src/arm_control.cpp.o: /opt/ros/indigo/include/ros/assert.h
@@ -67,6 +68,7 @@ arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o: /home/eeit/roboarm/catki
 arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o: /home/eeit/roboarm/catkin_ws/src/arm_control/src/arm_test.cpp
 arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
+arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o: /opt/ros/indigo/include/geometry_msgs/Point.h
 arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o: /opt/ros/indigo/include/ros/advertise_options.h
 arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o: /opt/ros/indigo/include/ros/advertise_service_options.h
 arm_control/CMakeFiles/arm_test.dir/src/arm_test.cpp.o: /opt/ros/indigo/include/ros/assert.h
