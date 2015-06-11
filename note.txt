@@ -30,3 +30,5 @@ Viet 1 class cho robot arm, bao gom:
 	private: nhung cai con lai
 
 http://www.maketecheasier.com/backup-ubuntu-with-remastersys/
+
+Talk about Git in the thesis report?
