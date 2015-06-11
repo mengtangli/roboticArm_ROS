@@ -34,3 +34,7 @@ Using a custom message is quite cool, but we should use a standard message
 of ROS.
 
 use geometry_msgs/Point to save point coordinate
+
+http://www.maketecheasier.com/backup-ubuntu-with-remastersys/
+
+Talk about Git in the thesis report?

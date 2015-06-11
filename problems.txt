@@ -6,7 +6,9 @@
 				add_dependencies(talker ros_tut_generate_messages_cpp)
 	(change talker with your cpp file name)
 3. Cannot install ROS by apt-get:
-	Solution: Download and use aptitude to install ros-ROSVERSION-desktop-full with dependencies taken care of.
+	Solution: Download aptitude and use aptitude to install ros-ROSVERSION-desktop-full with dependencies taken care of.
+	But this solution doesn't always work. Create a custom Ubuntu
+version with ROS and Gazebo included.
 4. Cannot run rosbuild commands:
 	Solution: Working with ROS indigo or newer, users must use catkin. Read how to migrate to indigo here: http://wiki.ros.org/catkin/migrating_from_rosbuild
 5. shaking inside gazebo: not enough initial param
